@@ -8,7 +8,7 @@
             <!-- we can use this too for redirecting to the blog page :to="`/blog/${article.slug}`"-->
             <div class="article-inner p-2 bg-gray-50 shadow-xl rounded-lg overflow-hidden">
               <img :src="require(`~/assets/resources/${article.img}`)" class="block w-full rounded-lg"/>
-              <div class="detail p-1 md:p-2 md:px-4 h-1/2">
+              <div class="detail p-1 md:p-2 md:px-4 h-48">
                 <h3 class="text-gray-800 p-1 sm:p-3 md:p-0 md:text-xl font-medium overflow-ellipsis line-clamp3 overflow-hidden h-1/2">{{ article.title }}</h3>
                 <p class="text-gray-500 text-lg md:text-x h-1/2">{{ article.description }}</p>
               </div>
