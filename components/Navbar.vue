@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full shadow-lg">
+  <div class="w-full shadow-md">
     <div class="w-5/6 h-auto m-auto">
       <div class="h-13 w-full flex justify-between border-gray-600">         <!--main-Navbar-div-->
         <div class="px-4 py-2">          <!--Navbar-Left-Div{Contains: heading}-->

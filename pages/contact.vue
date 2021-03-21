@@ -1,10 +1,10 @@
 <template>
-  <div class="w-full">
-    <div class="md:w-5/6 mx-auto px-2 md:px-0">
+  <div class="container">
+    <div class="md:w-5/6 mx-auto">
       <div
-        class="md:w-10/12 mt-8 bg-gray-50 p-1 md:p-2 m-auto rounded-2xl flex flex-col md:flex-row shadow-md"
+        class="md:w-10/12 mt-8 bg-gray-50 m-auto rounded-xl flex flex-col md:flex-row shadow-md overflow-hidden"
       >
-        <div class="xs:w-full md:w-2/5 h-auto md:h-96 py-3 bg-purple-800 rounded-lg shadow-lg">
+        <div class="xs:w-full md:w-2/5 h-auto md:h-96 py-3 bg-purple-800 shadow-lg">
           <!--left-div-->
           <h2 class="text-gray-50 text-xl font-medium p-2 text-center">
             Contact Information
