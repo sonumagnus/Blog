@@ -28,6 +28,6 @@
         @apply text-gray-600 font-semibold text-3xl border-b-2 border-gray-600 inline-block md:mx-32 font-sans
   }
   .blog-part p{
-        @apply text-gray-900 text-xl font-normal md:px-32 md:font-serif md:py-8 py-4 md:leading-normal
+        @apply text-gray-900 text-xl font-normal md:px-32 md:font-serif py-8
   }
 </style>
