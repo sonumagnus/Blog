@@ -2,18 +2,17 @@
   <div class="container">
     <div class="md:w-5/6 mx-auto">
       <div
-        class="md:w-10/12 mt-8 bg-gray-50 m-auto rounded-xl flex flex-col md:flex-row shadow-md overflow-hidden"
-      >
-        <div class="xs:w-full md:w-2/5 h-auto md:h-96 py-3 bg-purple-800 shadow-lg">
-          <!--left-div-->
-          <h2 class="text-gray-50 text-xl font-medium p-2 text-center">
+        class="w-[95%] md:w-10/12 mt-8 bg-gray-50 m-auto rounded-xl flex flex-col md:flex-row shadow-md overflow-hidden relative">
+        <div
+          class="xs:w-full md:w-1/3 h-auto md:h-[26rem] py-3 bg-purple-800 shadow-lg relative z-10"><!--left-div-->
+          <h2 class="text-gray-50 text-2xl font-medium p-2 text-center">
             Contact Information
           </h2>
           <div class="h-1/4 w-full flex justify-evenly py-2 md:pt-8 px-4">
             <!--left-mid-div-->
             <svg
-              :width="38"
-              :height="38"
+              :width="35"
+              :height="35"
               :aria-labelledby="iconName"
               aria-hidden="true"
               focusable="false"
@@ -30,8 +29,8 @@
               ></path>
             </svg>
             <svg
-              :width="40"
-              :height="40"
+              :width="35"
+              :height="35"
               :aria-labelledby="iconName"
               aria-hidden="true"
               focusable="false"
@@ -48,8 +47,8 @@
               ></path>
             </svg>
             <svg
-              :width="40"
-              :height="40"
+              :width="35"
+              :height="35"
               :aria-labelledby="iconName"
               aria-hidden="true"
               focusable="false"
@@ -66,13 +65,18 @@
               ></path>
             </svg>
           </div>
-          <div class=""> <!--left-bottom-div-->
-
-          </div>
+      
+        </div>
+        <div class="relative z-20">
+          <!--left-bottom-div-->
+           <div class="h-20 w-20 bg-blue-500 absolute right-14 bottom-14 opacity-90 rounded-full z-20 hidden md:block"></div>
+          <div class="absolute h-32 w-32 bg-red-300 right-0 bottom-0 rounded-tl-full z-10 hidden md:block"></div>          
         </div>
         <div class="w-full md:w-3/5 bg-gray-50">
           <!--right-div-->
-          <div class="py-4 px-0 md:px-2 flex md:flex-wrap md:flex-row flex-col justify-evenly h-1/2 items-center">
+          <div
+            class="py-4 px-0 md:px-2 flex md:flex-wrap md:flex-row flex-col justify-evenly h-1/2 items-center"
+          >
             <!--Right-upper-div-->
             <div class="text-gray-700 md:w-2/5 w-4/5 py-3 md:py-0">
               <h5 class="mb-1 font-medium">First Name</h5>
@@ -82,7 +86,7 @@
                 placeholder="Sonu"
               />
             </div>
-            <div class="text-gray-700  md:w-2/5 w-4/5 py-3 md:py-0">
+            <div class="text-gray-700 md:w-2/5 w-4/5 py-3 md:py-0">
               <h5 class="mb-1 font-medium">Last Name</h5>
               <input
                 type="text"
