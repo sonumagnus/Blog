@@ -1,9 +1,15 @@
 <template>
   <p v-if="$fetchState.pending">Fetching documents...</p>
   <p v-else-if="$fetchState.error">An error occurred :(</p>
-  <div v-else class="container bg-blue-100">
+  <div v-else class="container bg-blue-50">
     <div class="w-full md:w-4/5 m-auto px-2 lg:px-8">
-      <h2 class="py-5 text-3xl font-extrabold text-gray-600">Latest News</h2>
+    <div class="flex justify-between">
+      <ul class="flex">
+      <li class="py-5 text-2xl lg:text-3xl font-bold text-yellow-600 mr-2">Latest</li>
+      <li class="py-5 text-2xl lg:text-3xl font-bold text-green-800 mr-1">News</li>
+      </ul>
+      <nuxt-link to="/News" class="border px-1 rounded-full border-b-2 text-sm self-center">View all</nuxt-link>
+      </div>
       <div class="flex">
         <div class="w-full md:w-1/2">
           <ul>
@@ -22,7 +28,7 @@
           </ul>
         </div>
         <div class="w-1/2 overflow-hidden hidden lg:inline">
-          <img src="resources/blog-2.jpg" class="rounded-2xl my-auto"/>
+          <img src="resources/Right-Giant.jpg" class="rounded-2xl my-auto"/>
         </div>
       </div>
     </div>

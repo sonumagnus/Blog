@@ -2,7 +2,7 @@
 title: this is the title of news, climate change is a very big problem for this world. we should focus on this problem
 description: this is the description for news blog
 slug: news-2
-img: news-1.jpg
+img: news-2.jpg
 category: Phones
 ---
 

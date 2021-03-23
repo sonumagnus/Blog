@@ -15,12 +15,12 @@
               </li>
               <li>
                 <nuxt-link to="/about" class="text-lg font-bold px-4 py-2 text-gray-700 hover:text-pink-50 hover:bg-gray-700 hover: rounded">
-                  About Us
+                  Blog
                 </nuxt-link>
               </li>
               <li>
                 <nuxt-link to="/icons" class="text-lg font-bold px-4 py-2 text-gray-700  hover:text-pink-50 hover:bg-gray-700 hover: rounded">
-                  More
+                  News
                 </nuxt-link>
               </li>
             </ul>
