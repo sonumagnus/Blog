@@ -3,6 +3,7 @@ title: How to add the "Blue Arrow" button on your website (WebApp)
 description: As you Know Web development is very unique and productive and profitable profession for u 
 slug: second-post
 img: blog-2.jpg
+category: Technology
 ---
 # this is the most useful heading
  

@@ -3,6 +3,7 @@ title: Chris Hemsworth Is Exactly What’s Wrong With the Fitness Industry
 description: This is description part. here we can write a really long description
 slug: forth-post
 img: blog-4.jpg
+category: smartphone
 ---
 
 # This is the heading

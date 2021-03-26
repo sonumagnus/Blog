@@ -3,6 +3,7 @@ title: I tried planking for 5 minutes every day for a month and it made my back 
 description: This is description part. here we can write a really long description
 slug: third-post
 img: blog-3.jpg
+category: smartphone
 ---
 
 # this is the most useful heading

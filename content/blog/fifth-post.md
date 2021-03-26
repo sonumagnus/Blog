@@ -3,6 +3,7 @@ title: Green Plants are goint to extinct about 500 times faster than they should
 description: If you are sort of person who just can not keep a plant alive, you are not alone according to the new study publised june 10 in journal Nature
 slug: fifth-post
 img: blog-5.jpg
+category: smartphone
 ---
 
 # Asus is the big tech company

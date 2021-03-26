@@ -6,7 +6,7 @@ img: news-3.jpg
 category: Computer
 ---
 
-# hello, see this third news 
+# hello, see this third news how are you
 
 ## Are you okay and want to visit us
 _well, this is the news section writing blog for testing purpose_
