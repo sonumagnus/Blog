@@ -1,6 +1,6 @@
 <template>
-  <div class="container m-auto">
-    <article class="blog-part w-10/12 md:w-3/4 m-auto">
+  <div class="container m-auto bg-gray-50">
+    <article class="blog-part w-[90%] md:w-3/4 m-auto md:px-32 bg-gray-50">
       <nuxt-content :document="article" />
     </article>
   </div>
@@ -19,13 +19,13 @@ export default {
 
 <style>
 .blog-part h1 {
-  @apply text-gray-700 font-bold text-5xl my-4 md:mx-12 font-sans
+  @apply text-gray-900 font-bold text-5xl font-sans py-7
 }
 
 .blog-part h2 {
-  @apply text-gray-600 font-semibold text-3xl border-b-2 border-gray-600 inline-block md:px-32 font-sans
+  @apply text-gray-600 text-4xl py-2 font-semibold border-gray-800 inline-block font-sans
 }
 .blog-part p {
-  @apply text-gray-900 text-xl font-normal md:px-32 lg:px-32 md:font-serif py-8 font-serif
+  @apply text-gray-900 text-xl font-normal md:font-serif py-3 leading-9
 }
 </style>

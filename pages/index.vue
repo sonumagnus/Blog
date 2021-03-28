@@ -1,7 +1,7 @@
 <template>
-<div>
+<div class="w-11/12 m-auto">
   <newsfeed />
-  <div class=" py-14 md:px-8 px-2 m-auto max-w-screen-lg flex flex-col justify-between">
+  <div class="py-14 md:px-8 px-2 flex flex-col justify-between">
     <div class="flex justify-between mb-2 md:mb-0 mx-2 md:mx-0">
       <ul class="flex">
     <li class="font-bold text-2xl lg:text-3xl text-gray-800 md:mb-8 mb-2 mr-2">Latest</li>
@@ -34,7 +34,7 @@
 
 <script>
 import Newsfeed from '~/components/news/Newsfeed';
-import IconMore from '~/components/icons/ui/IconMore'
+import IconMore from '~/components/icons/ui/IconMore';
 export default {
   components: { Newsfeed, IconMore },
   async asyncData({ $content, params }) {
