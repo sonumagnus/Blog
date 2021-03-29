@@ -7,8 +7,8 @@ category: Android
 ---
 
 # hello there how are you
-
-## Are you okay and want to visit us
+![img](/resources/news-2.jpg)
+## Are you really want to visit us
 _well, this is the news section writing blog for testing purpose_
 
 hello there do you know Pubg mobile india soon gonna launch in india as per indian governet misintery of informantion and technoly.

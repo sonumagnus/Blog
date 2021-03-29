@@ -7,7 +7,7 @@ category: Computer
 ---
 
 # hello, see this third news how are you
-
+![img](/resources/news-2.jpg)
 ## Are you okay and want to visit us
 _well, this is the news section writing blog for testing purpose_
 

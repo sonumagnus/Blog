@@ -2,7 +2,7 @@
   <p v-if="$fetchState.pending">Fetching documents...</p>
   <p v-else-if="$fetchState.error">An error occurred :(</p>
   <div v-else>
-    <div class="w-full m-auto px-2 lg:px-8">
+    <div class="w-full m-auto px-2">
       <div>
         <ul class="flex justify-between">
           <li class="flex">
@@ -31,11 +31,11 @@
           <ul>
             <li v-for="doc of docs" :key="doc">
               <nuxt-link :to="`${doc.path}`">
-                <div class="article-inside mb-6 flex">
+                <div class="article-inside mb-4 md:mb-6 flex">
                   <img
                     :src="`resources/${doc.img}`"
                     class="w-auto h-24 rounded content-center mt-1"/>
-                  <div class="article-details px-5 md:pl-5 md:pr-10">
+                  <div class="article-details px-4 md:pl-5 md:pr-10">
                     <span class="font-bold text-lg text-pink-600">{{
                       doc.category
                     }}</span>
@@ -49,7 +49,7 @@
             </li>
           </ul>
         </div>
-        <div class="w-1/2 overflow-hidden hidden lg:inline">
+        <div class="w-1/2 overflow-hidden hidden md:inline">
           <img src="resources/Right-Giant.jpg" class="rounded-2xl my-auto" />
         </div>
       </div>

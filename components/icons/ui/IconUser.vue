@@ -2,7 +2,7 @@
   <svg
     :width="width"
     :height="height"
-    :aria-labelledby="name"
+    :aria-labelledby="IconName"
     aria-hidden="true"
     focusable="false"
     data-prefix="fad"

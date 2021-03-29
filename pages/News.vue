@@ -1,73 +1,69 @@
 <template>
-<div>
-<div
-class="grid p-10 md:p-16 grid-cols-5 md:grid-cols-10 gap-8 text-3xl md:text-5xl text-gray-500"
->
-<i class="fad fa-arrows-h"></i>
-<i class="fas fa-chevron-left"></i>
-<i class="fas fa-chevron-right"></i>
-<i class="fad fa-exclamation-triangle"></i>
-<i class="fad fa-bell-exclamation"></i>
-<i class="fad fa-info-circle"></i>
-<i class="fad fa-bullhorn"></i>
-<i class="fad fa-bell-exclamation"></i>
-<i class="fal fa-clipboard-check"></i>
-<i class="fal fa-clipboard-list"></i>
-<i class="fal fa-long-arrow-left"></i>
-<i class="far fa-long-arrow-right"></i>
-<i class="far fa-long-arrow-left"></i>
-<i class="fal fa-long-arrow-right"></i>
-<i class="fad fa-comment-alt-lines"></i>
-<i class="fas fa-location-arrow"></i>
-<i class="fal fa-search"></i>
-<i class="far fa-search"></i>
-<i class="fal fa-user"></i>
-<i class="fal fa-compass"></i>
-<i class="fal fa-bookmark"></i>
-<i class="fal fa-home-lg-alt"></i>
-<i class="fal fa-comment-alt-lines"></i>
-<i class="fal fa-comment-alt-dots"></i>
-<i class="fad fa-code-branch"></i>
-<i class="fad fa-comment-alt-dots"></i>
-<i class="fad fa-comment-dots"></i>
-<i class="fad fa-user"></i>
-<i class="fad fa-house"></i>
-<i class="fad fa-bookmark"></i>
-<i class="fad fa-compass"></i>
-<i class="fad fa-atom-alt"></i>
-<i class="fad fa-bullseye-arrow"></i>
-<i class="fad fa-desktop-alt"></i>
-<i class="fad fa-database"></i>
-<i class="fal fa-book-reader"></i>
-<i class="fal fa-chevron-left"></i>
-<i class="fal fa-chevron-right"></i>
-<i class="fad fa-long-arrow-right"></i>
-<i class="fad fa-code"></i>
-<i class="fab fa-html5"></i>
-<i class="fab fa-instagram"></i>
-<i class="fal fa-envelope"></i>
-<i class="fad fa-phone-alt"></i>
-<i class="fab fa-facebook"></i>
-<i class="fad fa-bars"></i>
-<i class="fal fa-angle-double-right"></i>
-</div>
-</div>
+  <p v-if="$fetchState.pending">Fetching News...</p>
+  <p v-else-if="$fetchState.error">An error occurred :(</p>
+  <div v-else>
+    <div class="w-full m-auto px-2">
+      <div>
+        <ul>
+          <li class="flex">
+          <p class="py-5 text-2xl lg:text-3xl font-bold text-yellow-600 mr-2">
+            Latest
+          </p>
+          <p class="py-5 text-2xl lg:text-3xl font-bold text-green-800">
+            News
+          </p>
+          </li>
+        </ul>
+      </div>
+        <div class="w-full">
+          <ul class="News-post grid grid-cols-2 gap-6">
+            <li v-for="doc of docs" :key="doc" >
+              <nuxt-link :to="`${doc.path}`">
+                <div class="article-inside flex">
+                  <img
+                    :src="`resources/${doc.img}`"
+                    class="w-auto h-36 rounded content-center mt-1"/>
+                  <div class="article-details px-4 md:pl-5 flex flex-col justify-evenly">
+                    <p class="font-bold text-lg line-clamp-2 mb-1">
+                      {{ doc.title }}
+                    </p>
+                    <p class="text-lg">{{ doc.description }}</p>
+                     <span class="font-bold text-lg text-pink-600">{{
+                      doc.category
+                    }}</span>
+                  </div>
+                </div>
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 </template>
-
 <script>
 export default {
- head () {
-       return{
-             script: [
-                   {
-                         src: '/js/fontawesome.js'
-                   }
-             ]
-       }
- }
-}
+  data() {
+    return {
+      docs: [],
+    };
+  },
+  async fetch() {
+    this.docs = await this.$content("news").sortBy("asc").fetch();
+  },
+};
 </script>
 
 <style>
-
+.News-post li:first-child{
+  @apply col-span-1 row-span-3
+}
+.News-post li:first-child .article-inside{
+  @apply block
+}
+.News-post li:first-child .article-inside img{
+  @apply w-full h-auto
+}
+.News-post li:first-child .article-inside .article-details{
+  @apply p-3
+}
 </style>

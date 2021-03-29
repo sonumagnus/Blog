@@ -5,8 +5,8 @@ slug: second-post
 img: blog-2.jpg
 category: Technology
 ---
-# this is the most useful heading
- 
+# This is the most useful heading
+ ![](/resources/news-3.jpg)
  ## Welcome to sub-heading
 
  Holland began dancing at a hip hop class at Nifty Feet Dance School in Wimbledon. His potential was spotted by choreographer Lynne Page (who was an associate to Peter Darling, choreographer of Billy Elliot and Billy Elliot the Musical) when he performed with his dance school as part of the 2006 Richmond Dance Festival.<br><br>
