@@ -16,18 +16,18 @@
         </ul>
       </div>
         <div class="w-full">
-          <ul class="News-post grid grid-cols-2 gap-6">
+          <ul class="News-post grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
             <li v-for="doc of docs" :key="doc" >
               <nuxt-link :to="`${doc.path}`">
-                <div class="article-inside flex">
+                <div class="article-inside flex h-24 md:h-auto">
                   <img
                     :src="`resources/${doc.img}`"
-                    class="w-auto h-36 rounded content-center mt-1"/>
+                    class="w-auto h-24 md:h-36 rounded content-center mt-1"/>
                   <div class="article-details px-4 md:pl-5 flex flex-col justify-evenly">
                     <p class="font-bold text-lg line-clamp-2 mb-1">
                       {{ doc.title }}
                     </p>
-                    <p class="text-lg">{{ doc.description }}</p>
+                    <p class="text-lg hidden md:block">{{ doc.description }}</p>
                      <span class="font-bold text-lg text-pink-600">{{
                       doc.category
                     }}</span>
@@ -55,15 +55,15 @@ export default {
 
 <style>
 .News-post li:first-child{
-  @apply col-span-1 row-span-3
+  @apply md:col-span-1 md:row-span-3
 }
 .News-post li:first-child .article-inside{
-  @apply block
+  @apply flex md:flex-col flex-row
 }
 .News-post li:first-child .article-inside img{
-  @apply w-full h-auto
+  @apply w-auto h-24 md:h-auto
 }
 .News-post li:first-child .article-inside .article-details{
-  @apply p-3
+  @apply md:p-3
 }
 </style>

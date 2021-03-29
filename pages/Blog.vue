@@ -5,15 +5,15 @@
     <div v-else>
       <p class="text-2xl font-semibold text-center m-4">All Blogs</p>
     </div>
-    <div class="articles m-auto">
-      <ul class="grid sm:grid-cols-4 gap-3 sm:gap-5 grid-cols-2">
+    <div class="articles px-1 m-auto">
+      <ul class="grid sm:grid-cols-4 gap-3 sm:gap-5 grid-cols-1">
         <li class="article w-full" v-for="article of articles" :key="article">
           <nuxt-link :to="`${article.path}`">
             <!-- we can use this too for redirecting to the blog page :to="`/blog/${article.slug}`"-->
             <div
-              class="article-inner border hover:shadow-md overflow-hidden rounded-lg"
+              class="article-inner border flex md:block hover:shadow-md overflow-hidden rounded-lg"
             >
-              <img :src="`/resources/${article.img}`" class="block w-full" />
+              <img :src="`/resources/${article.img}`" class="block md:w-full w-40" />
               <div
                 class="detail p-1 md:p-2 md:px-4 h-24 lg:h-44 overflow-hidden"
               >
@@ -25,8 +25,9 @@
                 <p
                   class="text-gray-500 text-lg h-auto lg:h-16 lg:line-clamp-2 hidden"
                 >
-                  {{ article.description }}
+                  {{ article.description }}   
                 </p>
+                <p>{{ article.category }}</p>
               </div>
             </div>
           </nuxt-link>
@@ -51,13 +52,13 @@ export default {
 
 <style scoped>
 .articles ul li:first-child {
-  @apply col-span-4 w-full
+  @apply md:col-span-4 w-full
 }
 .articles ul li:first-child .article-inner {
   @apply flex overflow-hidden
 }
 .articles ul li:first-child .article-inner img {
-  @apply w-96
+  @apply w-40 md:w-96
 }
 .articles ul li:first-child .article-inner .article-info {
   @apply pl-4

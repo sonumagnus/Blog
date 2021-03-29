@@ -31,7 +31,7 @@
           <ul>
             <li v-for="doc of docs" :key="doc">
               <nuxt-link :to="`${doc.path}`">
-                <div class="article-inside mb-4 md:mb-6 flex">
+                <div class="article-inside mb-1 md:mb-6 flex">
                   <img
                     :src="`resources/${doc.img}`"
                     class="w-auto h-24 rounded content-center mt-1"/>
