@@ -69,6 +69,7 @@ export default {
   async fetch() {
     this.docs = await this.$content("news")
     .sortBy("asc")
+    .limit(3)
     .fetch();
   },
 };
