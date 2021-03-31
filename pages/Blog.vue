@@ -57,7 +57,7 @@ export default {
   @apply flex-row overflow-hidden
 }
 .articles ul li:first-child .article-inner img {
-  @apply w-40 sm:w-80 max-w-xs
+  @apply w-40 sm:w-80 md:w-[360px]
 }
 .articles ul li:first-child .article-inner .detail {
   @apply pl-4
