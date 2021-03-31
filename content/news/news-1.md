@@ -1,6 +1,6 @@
 ---
 title: This is the title of news Section where we disscuss about the latest news & Updates
-description: this is the description for news blog
+description: TYhis is the description for news blog. But here i will have to write a more long description for jst the purpose of testing
 slug: news-1
 img: news-1.jpg
 category: Android

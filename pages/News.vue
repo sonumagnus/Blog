@@ -15,15 +15,15 @@
             >
               <img :src="`/resources/${doc.img}`" class=" w-2/5 h-auto" />
               <div
-                class="detail p-1 md:p-2 md:px-4 md:h-[102px] overflow-hidden w-3/5 h-24"
+                class="detail p-1 md:p-2 md:px-4 md:h-[102px] overflow-hidden w-3/5 h-24 md:h-32"
               >
                 <h3
-                  class="text-gray-800 p-1 sm:p-3 md:p-0 md:text-lg font-bold line-clamp-3 md:line-clamp-2 h-[75px] sm:h-20 md:h-16"
+                  class="text-gray-800 p-1 sm:p-3 md:p-0 md:text-lg font-bold line-clamp-3 md:line-clamp-2 h-[75px] sm:h-24 md:h-16"
                 >
                   {{ doc.title }}
                 </h3>
                 <p
-                  class="text-gray-500 sm:p-3 text-lg h-auto lg:h-16 md:line-clamp-1 lg:line-clamp-2 hidden sm:block description"
+                  class="text-gray-500 sm:px-3 text-lg h-24 md:line-clamp-2 hidden sm:block description"
                 >
                   {{ doc.description }}   
                 </p>
