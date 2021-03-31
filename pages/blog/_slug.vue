@@ -1,6 +1,6 @@
 <template>
-  <div class="container m-auto bg-gray-50">
-    <article class="blog-part w-[90%] md:w-3/4 m-auto md:px-32 bg-gray-50">
+  <div class="container m-auto">
+    <article class="blog-part w-[90%] md:w-3/4 m-auto md:px-16">
       <nuxt-content :document="article" />
     </article>
   </div>

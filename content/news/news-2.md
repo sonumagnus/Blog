@@ -7,7 +7,7 @@ category: Phones
 ---
 
 # hello there, 2nd news is here
-
+![](/resources/blog-6.jpg)
 ## Are you okay and want to visit us
 _well, this is the news section writing blog for testing purpose_
 

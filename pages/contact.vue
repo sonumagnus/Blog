@@ -39,7 +39,7 @@
             class="absolute h-32 w-32 bg-red-300 right-0 bottom-0 rounded-tl-full z-10 hidden md:block"
           ></div>
         </div>
-        <div class="w-full md:w-3/5 bg-gray-50">
+        <div class="w-full md:w-3/5">
           <!--right-div-->
           <div
             class="py-4 px-0 md:px-2 flex md:flex-wrap md:flex-row flex-col justify-evenly h-1/2 items-center"
@@ -49,7 +49,7 @@
               <h5 class="mb-1 font-medium">First Name</h5>
               <input
                 type="text"
-                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full"
+                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full bg-gray-50"
                 placeholder="Sonu"
               />
             </div>
@@ -57,7 +57,7 @@
               <h5 class="mb-1 font-medium">Last Name</h5>
               <input
                 type="text"
-                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full"
+                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full bg-gray-50"
                 placeholder="Lodha"
               />
             </div>
@@ -67,7 +67,7 @@
                 type="email"
                 name=""
                 id=""
-                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full"
+                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full bg-gray-50"
                 placeholder="Enter Email"
               />
             </div>
@@ -77,7 +77,7 @@
                 type="number"
                 name=""
                 id=""
-                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full"
+                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full bg-gray-50"
                 placeholder="Enter Phone Number"
               />
             </div>
@@ -88,9 +88,9 @@
               <textarea
                 name=""
                 id=""
-                cols="53"
+                cols="45"
                 rows="3"
-                class="resize-none outline-none rounded-lg px-4 pt-2 pb-1 border-2 border-gray-400 focus:border-2 focus:border-gray-800 w-full md:w-auto"
+                class="resize-none outline-none rounded-lg px-4 pt-2 pb-1 border-2 border-gray-400 focus:border-2 focus:border-gray-800 w-full bg-gray-50"
                 placeholder="Write Your Message here..."
               ></textarea>
             </div>
