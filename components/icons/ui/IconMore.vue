@@ -1,20 +1,21 @@
 <template>
   <svg
-    :width="width"
-    :height="height"
-    :aria-labelledby="iconName"
+    width="10"
+    height="10"
+    aria-labelledby="box"
     aria-hidden="true"
     focusable="false"
-    data-prefix="fal"
-    data-icon="angle-double-right"
+    data-prefix="fas"
+    data-icon="chevron-right"
     role="img"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 320 512"
     data-fa-i2svg=""
+    class="ml-1"
   >
     <path
       fill="currentColor"
-      d="M166.9 264.5l-117.8 116c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L127.3 256 25.1 155.6c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0l117.8 116c4.6 4.7 4.6 12.3-.1 17zm128-17l-117.8-116c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L255.3 256 153.1 356.4c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l117.8-116c4.6-4.7 4.6-12.3-.1-17z"
+      d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
     ></path>
   </svg>
 </template>

@@ -19,13 +19,12 @@ export default {
 
 <style>
 .blog-part h1 {
-  @apply text-gray-900 font-bold text-5xl font-sans py-7
+  @apply text-gray-900 font-bold text-4xl md:text-5xl font-sans pt-8 pb-4
 }
-
 .blog-part h2 {
-  @apply text-gray-600 text-4xl py-2 font-semibold border-gray-800 inline-block font-sans
+  @apply text-gray-600 text-3xl md:text-4xl pb-2 font-semibold border-gray-800 inline-block font-sans
 }
 .blog-part p {
-  @apply text-gray-900 text-xl font-normal md:font-serif py-3 leading-9
+  @apply text-gray-900 text-xl font-normal md:font-serif py-2 leading-9
 }
 </style>

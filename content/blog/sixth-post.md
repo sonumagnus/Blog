@@ -7,7 +7,7 @@ category: smartphone
 ---
 
 # Who is Iroman
- ![](/resources/blog-6.jpg)
+ ![](/resources/blog-3.jpg)
  ## Read about Tony Stark
 
  Holland began dancing at a hip hop class at Nifty Feet Dance School in Wimbledon. His potential was spotted by choreographer Lynne Page (who was an associate to Peter Darling, choreographer of Billy Elliot and Billy Elliot the Musical) when he performed with his dance school as part of the 2006 Richmond Dance Festival.<br><br>

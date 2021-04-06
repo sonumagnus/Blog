@@ -56,18 +56,32 @@
               width="25"
               height="25"
               icon-name="bars"
-              class="mt-2.5 mr-3"
+              class="mt-2.5 mr-2.5"
             ></icon-menu
           ></span>
         </span>
       </div>
       <!-- Navbar-Finish -->
-      <div class="w-screen px-4 bg-blue-50 " :class="{ hidden: show }" @click="display">
-        <NuxtLink to="/" class="p-2 block font-bold border-b" @click="display()">Home</NuxtLink>
-        <NuxtLink to="/Blog" class="p-2 block font-bold border-b">Blog</NuxtLink>
-        <NuxtLink to="/News" class="p-2 block font-bold border-b">News</NuxtLink>
-        <NuxtLink to="/contact" class="p-2 block font-bold border-b">Contact</NuxtLink>
-        <NuxtLink to="/" class="p-2 block font-bold border-b">About us</NuxtLink>
+      <div
+        class="w-screen px-4 bg-blue-50"
+        :class="{ hidden: show }"
+        @click="display"
+      >
+        <NuxtLink to="/" class="p-2 block font-bold border-b" @click="display()"
+          >Home</NuxtLink
+        >
+        <NuxtLink to="/Blog" class="p-2 block font-bold border-b"
+          >Blog</NuxtLink
+        >
+        <NuxtLink to="/News" class="p-2 block font-bold border-b"
+          >News</NuxtLink
+        >
+        <NuxtLink to="/contact" class="p-2 block font-bold border-b"
+          >Contact</NuxtLink
+        >
+        <NuxtLink to="/" class="p-2 block font-bold border-b"
+          >About us</NuxtLink
+        >
       </div>
     </div>
   </div>

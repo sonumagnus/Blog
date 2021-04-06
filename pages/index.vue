@@ -1,30 +1,30 @@
 <template>
   <div class="pt-12">
     <newsfeed />
-    <div class="py-14 px-2 flex flex-col justify-between">
-      <div class="flex justify-between mb-2 md:mb-0 mx-2 md:mx-0">
-        <ul class="flex">
-          <li
-            class="font-bold text-2xl lg:text-3xl text-gray-800 md:mb-8 mb-2 mr-2"
+    <div class="py-2 px-2 flex flex-col justify-between">
+      <ul class="flex justify-between mt-5">
+          <li class="flex px-1">
+            <p class="pt-1 text-2xl lg:text-3xl font-bold text-yellow-600 mr-2">
+              Latest
+            </p>
+            <p class="py-1 text-2xl lg:text-3xl font-bold text-green-800">
+              Post
+            </p>
+          </li>
+          <nuxt-link
+            to="/News"
+            class="text-xs rounded-lg py-0.5 px-2 flex justify-center items-center"
           >
-            Latest
-          </li>
-          <li class="font-bold text-2xl lg:text-3xl text-red-600 md:mb-8 mb-2">
-            Post
-          </li>
+            <p class="text-xs px-2 py-0.5 bg-indigo-50 rounded-lg">See all</p>
+            <icon-more
+              width="22"
+              height="22"
+              icon-name="chevron-right"
+            ></icon-more>
+          </nuxt-link>
         </ul>
-        <nuxt-link to="/Blog" class="flex text-sm hover:text-blue-700 pt-2.5">
-          <p>View all</p>
-          <icon-more
-            width="22"
-            height="22"
-            icon-name="angle-double-right"
-            class="py-0.5"
-          ></icon-more>
-        </nuxt-link>
-      </div>
       <div class="articles m-auto">
-        <ul class="grid sm:grid-cols-3 gap-3 sm:gap-5 grid-cols-2">
+        <ul class="grid sm:grid-cols-3 gap-3 sm:gap-5 grid-cols-2 border-t md:border-t-0 rounded-lg pt-3 border-red-300">
           <li class="article w-full" v-for="article of articles" :key="article">
             <nuxt-link :to="`${article.path}`">
               <!-- we can use this too for redirecting to the blog page :to="`/blog/${article.slug}`"-->
