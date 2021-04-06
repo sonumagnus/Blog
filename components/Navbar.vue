@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full shadow bg-gray-100 fixed z-50">
+  <div class="w-full border-b border-gray-400 bg-gray-50 fixed z-50">
     <div class="w-full md:w-5/6 h-auto m-auto">
       <div class="w-full flex justify-between">
         <!--main-Navbar-div-->
@@ -56,18 +56,18 @@
               width="25"
               height="25"
               icon-name="bars"
-              class="mt-2 mr-2"
+              class="mt-2.5 mr-3"
             ></icon-menu
           ></span>
         </span>
       </div>
       <!-- Navbar-Finish -->
-      <div class="w-screen px-3" :class="{ hidden: show }" @click="display">
-        <NuxtLink to="/" class="p-2 block font-medium" @click="display()">Home</NuxtLink>
-        <NuxtLink to="/Blog" class="p-2 block font-medium">Blog</NuxtLink>
-        <NuxtLink to="/News" class="p-2 block font-medium">News</NuxtLink>
-        <NuxtLink to="/contact" class="p-2 block font-medium">Contact</NuxtLink>
-        <NuxtLink to="/" class="p-2 block font-medium">About us</NuxtLink>
+      <div class="w-screen px-4 bg-blue-50 " :class="{ hidden: show }" @click="display">
+        <NuxtLink to="/" class="p-2 block font-bold border-b" @click="display()">Home</NuxtLink>
+        <NuxtLink to="/Blog" class="p-2 block font-bold border-b">Blog</NuxtLink>
+        <NuxtLink to="/News" class="p-2 block font-bold border-b">News</NuxtLink>
+        <NuxtLink to="/contact" class="p-2 block font-bold border-b">Contact</NuxtLink>
+        <NuxtLink to="/" class="p-2 block font-bold border-b">About us</NuxtLink>
       </div>
     </div>
   </div>
