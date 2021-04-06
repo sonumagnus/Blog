@@ -2,10 +2,10 @@
   <div class="container">
     <div class="md:w-5/6 mx-auto">
       <div
-        class="w-[95%] md:w-10/12 mt-8 bg-gray-50 m-auto rounded-xl flex flex-col md:flex-row shadow-md overflow-hidden relative"
+        class="w-[95%] md:w-10/12 pt-20 bg-gray-50 m-auto flex flex-col md:flex-row shadow-md overflow-hidden relative"
       >
         <div
-          class="xs:w-full md:w-1/3 h-auto md:h-[26rem] py-3 bg-purple-800 shadow-lg relative z-10"
+          class="xs:w-full md:w-1/3 h-auto md:h-[26rem] py-3 bg-purple-800 shadow-lg relative z-10 rounded-xl"
         >
           <!--left-div-->
           <h2 class="text-gray-50 text-2xl font-medium p-2 text-center">

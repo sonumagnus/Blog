@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt-12">
     <newsfeed />
     <div class="py-14 px-2 flex flex-col justify-between">
       <div class="flex justify-between mb-2 md:mb-0 mx-2 md:mx-0">

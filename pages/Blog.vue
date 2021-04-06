@@ -3,7 +3,7 @@
     <p v-if="$fetchState.pending">Fetching Blog Posts...</p>
     <p v-else-if="$fetchState.error">An error occurred :(</p>
     <div v-else>
-      <p class="text-2xl font-semibold text-center m-4">All Blogs</p>
+      <p class="text-2xl font-semibold text-center pt-16 p-4">All Blogs</p>
     </div>
     <div class="articles px-1 m-auto">
       <ul class="grid sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 grid-cols-1">
@@ -49,18 +49,6 @@ export default {
 };
 </script>
 
-<style scoped>
-.articles ul li:first-child {
-  @apply sm:col-span-3 lg:col-span-4
-}
-.articles ul li:first-child .article-inner {
-  @apply flex-row overflow-hidden
-}
-.articles ul li:first-child .article-inner img {
-  @apply w-40 sm:w-[350px]
-}
-.articles ul li:first-child .article-inner .detail {
-  @apply pl-4
-}
+<style>
 </style> 
 

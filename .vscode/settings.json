@@ -1,45 +1,46 @@
 {
-    "workbench.colorTheme": "Ayu Mirage Bordered",
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": false,
-    "[vue]": {
-      "editor.defaultFormatter": "octref.vetur"
-    },
-    "eslint.codeAction.showDocumentation": {
-      "enable": false
-    },
-    "eslint.enable": false,
-    "eslint.codeAction.disableRuleComment": {
-      "enable": false
-    },
-    "editor.fontSize": 16,
-    "editor.letterSpacing": 1.1,
-    "editor.tabSize": 6,
-    "editor.lineHeight": 29,
-    "editor.fontWeight": 300,
-    "editor.formatOnType": true,
-    "editor.minimap.enabled": false,
-    "workbench.tree.indent": 10,
-    "workbench.statusBar.visible": false,
-    "workbench.sideBar.location": "left",
-    "editor.renderIndentGuides": false,
-    "workbench.colorCustomizations": {
-      "activityBar.background": "#19172c",
-      "activityBar.foreground": "#f0e7e6",
-      "activityBar.inactiveForeground": "#cf827e",
-      "tab.activeBackground": "#060521",
-      "editor.background": "#141027",
-      "editor.foldBackground": "#ff0000",
-      "sideBar.background": "#060521",
-      "sideBar.foreground": "#d9cbca",
-      "tab.activeBorderTop": "#060521",
-      "tab.activeBorder": "#8684b5"
-    },
-    "editor.wordWrap": "on",
-    "editor.cursorWidth": 2,
-    "editor.fontFamily": "'Work Sans', sans-serif",
-    "editor.fontLigatures": null,
-    "breadcrumbs.enabled": false
-  }
-  
+  "workbench.colorTheme": "Ayu Mirage Bordered",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": false,
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "eslint.codeAction.showDocumentation": {
+    "enable": false
+  },
+  "eslint.enable": false,
+  "eslint.codeAction.disableRuleComment": {
+    "enable": false
+  },
+  "editor.fontSize": 16,
+  "editor.letterSpacing": 1.1,
+  "editor.tabSize": 6,
+  "editor.lineHeight": 29,
+  "editor.fontWeight": 300,
+  "editor.formatOnType": true,
+  "editor.minimap.enabled": true,
+  "workbench.tree.indent": 10,
+  "workbench.statusBar.visible": false,
+  "workbench.sideBar.location": "left",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.letterSpacing": 1,
+  "editor.renderIndentGuides": false,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#19172c",
+    "activityBar.foreground": "#f0e7e6",
+    "activityBar.inactiveForeground": "#cf827e",
+    "tab.activeBackground": "#060521",
+    "editor.background": "#141027",
+    "editor.foldBackground": "#ff0000",
+    "sideBar.background": "#060521",
+    "sideBar.foreground": "#d9cbca",
+    "tab.activeBorderTop": "#060521",
+    "tab.activeBorder": "#8684b5"
+  },
+  "editor.wordWrap": "on",
+  "editor.cursorWidth": 2,
+  "editor.fontFamily": "'Work Sans', sans-serif",
+  "editor.fontLigatures": false,
+  "breadcrumbs.enabled": false
+}
