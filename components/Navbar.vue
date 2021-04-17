@@ -3,15 +3,15 @@
     <div class="w-full md:w-5/6 h-auto m-auto">
       <div class="w-full flex justify-between">
         <!--main-Navbar-div-->
-        <div class="px-4 py-2">
+        <div class="py-2">
           <!--Navbar-Left-Div{Contains: heading}-->
           <nuxt-link to="/">
-            <h1 class="text-2xl font-extrabold">BlogTag</h1>
+            <h1 class="text-2xl font-extrabold px-2 md:px-0">BlogTag</h1>
           </nuxt-link>
         </div>
-        <div class="w-2/5 hidden md:flex justify-between px-3 py-3">
+        <div class="w-2/5 hidden md:flex justify-end py-3">
           <!--Navbar-Right-Div{Contains: Menu, Contact-btn}-->
-          <div>
+          <div class="mr-8">
             <ul class="flex">
               <li>
                 <nuxt-link
@@ -67,7 +67,7 @@
         :class="{ hidden: show }"
         @click="display"
       >
-        <NuxtLink to="/" class="p-2 block font-bold border-b" @click="display()"
+        <NuxtLink to="/" class="p-2 block font-bold border-b"
           >Home</NuxtLink
         >
         <NuxtLink to="/Blog" class="p-2 block font-bold border-b"
@@ -79,7 +79,7 @@
         <NuxtLink to="/contact" class="p-2 block font-bold border-b"
           >Contact</NuxtLink
         >
-        <NuxtLink to="/" class="p-2 block font-bold border-b"
+        <NuxtLink to="/icons" class="p-2 block font-bold border-b"
           >About us</NuxtLink
         >
       </div>

@@ -1,14 +1,14 @@
 ---
-title: this is the title of news, climate change is a very big problem for this world. we should focus on this problem
+title: This is the title of news, climate change is a very big problem for this world. we should focus on this problem
 description: The description for news blog. his is the description for news blog. But here i will have to write a more long description for jst the purpose of testing
 slug: news-2
 img: news-2.jpg
-category: Phones
+category: "#Phones"
 ---
 
 # hello there, 2nd news is here
 ![](/resources/blog-6.jpg)
-## Are you okay and want to visit us
+## Who is Spider Man
 _well, this is the news section writing blog for testing purpose_
 
-hello there do you know Pubg mobile india soon gonna launch in india as per indian governet misintery of informantion and technoly.
+hello there do you know Pubg mobile india soon gonna launch in india as per indian government and misintery of informantion & technoly.

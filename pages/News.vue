@@ -13,7 +13,7 @@
             <div
               class="article-inner border flex hover:shadow-md overflow-hidden rounded-lg"
             >
-              <img :src="`/resources/${doc.img}`" class=" w-2/5 h-auto" />
+              <img :src="`/resources/${doc.img}`" class="w-2/5 h-auto" />
               <div
                 class="detail p-1 md:p-2 md:px-4 md:h-[102px] overflow-hidden w-3/5 h-24 md:h-[100px] lg:h-32"
               >
@@ -25,7 +25,7 @@
                 <p
                   class="text-gray-500 text-lg md:h-16 lg:h-24 md:line-clamp-1 lg:line-clamp-2 hidden sm:block description"
                 >
-                  {{ doc.description }}   
+                  {{ doc.description }}
                 </p>
               </div>
             </div>
@@ -49,17 +49,5 @@ export default {
 };
 </script>
 
-<style scoped>
-.articles ul li:first-child {
-  @apply sm:row-span-3
-}
-.articles ul li:first-child .article-inner {
-  @apply overflow-hidden md:flex-col
-}
-.articles ul li:first-child .article-inner img {
-  @apply h-auto w-2/5 md:w-full
-}
-.articles ul li:first-child .article-inner .detail {
-  @apply pl-4 w-full md:h-auto
-}
+<style>
 </style> 

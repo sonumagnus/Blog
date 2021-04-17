@@ -1,6 +1,6 @@
 ---
 title: This is the title of news Section where we disscuss about the latest news & Updates
-description: this is the description for news blog
+description: This is the description for news blog
 slug: news-4
 img: blog-3.jpg
 category: Android

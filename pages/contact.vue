@@ -8,24 +8,24 @@
           class="xs:w-full md:w-1/3 h-auto md:h-[26rem] py-3 bg-purple-800 relative z-10 rounded-xl"
         >
           <!--left-div-->
-          <h2 class="text-gray-50 text-2xl font-medium p-2 text-center">
+          <h2 class="text-gray-50 text-xl font-medium p-2 text-center">
             Contact Information
           </h2>
           <div class="h-1/4 w-full flex justify-evenly py-2 md:pt-8 px-4 text-gray-100">
             <!--left-mid-div-->
             <icon-facebook
-              width="34"
-              height="34"
+              width="28"
+              height="28"
               icon-name="facebook"
             ></icon-facebook>
             <icon-insta
-              width="35"
-              height="35"
+              width="28"
+              height="28"
               icon-name="Instagram"
             ></icon-insta>
             <icon-envelope
-              width="35"
-              height="35"
+              width="28"
+              height="28"
               icon-name="Envelope"
             ></icon-envelope>
           </div>

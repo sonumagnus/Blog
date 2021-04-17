@@ -50,7 +50,7 @@
             </li>
           </ul>
         </div>
-        <div class="w-1/2 overflow-hidden hidden md:inline">
+        <div class="w-1/2 overflow-hidden hidden md:inline pt-5">
           <img src="resources/Right-Giant.jpg" class="rounded-2xl my-auto" />
         </div>
       </div>

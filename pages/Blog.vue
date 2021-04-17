@@ -13,7 +13,10 @@
             <div
               class="article-inner border flex sm:flex-col hover:shadow-md overflow-hidden rounded-lg"
             >
-              <img :src="`/resources/${article.img}`" class="block w-40 sm:w-full" />
+              <img
+                :src="`/resources/${article.img}`"
+                class="block w-40 sm:w-full"
+              />
               <div
                 class="detail p-1 md:p-2 md:px-4 h-24 md:h-[165px] lg:h-[170px] overflow-hidden"
               >
@@ -25,7 +28,7 @@
                 <p
                   class="text-gray-500 sm:px-3 md:p-0 text-lg h-auto lg:h-16 lg:line-clamp-2 description hidden sm:block"
                 >
-                  {{ article.description }}   
+                  {{ article.description }}
                 </p>
               </div>
             </div>
