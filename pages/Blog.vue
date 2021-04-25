@@ -3,7 +3,7 @@
     <p v-if="$fetchState.pending">Fetching Blog Posts...</p>
     <p v-else-if="$fetchState.error">An error occurred :(</p>
     <div v-else>
-      <p class="text-2xl font-semibold text-center pt-16 p-4">All Blogs</p>
+      <p class="text-2xl font-bold text-center p-4">All Blogs</p>
     </div>
     <div class="articles px-1 m-auto">
       <ul class="grid sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 grid-cols-1">

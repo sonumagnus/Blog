@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <div class="md:w-5/6 mx-auto">
+    <div class="lg:w-5/6 mx-auto pt-4">
       <div
-        class="w-[95%] md:w-10/12 pt-20 bg-gray-50 m-auto flex flex-col md:flex-row shadow-md overflow-hidden relative"
+        class="w-[95%] md:w-10/12 bg-gray-50 m-auto flex flex-col md:flex-row shadow-md overflow-hidden relative rounded-xl md:my-9"
       >
         <div
-          class="xs:w-full md:w-1/3 h-auto md:h-[26rem] py-3 bg-purple-800 relative z-10 rounded-xl"
+          class="xs:w-full md:w-2/5 h-auto md:h-[26rem] py-3 bg-purple-800 relative z-10"
         >
           <!--left-div-->
           <h2 class="text-gray-50 text-xl font-medium p-2 text-center">
@@ -49,16 +49,16 @@
               <h5 class="mb-1 font-medium">First Name</h5>
               <input
                 type="text"
-                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full bg-gray-50"
-                placeholder="Sonu"
+                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full bg-gray-50 transition-colors duration-500"
+                placeholder="Tom"
               />
             </div>
             <div class="text-gray-700 md:w-2/5 w-4/5 py-3 md:py-0">
               <h5 class="mb-1 font-medium">Last Name</h5>
               <input
                 type="text"
-                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full bg-gray-50"
-                placeholder="Lodha"
+                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full bg-gray-50 transition-colors duration-500"
+                placeholder="Holland"
               />
             </div>
             <div class="text-gray-700 md:w-2/5 w-4/5 py-3 md:py-0">
@@ -67,8 +67,8 @@
                 type="email"
                 name=""
                 id=""
-                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full bg-gray-50"
-                placeholder="Enter Email"
+                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full bg-gray-50 transition-colors duration-500"
+                placeholder="example@gmail.com"
               />
             </div>
             <div class="text-gray-700 md:w-2/5 w-4/5 py-3 md:py-0">
@@ -77,8 +77,8 @@
                 type="number"
                 name=""
                 id=""
-                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full bg-gray-50"
-                placeholder="Enter Phone Number"
+                class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full bg-gray-50 transition-colors duration-500"
+                placeholder="12345-67890"
               />
             </div>
           </div>
@@ -90,7 +90,7 @@
                 id=""
                 cols="45"
                 rows="3"
-                class="resize-none outline-none rounded-lg px-4 pt-2 pb-1 border-2 border-gray-400 focus:border-2 focus:border-gray-800 w-full bg-gray-50"
+                class="resize-none outline-none rounded-lg px-4 pt-2 pb-1 border-2 border-gray-400 focus:border-2 focus:border-gray-800 w-full bg-gray-50 transition-colors duration-500"
                 placeholder="Write Your Message here..."
               ></textarea>
             </div>
@@ -99,7 +99,7 @@
           <div class="flex justify-center md:justify-end px-16 py-1 md:py-0">
             <button
               type="submit"
-              class="px-3 py-2 bg-purple-900 hover:bg-purple-700 text-gray-50 rounded-lg font-semibold focus:outline-none shadow-lg"
+              class="px-3 py-2 bg-purple-900 hover:bg-purple-700 text-gray-50 rounded-xl font-semibold focus:outline-none shadow-lg transition-colors duration-700"
             >
               Send Message
             </button>

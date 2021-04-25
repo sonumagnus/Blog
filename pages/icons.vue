@@ -1,7 +1,7 @@
 <template>
 <div>
 <div
-class="grid p-10 md:p-16 grid-cols-5 md:grid-cols-10 gap-8 text-3xl md:text-5xl text-gray-500 pt-4"
+class="grid p-10 grid-cols-5 md:grid-cols-10 gap-8 text-3xl md:text-5xl text-gray-500 pt-4"
 >
 <i class="fad fa-arrows-h"></i>
 <i class="fas fa-chevron-left"></i>

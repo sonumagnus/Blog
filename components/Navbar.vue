@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full border-b border-gray-400 bg-gray-50 fixed z-50">
+  <div class="w-full border-b border-gray-400 bg-gray-50 fixed">
     <div class="w-full md:w-5/6 h-auto m-auto">
       <div class="w-full flex justify-between">
         <!--main-Navbar-div-->
@@ -43,7 +43,7 @@
             <!--Contact-button-Container-div-->
             <nuxt-link
               to="/contact"
-              class="px-4 py-2 bg-purple-800 text-pink-50 hover:bg-purple-600 rounded"
+              class="px-4 py-2 bg-purple-700 text-pink-50 hover:bg-green-800 rounded-full transition-colors duration-700 font-medium"
             >
               Contact
             </nuxt-link>
@@ -63,24 +63,25 @@
       </div>
       <!-- Navbar-Finish -->
       <div
-        class="w-screen px-4 bg-blue-50"
-        :class="{ hidden: show }"
+        class="w-1/2 h-screen px-4 bg-blue-50 fixed -left-full transition-all duration-300 mt-px"
+        :class="{ 'left-0': show }"
         @click="display"
       >
-        <NuxtLink to="/" class="p-2 block font-bold border-b"
-          >Home</NuxtLink
-        >
-        <NuxtLink to="/Blog" class="p-2 block font-bold border-b"
+        <NuxtLink to="/" class="p-3 block font-bold border-b">Home</NuxtLink>
+        <NuxtLink to="/Blog" class="p-3 block font-bold border-b"
           >Blog</NuxtLink
         >
-        <NuxtLink to="/News" class="p-2 block font-bold border-b"
+        <NuxtLink to="/News" class="p-3 block font-bold border-b"
           >News</NuxtLink
         >
-        <NuxtLink to="/contact" class="p-2 block font-bold border-b"
+        <NuxtLink to="/contact" class="p-3 block font-bold border-b"
           >Contact</NuxtLink
         >
-        <NuxtLink to="/icons" class="p-2 block font-bold border-b"
+        <NuxtLink to="/icons" class="p-3 block font-bold border-b"
           >About us</NuxtLink
+        >
+        <NuxtLink to="/privacy" class="p-3 block font-bold border-b"
+          >Privacy Policy</NuxtLink
         >
       </div>
     </div>
@@ -94,7 +95,7 @@ export default {
     IconMenu,
   },
   data() {
-    return { show: true };
+    return { show: false };
   },
   methods: {
     display() {
