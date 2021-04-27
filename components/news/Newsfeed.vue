@@ -21,7 +21,7 @@
             <icon-more
               width="22"
               height="22"
-              icon-name="chevron-right"
+              iconName="chevron-right"
             ></icon-more>
           </nuxt-link>
         </ul>

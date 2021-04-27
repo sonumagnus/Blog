@@ -19,7 +19,7 @@
             <icon-more
               width="22"
               height="22"
-              icon-name="chevron-right"
+              iconName="chevron-right"
             ></icon-more>
           </nuxt-link>
         </ul>
@@ -35,6 +35,7 @@
                 <div
                   class="detail p-1 md:p-2 md:px-4 h-24 lg:h-44 overflow-hidden"
                 >
+                <p>{{ article.date }}</p>
                   <h3
                     class="text-gray-800 p-1 sm:p-3 md:p-0 md:text-xl font-bold mb-3 line-clamp-3 h-[75px] sm:h-20 md:h-[85px]"
                   >
@@ -62,7 +63,7 @@ export default {
   components: { Newsfeed, IconMore },
   async asyncData({ $content, params }) {
     const articles = await $content("blog", params.slug)
-      // .only(["title", "description", "img", "slug"])
+      .only(["title", "description", "img", "date", "slug"])
       .sortBy("createdAt", "asc")
       .fetch();
     return {

@@ -74,7 +74,7 @@
             <div class="text-gray-700 md:w-2/5 w-4/5 py-3 md:py-0">
               <h5 class="mb-1 font-medium">Phone</h5>
               <input
-                type="number"
+                type="phone"
                 name=""
                 id=""
                 class="pb-2 outline-none border-b-2 focus:border-b-2 focus:border-gray-800 border-gray-400 w-full bg-gray-50 transition-colors duration-500"
