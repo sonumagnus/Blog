@@ -64,8 +64,8 @@
       <!-- Navbar-Finish -->
       <div class="h-screen top-0 bottom-0 left-0 right-0 fixed bg-gray-900 bg-opacity-50 z-40" :class="{ 'block': show, 'hidden': !show }" @click="display"></div>
       <div
-        class="w-1/2 h-screen px-4 bg-blue-50 fixed -left-full transition-all duration-300 mt-px z-50 top-0"
-        :class="{ 'left-0': show }"
+        class="w-1/2 h-screen px-4 bg-blue-50 fixed transition-all duration-300 mt-px z-50 top-0 pt-16"
+        :class="{ 'left-0': show, '-left-full': !show }"
         @click="display"
       >
         <NuxtLink to="/" class="p-3 block font-bold border-b">Home</NuxtLink>
