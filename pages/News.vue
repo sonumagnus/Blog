@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <p v-if="$fetchState.pending">Fetching Blog Posts...</p>
     <p v-else-if="$fetchState.error">An error occurred :(</p>
     <div v-else>

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full border-b border-gray-400 bg-gray-50 fixed">
+  <div class="w-full border-b border-gray-400 bg-gray-50">
     <div class="w-full md:w-5/6 h-auto m-auto">
       <div class="w-full flex justify-between">
         <!--main-Navbar-div-->

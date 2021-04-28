@@ -1,7 +1,7 @@
 <template>
-  <div class="relative">
-    <Navbar class="z-30" />
-    <Nuxt class="md:w-11/12 m-auto md:px-8 pt-12 z-20 min-h-screen" />
+  <div>
+    <Navbar class=" sticky top-0 z-50"/>
+    <Nuxt class="md:w-5/6 m-auto  min-h-screen" />
     <Footer />
   </div>
 </template>

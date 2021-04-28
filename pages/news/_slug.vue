@@ -1,5 +1,5 @@
 <template>
-  <div class="container m-auto pt-8">
+  <div class="container m-auto">
     <article class="blog-section w-[90%] md:w-3/4 m-auto md:px-16">
       <nuxt-content :document="doc" />
     </article>

@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div class="lg:w-5/6 mx-auto pt-4">
+    <div class="lg:w-5/6 mx-auto mt-12">
       <div
-        class="w-[95%] md:w-10/12 bg-gray-50 m-auto flex flex-col md:flex-row shadow-md overflow-hidden relative rounded-xl md:my-9"
+        class="w-[95%] md:w-10/12 bg-gray-50 m-auto flex flex-col md:flex-row shadow-md overflow-hidden relative rounded-xl"
       >
         <div
           class="xs:w-full md:w-2/5 h-auto md:h-[26rem] py-3 bg-purple-800 relative z-10"

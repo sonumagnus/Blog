@@ -17,12 +17,12 @@
             to="/News"
             class="text-xs rounded-lg py-0.5 px-2 flex justify-center items-center"
           >
-            <p class="text-xs px-2 py-0.5 bg-indigo-50 rounded-lg">See all</p>
+            <span class="text-xs px-2 py-0.5 bg-indigo-50 rounded-xl flex items-center">See all
             <icon-more
               width="22"
               height="22"
               iconName="chevron-right"
-            ></icon-more>
+            ></icon-more></span>
           </nuxt-link>
         </ul>
       </div>
