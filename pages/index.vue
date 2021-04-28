@@ -63,7 +63,7 @@ export default {
   components: { Newsfeed, IconMore },
   async asyncData({ $content, params }) {
     const articles = await $content("blog", params.slug)
-      .only(["title", "description", "img", "date", "slug"])
+      // .only(["title", "description", "img", "date", "slug"])
       .sortBy("createdAt", "asc")
       .fetch();
     return {
