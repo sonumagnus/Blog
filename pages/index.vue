@@ -35,7 +35,7 @@
                 <div
                   class="detail p-1 md:p-2 md:px-4 h-24 lg:h-44 overflow-hidden"
                 >
-                <p>{{ article.date }}</p>
+                <!-- <p>{{ article.date }}</p> -->
                   <h3
                     class="text-gray-800 p-1 sm:p-3 md:p-0 md:text-xl font-bold mb-3 line-clamp-3 h-[75px] sm:h-20 md:h-[85px]"
                   >
