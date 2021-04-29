@@ -1,14 +1,13 @@
 ---
-title: I tried planking for 5 minutes every day for a month and it made my back feel great
-description: This is description part. here we can write a really long description
-slug: third-post
-img: blog-3.jpg
-category: smartphone
+author:
+  name: Benjamin
+  bio: All about Benjamin
+  image: https://images.unsplash.com/.....
 ---
 
-# this is the most useful heading
- 
-![images](/resources/blog-6.jpg)
+
+# Asus is the big tech company
+ ![images](/resources/blog-2.jpg)
  ## Welcome to sub-heading
 
  Holland began dancing at a hip hop class at Nifty Feet Dance School in Wimbledon. His potential was spotted by choreographer Lynne Page (who was an associate to Peter Darling, choreographer of Billy Elliot and Billy Elliot the Musical) when he performed with his dance school as part of the 2006 Richmond Dance Festival.<br><br>

@@ -64,7 +64,7 @@
       <!-- Navbar-Finish -->
       <div class="h-screen top-0 bottom-0 left-0 right-0 fixed bg-gray-900 bg-opacity-50 z-40" :class="{ 'block': show, 'hidden': !show }" @click="display"></div>
       <div
-        class="w-1/2 h-screen px-4 bg-blue-50 fixed transition-all duration-300 mt-px z-50 top-0 pt-16"
+        class="w-3/5 h-screen px-4 bg-gray-800 fixed transition-all duration-300 text-gray-50 z-50 top-0 pt-16 pl-6"
         :class="{ 'left-0': show, '-left-full': !show }"
         @click="display"
       >

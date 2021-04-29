@@ -1,6 +1,5 @@
 <template>
   <div>
-    <newsfeed />
     <div class="py-2 px-2 flex flex-col justify-between">
       <ul class="flex justify-between mt-5">
         <li class="flex px-1">
@@ -9,21 +8,6 @@
           </p>
           <p class="py-1 text-2xl lg:text-3xl font-bold text-green-800">Post</p>
         </li>
-        <nuxt-link
-          to="/Blog"
-          class="text-xs rounded-lg py-0.5 px-2 flex justify-center items-center"
-        >
-          <span
-            class="text-xs px-2 py-0.5 bg-indigo-50 rounded-xl flex items-center"
-            >See all
-            <icon-more
-              width="10"
-              height="10"
-              iconName="chevron-right"
-              class="ml-0.5"
-            ></icon-more
-          ></span>
-        </nuxt-link>
       </ul>
       <div class="articles m-auto">
         <ul
@@ -68,21 +52,22 @@
 </template>
 
 <script>
-import Newsfeed from "~/components/news/Newsfeed";
 import IconMore from "~/components/icons/ui/IconMore";
 import IconClock from "~/components/icons/ui/IconClock";
 export default {
-  components: { Newsfeed, IconMore, IconClock },
-  async asyncData({ $content, params }) {
-    const articles = await $content("blog/Gadgets", params.slug)
-      // .only(["title", "description", "img", "date", "slug"])
-      .sortBy("createdAt", "asc")
-      .fetch();
+  components: { IconMore, IconClock },
+  data() {
     return {
-      articles,
+      articles: [],
     };
   },
-  methods: {
+  async fetch() {
+    this.articles = await this.$content("blog/Gadgets")
+    .where({
+          category: "smartphone"
+    }).fetch();
+  },
+    methods: {
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);

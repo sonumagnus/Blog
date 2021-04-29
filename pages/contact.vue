@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="lg:w-5/6 mx-auto mt-12">
+    <div class="lg:w-5/6 mx-auto mt-2 md:mt-12">
       <div
         class="w-[95%] md:w-10/12 bg-gray-50 m-auto flex flex-col md:flex-row shadow-md overflow-hidden relative rounded-xl"
       >

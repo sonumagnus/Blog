@@ -1,25 +1,13 @@
 <template>
-  <div class="mt-4">
-    <span
-      class="px-1.5 mx-2 py-1.5 mt-2 bg-gray-200 rounded-lg text-gray-800"
-      @click="displayall"
-      >#All Blogs</span
-    >
-    <span
-       class="px-1.5 mx-2 py-1.5 mt-2 bg-gray-200 rounded-lg text-gray-800"
-      @click="displaygadgets"
-      >#Gadgets</span
-    >
-    <span
-       class="px-1.5 mx-2 py-1.5 mt-2 bg-gray-200 rounded-lg text-gray-800"
-      @click="displayphone"
-      >#Phone</span
-    >
-    <Gadgets :class="{ hidden: !showtwo, block: showtwo }" />
-    <Phone :class="{ hidden: !showthree, block: showthree }" />
-    <div :class="{ hidden: !showone, block: showone }">
-      <div class="px-2 flex flex-col justify-between mb-3">
-        <ul class="flex justify-between mt-2">
+  <div class="py-4">
+    <span class="px-3 py-1.5 mt-2 bg-blue-800 rounded-lg text-white" @click="displayall">All Blogs</span>
+    <span class="px-3 py-1.5 mt-2 bg-blue-800 rounded-lg text-white" @click="displaygadgets">Gadgets</span>
+    <span class="px-3 py-1.5 mt-2 bg-blue-800 rounded-lg text-white" @click="displayphone">Phone</span>
+    <Gadgets :class="{ 'hidden': !showtwo, 'block': showtwo }" />
+    <Phone :class="{ 'hidden': !showthree, 'block': showthree }"/>
+    <div :class="{ 'hidden': !showone, 'block': showone }">
+      <div class="py-2 px-2 flex flex-col justify-between">
+        <ul class="flex justify-between mt-5">
           <li class="flex px-1">
             <p class="pt-1 text-2xl lg:text-3xl font-bold text-yellow-600 mr-2">
               Latest
@@ -105,14 +93,20 @@ export default {
       return new Date(date).toLocaleDateString("en", options);
     },
     displayall() {
-      (this.showone = true), (this.showtwo = false), (this.showthree = false);
+      this.showone = true,
+      this.showtwo = false,
+      this.showthree = false
     },
-    displaygadgets() {
-      (this.showone = false), (this.showtwo = true), (this.showthree = false);
+    displaygadgets(){
+      this.showone = false,
+      this.showtwo = true,
+      this.showthree = false
     },
-    displayphone() {
-      (this.showone = false), (this.showtwo = false), (this.showthree = true);
-    },
+    displayphone(){
+      this.showone = false,
+      this.showtwo = false,
+      this.showthree = true
+    }
   },
 };
 </script>

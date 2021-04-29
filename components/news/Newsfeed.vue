@@ -19,9 +19,9 @@
           >
             <span class="text-xs px-2 py-0.5 bg-indigo-50 rounded-xl flex items-center">See all
             <icon-more
-              width="22"
-              height="22"
-              iconName="chevron-right"
+              width="10"
+              height="10"
+              iconName="chevron-right" class="ml-0.5"
             ></icon-more></span>
           </nuxt-link>
         </ul>

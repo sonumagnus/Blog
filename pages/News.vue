@@ -1,8 +1,6 @@
 <template>
   <div>
-    <p v-if="$fetchState.pending">Fetching Blog Posts...</p>
-    <p v-else-if="$fetchState.error">An error occurred :(</p>
-    <div v-else>
+    <div>
       <p class="text-2xl font-bold text-center p-4">All News</p>
     </div>
     <div class="articles px-1 m-auto">
@@ -11,22 +9,17 @@
           <nuxt-link :to="`${doc.path}`">
             <!-- we can use this too for redirecting to the blog page :to="`/blog/${article.slug}`"-->
             <div
-              class="article-inner border flex hover:shadow-md overflow-hidden rounded-lg"
+              class="border flex hover:shadow-md rounded-lg overflow-hidden"
             >
-              <img :src="`/resources/${doc.img}`" class="w-2/5 h-auto" />
-              <div
-                class="detail p-1 md:p-2 md:px-4 md:h-[102px] overflow-hidden w-3/5 h-24 md:h-[100px] lg:h-32"
-              >
-                <h3
-                  class="text-gray-800 p-1  md:p-0 md:text-lg font-bold line-clamp-3 md:line-clamp-2 h-20 md:h-[90px]"
-                >
-                  {{ doc.title }}
-                </h3>
-                <p
-                  class="text-gray-500 text-lg h-16 md:h-24 md:line-clamp-1 lg:line-clamp-2 hidden sm:block description"
-                >
-                  {{ doc.description }}
-                </p>
+              <img :src="`/resources/${doc.img}`" class="w-[47%] h-[7.5rem] md:h-auto" />
+              <div class="h-auto w-[53%] px-2 flex flex-col justify-between">
+                <p class="text-lg font-bold line-clamp-2 md:line-clamp-3">{{ doc.title }}</p>
+                <p class="text-base line-clamp-2 description">{{ doc.description }}</p>
+                <span class="flex items-center h-auto relative bottom-0">
+                  <icon-clock width="11" height="11" icon-name="clock" class=" mr-1 "></icon-clock>
+                 <p class="text-xs">{{ formatDate(doc.createdAt) }}</p>
+                </span>
+                <p></p>
               </div>
             </div>
           </nuxt-link>
@@ -37,14 +30,23 @@
 </template>
 
 <script>
+import IconClock from "~/components/icons/ui/IconClock";
 export default {
-  data() {
+  components:{ IconClock },
+  async asyncData({ $content, params }) {
+    const docs = await $content("news", params.slug)
+      // .only(["title", "description", "img", "date", "slug"])
+      .sortBy("createdAt", "asc")
+      .fetch();
     return {
-      docs: [],
+      docs,
     };
   },
-  async fetch() {
-    this.docs = await this.$content("news").fetch();
+  methods: {
+    formatDate(date) {
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      return new Date(date).toLocaleDateString("en", options);
+    },
   },
 };
 </script>

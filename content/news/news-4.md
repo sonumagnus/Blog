@@ -13,4 +13,4 @@ _well, this is the news section writing blog for testing purpose_
 
 ## Second Heading 
 
-hello there do you know Pubg mobile india soon gonna launch in india as per indian governet misintery of informantion and technoly.
+hello there do you know PUBG mobile India soon gonna launch in India as per Indian  Government of information and technology
