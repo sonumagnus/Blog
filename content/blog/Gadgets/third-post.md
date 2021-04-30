@@ -6,7 +6,7 @@ img: blog-3.jpg
 category: Android
 ---
 
-# this is the most useful heading
+# This is the most useful heading
  
 ![images](/resources/blog-6.jpg)
  ## Welcome to sub-heading
