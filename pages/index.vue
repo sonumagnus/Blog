@@ -11,16 +11,15 @@
         </li>
         <nuxt-link
           to="/Blog"
-          class="text-xs rounded-lg py-0.5 px-2 flex justify-center items-center"
+          class="text-xs rounded-lg py-0.5 flex justify-center items-center"
         >
           <span
-            class="text-xs px-2 py-0.5 bg-indigo-50 rounded-xl flex items-center"
+            class="text-xs px-1.5 py-0.5 bg-indigo-50 rounded-xl flex items-center"
             >See all
             <icon-more
               width="10"
               height="10"
               iconName="chevron-right"
-              class="ml-0.5"
             ></icon-more
           ></span>
         </nuxt-link>
@@ -39,19 +38,19 @@
                 <div
                   class="detail p-1 md:p-2 md:px-4 h-24 lg:h-44 overflow-hidden"
                 >
-                  <div class="flex">
+                  <div class="flex px-[5px]">
                     <icon-clock
                       width="10"
                       height="10"
-                      icon-name="clock" class="mr-1 mt-[3px]"
+                      icon-name="clock" class="mr-1 mt-0.5 md:mt-[3px]"
                     ></icon-clock>
                     <p class="text-xs">{{ formatDate(article.createdAt) }}</p>
                   </div>
-                  <h3
-                    class="text-gray-800 p-1 sm:p-3 md:p-0 md:text-xl font-bold mb-1.5 line-clamp-3 h-[75px] sm:h-20 md:h-[85px]"
+                  <p
+                    class="text-gray-800 px-1 md:p-0 md:text-xl font-bold mb-1.5 line-clamp-3 h-[75px] sm:h-20 md:h-[85px]"
                   >
                     {{ article.title }}
-                  </h3>
+                  </p>
                   <p
                     class="text-gray-500 text-lg h-auto lg:h-16 lg:line-clamp-2 hidden"
                   >

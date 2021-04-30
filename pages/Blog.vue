@@ -1,25 +1,25 @@
 <template>
-  <div class="mt-4">
-    <span
-      class="px-1.5 mx-2 py-1.5 mt-2 bg-gray-200 rounded-lg text-gray-800"
+  <div>
+    <button
+      class="px-1.5 mx-2 py-1 mt-2 bg-gray-200 rounded-lg text-gray-800 font-semibold focus:outline-none focus:bg-blue-800 focus:text-white"
       @click="displayall"
-      >#All Blogs</span
+      >#All Blogs</button
     >
-    <span
-       class="px-1.5 mx-2 py-1.5 mt-2 bg-gray-200 rounded-lg text-gray-800"
+    <button
+       class="px-1.5 mx-2 py-1 mt-2 bg-gray-200 rounded-lg text-gray-800 font-semibold focus:outline-none focus:bg-blue-800 focus:text-white"
       @click="displaygadgets"
-      >#Gadgets</span
+      >#Gadgets</button
     >
-    <span
-       class="px-1.5 mx-2 py-1.5 mt-2 bg-gray-200 rounded-lg text-gray-800"
+    <button
+       class="px-1.5 mx-2 py-1 mt-2 bg-gray-200 rounded-lg text-gray-800 font-semibold focus:outline-none focus:bg-blue-800 focus:text-white"
       @click="displayphone"
-      >#Phone</span
+      >#Phone</button
     >
     <Gadgets :class="{ hidden: !showtwo, block: showtwo }" />
     <Phone :class="{ hidden: !showthree, block: showthree }" />
     <div :class="{ hidden: !showone, block: showone }">
       <div class="px-2 flex flex-col justify-between mb-3">
-        <ul class="flex justify-between mt-2">
+        <ul class="flex justify-between mt-1">
           <li class="flex px-1">
             <p class="pt-1 text-2xl lg:text-3xl font-bold text-yellow-600 mr-2">
               Latest
@@ -50,20 +50,20 @@
                   <div
                     class="detail p-1 md:p-2 md:px-4 h-24 lg:h-44 overflow-hidden"
                   >
-                    <div class="flex">
+                    <div class="flex px-[5px]">
                       <icon-clock
                         width="10"
                         height="10"
                         icon-name="clock"
-                        class="mr-1 mt-[3px]"
+                        class="mr-1 mt-0.5 md:mt-[3px]"
                       ></icon-clock>
                       <p class="text-xs">{{ formatDate(article.createdAt) }}</p>
                     </div>
-                    <h3
-                      class="text-gray-800 p-1 sm:p-3 md:p-0 md:text-xl font-bold mb-1.5 line-clamp-3 h-[75px] sm:h-20 md:h-[85px]"
+                    <p
+                      class="text-gray-800 px-1 md:p-0 md:text-xl font-bold mb-1.5 line-clamp-3 h-[75px] sm:h-20 md:h-[85px]"
                     >
                       {{ article.title }}
-                    </h3>
+                    </p>
                     <p
                       class="text-gray-500 text-lg h-auto lg:h-16 lg:line-clamp-2 hidden"
                     >

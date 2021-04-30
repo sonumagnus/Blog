@@ -4,7 +4,7 @@
   <div v-else>
     <div class="w-full m-auto px-2">
       <div>
-        <ul class="flex justify-between pt-4 px-1">
+        <ul class="flex justify-between mt-4 px-1">
           <li class="flex">
             <p class="text-2xl lg:text-3xl font-bold text-yellow-600 mr-2">
               Latest
@@ -15,13 +15,13 @@
           </li>
           <nuxt-link
             to="/News"
-            class="text-xs rounded-lg py-0.5 px-2 flex justify-center items-center"
+            class="text-xs rounded-lg py-0.5 flex justify-center items-center"
           >
-            <span class="text-xs px-2 py-0.5 bg-indigo-50 rounded-xl flex items-center">See all
+            <span class="text-xs px-1.5 py-0.5 bg-indigo-50 rounded-xl flex items-center">See all
             <icon-more
               width="10"
               height="10"
-              iconName="chevron-right" class="ml-0.5"
+              iconName="chevron-right"
             ></icon-more></span>
           </nuxt-link>
         </ul>
