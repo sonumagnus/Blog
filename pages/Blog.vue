@@ -1,18 +1,21 @@
 <template>
   <div>
     <button
-      class="px-1.5 mx-2 py-1 mt-2 bg-gray-200 rounded-lg text-gray-800 font-semibold focus:outline-none focus:bg-blue-800 focus:text-white"
+      class="px-1.5 mx-2 py-1 mt-2 bg-gray-200 rounded-lg text-gray-800 font-semibold focus:outline-none"
       @click="displayall"
+      :class="{[`bg-blue-800 text-white`]:showone, 'bg-gray-200': !showone}"
       >#All Blogs</button
     >
     <button
-       class="px-1.5 mx-2 py-1 mt-2 bg-gray-200 rounded-lg text-gray-800 font-semibold focus:outline-none focus:bg-blue-800 focus:text-white"
+       class="px-1.5 mx-2 py-1 mt-2 bg-gray-200 rounded-lg font-semibold focus:outline-none"
       @click="displaygadgets"
+      :class="{[`bg-blue-800 text-white`]:showtwo, 'bg-gray-200': !showtwo}"
       >#Gadgets</button
     >
     <button
-       class="px-1.5 mx-2 py-1 mt-2 bg-gray-200 rounded-lg text-gray-800 font-semibold focus:outline-none focus:bg-blue-800 focus:text-white"
+       class="px-1.5 mx-2 py-1 mt-2 rounded-lg font-semibold focus:outline-none"
       @click="displayphone"
+      :class="{[`bg-blue-800 text-white`]:showthree, 'bg-gray-200': !showthree}"
       >#Phone</button
     >
     <Gadgets :class="{ hidden: !showtwo, block: showtwo }" />

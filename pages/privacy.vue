@@ -1,5 +1,5 @@
 <template>
-  <div class="text-xl px-2 text-center">
+  <div class="text-xl px-2 text-center font-serif">
     <p class="text-3xl text-gray-800 font-bold italic underline py-5">
       Privacy Policy
     </p>
