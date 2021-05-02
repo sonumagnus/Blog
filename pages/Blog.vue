@@ -1,7 +1,7 @@
 <template>
   <div>
     <button
-      class="px-1.5 mx-2 py-1 mt-2 bg-gray-200 rounded-lg text-gray-800 font-semibold focus:outline-none"
+       class="px-1.5 mx-2 py-1 mt-2 bg-gray-200 rounded-lg font-semibold focus:outline-none"
       @click="displayall"
       :class="{[`bg-blue-800 text-white`]:showone, 'bg-gray-200': !showone}"
       >#All Blogs</button
@@ -53,7 +53,7 @@
                   <div
                     class="detail p-1 md:p-2 md:px-4 h-24 lg:h-44 overflow-hidden"
                   >
-                    <div class="flex px-[5px]">
+                    <div class="flex px-[5px] md:px-0.5">
                       <icon-clock
                         width="10"
                         height="10"

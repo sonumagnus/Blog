@@ -15,7 +15,7 @@
               />
               <div class="h-auto px-2.5 py-0.5">
                 <p
-                  class="text-medium md:text-lg font-bold line-clamp-3 text-gray-700 leading-6 md:leading-7"
+                  class="text-medium md:text-lg font-bold line-clamp-3 text-gray-700 leading-6 md:leading-7 md:px-1"
                 >
                   {{ doc.title }}
                 </p> 

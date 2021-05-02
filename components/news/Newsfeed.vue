@@ -4,7 +4,7 @@
   <div v-else>
     <div class="w-full m-auto px-2">
       <div>
-        <ul class="flex justify-between mt-4 px-1">
+        <ul class="flex justify-between mt-4">
           <li class="flex">
             <p class="text-2xl lg:text-3xl font-bold text-yellow-600 mr-2">
               Latest

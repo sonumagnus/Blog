@@ -1,12 +1,14 @@
 <template>
-  <div class="w-full border-b border-gray-400 bg-gray-50">
+  <div class="w-full bg-gray-800">
     <div class="w-full md:w-5/6 h-auto m-auto">
-      <div class="w-full flex justify-between">
+      <div class="w-full flex justify-center md:justify-between">
         <!--main-Navbar-div-->
         <div class="py-2">
           <!--Navbar-Left-Div{Contains: heading}-->
           <nuxt-link to="/">
-            <h1 class="text-2xl font-extrabold px-2 md:px-0">BlogTag</h1>
+            <h1 class="text-2xl font-extrabold px-2 md:px-0 text-white">
+              𝕭𝖑𝖔𝖌𝕿𝖆𝖌
+            </h1>
           </nuxt-link>
         </div>
         <div class="w-2/5 hidden md:flex justify-end py-3">
@@ -16,7 +18,7 @@
               <li>
                 <nuxt-link
                   to="/"
-                  class="text-lg font-bold px-4 text-gray-700 hover:text-blue-700 hover:underline"
+                  class="text-lg font-bold px-4 text-white hover:text-blue-700 hover:underline"
                 >
                   Home
                 </nuxt-link>
@@ -24,7 +26,7 @@
               <li>
                 <nuxt-link
                   to="/Blog"
-                  class="text-lg font-bold px-4 text-gray-700 hover:text-blue-700 hover:underline"
+                  class="text-lg font-bold px-4 text-white hover:text-blue-700 hover:underline"
                 >
                   Blog
                 </nuxt-link>
@@ -32,7 +34,7 @@
               <li>
                 <nuxt-link
                   to="/News"
-                  class="text-lg font-bold px-4 text-gray-700 hover:text-blue-700 hover:underline"
+                  class="text-lg font-bold px-4 text-white hover:text-blue-700 hover:underline"
                 >
                   News
                 </nuxt-link>
@@ -53,47 +55,89 @@
         <span class="md:hidden">
           <span @click="display"
             ><icon-menu
-              width="25"
-              height="25"
+              width="18"
+              height="18"
               icon-name="bars"
-              class="mt-2.5 mr-2.5"
+              class="mt-4 absolute left-2 text-white"
+              v-show="!show"
             ></icon-menu
           ></span>
         </span>
       </div>
       <!-- Navbar-Finish -->
+      <!-- sliding-menubar-logic-built -->
       <div
         class="h-screen top-0 bottom-0 left-0 right-0 fixed bg-gray-900 bg-opacity-50 z-40"
         :class="{ block: show, hidden: !show }"
         @click="display"
       ></div>
       <div
-        class="w-full px-4 bg-gray-300 fixed transition-all duration-300 text-gray-800 z-50 top-0 pl-6 overflow-hidden"
-        :class="{ 'h-[315px]': show, 'h-0': !show }"
+        class="w-64 h-screen px-4 bg-gray-900 fixed transition-all duration-300 text-lg text-gray-400 z-50 top-0 left-0 pl-6 overflow-hidden"
+        :class="{ 'left-0': show, '-left-full': !show }"
         @click="display"
       >
-        <div class="text-center text-3xl my-4">
-          <p>𝕭𝖑𝖔𝖌𝕿𝖆𝖌</p>
+        <div class="text-2xl mx-2 my-4 flex justify-between">
+          <p class="font-semibold text-gray-100">BlogTag</p>
+          <!-- three-line-hamburger-menu-icon -->
+          <icon-close
+            width="22"
+            height="22"
+            icon-name="times"
+            class="text-white"
+            v-show="show"
+          ></icon-close>
         </div>
-        <span>
-          <icon-close width="30" height="30" icon-name="times" class="float-right absolute top-2.5 right-2"></icon-close>
-        </span>
-        <NuxtLink to="/" class="p-2 block font-bold border-b">Home</NuxtLink>
-        <NuxtLink to="/Blog" class="p-2 block font-bold border-b"
-          >Blog</NuxtLink
-        >
-        <NuxtLink to="/News" class="p-2 block font-bold border-b"
-          >News</NuxtLink
-        >
-        <NuxtLink to="/contact" class="p-2 block font-bold border-b"
-          >Contact</NuxtLink
-        >
-        <NuxtLink to="/icons" class="p-2 block font-bold border-b"
-          >About us</NuxtLink
-        >
-        <NuxtLink to="/privacy" class="p-2 block font-bold"
-          >Privacy Policy</NuxtLink
-        >
+        <!-- sliding-munubar-links-below -->
+        <div>
+          <nuxt-link to="/" class="p-2 block font-bold mt-8">Home</nuxt-link>
+          <nuxt-link to="/Blog" class="p-2 block font-bold">Blog</nuxt-link>
+          <nuxt-link to="/News" class="p-2 block font-bold">News</nuxt-link>
+          <nuxt-link to="/contact" class="p-2 block font-bold"
+            >Contact</nuxt-link
+          >
+          <nuxt-link to="/icons" class="p-2 block font-bold"
+            >About us</nuxt-link
+          >
+          <nuxt-link to="/privacy" class="p-2 block font-bold"
+            >Privacy Policy</nuxt-link
+          >
+        </div>
+        <!-- Bottom-social-icons-div-in navbar -->
+        <div class="flex text-gray-200 fixed bottom-2 ml-4">
+          <nuxt-link to="#">
+            <icon-facebook
+              width="17"
+              height="17"
+              icon-name="facebook"
+              class="m-3"
+            >
+            </icon-facebook>
+          </nuxt-link>
+          <nuxt-link to="#">
+            <icon-insta
+              width="17"
+              height="17"
+              icon-name="instagram"
+              class="m-3"
+            ></icon-insta>
+          </nuxt-link>
+          <nuxt-link to="#">
+            <icon-envelope
+              width="17"
+              height="17"
+              icon-name="Envelope"
+              class="m-3"
+            ></icon-envelope>
+          </nuxt-link>
+          <nuxt-link to="#">
+            <icon-twitter
+              width="17"
+              height="17"
+              icon-name="twitter"
+              class="m-3"
+            ></icon-twitter>
+          </nuxt-link>
+        </div>
       </div>
     </div>
   </div>
@@ -102,10 +146,18 @@
 <script>
 import IconMenu from "~/components/icons/header/IconMenu";
 import IconClose from "~/components/icons/ui/IconClose";
+import IconFacebook from "~/components/icons/contact/IconFacebook";
+import IconInsta from "~/components/icons/contact/IconInsta";
+import IconEnvelope from "~/components/icons/contact/IconEnvelope";
+import IconTwitter from "~/components/icons/contact/IconTwitter";
 export default {
   components: {
     IconMenu,
     IconClose,
+    IconFacebook,
+    IconInsta,
+    IconEnvelope,
+    IconTwitter,
   },
   data() {
     return { show: false };

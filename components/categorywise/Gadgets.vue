@@ -23,7 +23,7 @@
                 <div
                   class="detail p-1 md:p-2 md:px-4 h-24 lg:h-44 overflow-hidden"
                 >
-                  <div class="flex px-[5px]">
+                  <div class="flex px-[5px] md:px-0.5">
                     <icon-clock
                       width="10"
                       height="10"

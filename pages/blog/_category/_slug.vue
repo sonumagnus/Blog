@@ -20,7 +20,7 @@ export default {
 
 <style>
 .blog-part h1 {
-  @apply text-gray-900 font-bold text-4xl md:text-5xl font-sans py-4 px-3;
+  @apply text-gray-900 font-bold text-4xl lg:text-6xl  font-sans py-4 px-3;
 }
 .blog-part h2 {
   @apply text-gray-600 text-2xl md:text-4xl pb-2 font-semibold border-gray-800 inline-block font-sans px-3;
