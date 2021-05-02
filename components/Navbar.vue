@@ -62,26 +62,36 @@
         </span>
       </div>
       <!-- Navbar-Finish -->
-      <div class="h-screen top-0 bottom-0 left-0 right-0 fixed bg-gray-900 bg-opacity-50 z-40" :class="{ 'block': show, 'hidden': !show }" @click="display"></div>
       <div
-        class="w-3/5 h-screen px-4 bg-gray-800 fixed transition-all duration-300 text-gray-50 z-50 top-0 pt-16 pl-6"
-        :class="{ 'left-0': show, '-left-full': !show }"
+        class="h-screen top-0 bottom-0 left-0 right-0 fixed bg-gray-900 bg-opacity-50 z-40"
+        :class="{ block: show, hidden: !show }"
+        @click="display"
+      ></div>
+      <div
+        class="w-full px-4 bg-gray-300 fixed transition-all duration-300 text-gray-800 z-50 top-0 pl-6 overflow-hidden"
+        :class="{ 'h-[315px]': show, 'h-0': !show }"
         @click="display"
       >
-        <NuxtLink to="/" class="p-3 block font-bold border-b">Home</NuxtLink>
-        <NuxtLink to="/Blog" class="p-3 block font-bold border-b"
+        <div class="text-center text-3xl my-4">
+          <p>𝕭𝖑𝖔𝖌𝕿𝖆𝖌</p>
+        </div>
+        <span>
+          <icon-close width="30" height="30" icon-name="times" class="float-right absolute top-2.5 right-2"></icon-close>
+        </span>
+        <NuxtLink to="/" class="p-2 block font-bold border-b">Home</NuxtLink>
+        <NuxtLink to="/Blog" class="p-2 block font-bold border-b"
           >Blog</NuxtLink
         >
-        <NuxtLink to="/News" class="p-3 block font-bold border-b"
+        <NuxtLink to="/News" class="p-2 block font-bold border-b"
           >News</NuxtLink
         >
-        <NuxtLink to="/contact" class="p-3 block font-bold border-b"
+        <NuxtLink to="/contact" class="p-2 block font-bold border-b"
           >Contact</NuxtLink
         >
-        <NuxtLink to="/icons" class="p-3 block font-bold border-b"
+        <NuxtLink to="/icons" class="p-2 block font-bold border-b"
           >About us</NuxtLink
         >
-        <NuxtLink to="/privacy" class="p-3 block font-bold border-b"
+        <NuxtLink to="/privacy" class="p-2 block font-bold"
           >Privacy Policy</NuxtLink
         >
       </div>
@@ -91,9 +101,11 @@
 
 <script>
 import IconMenu from "~/components/icons/header/IconMenu";
+import IconClose from "~/components/icons/ui/IconClose";
 export default {
   components: {
     IconMenu,
+    IconClose,
   },
   data() {
     return { show: false };

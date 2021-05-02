@@ -1,5 +1,5 @@
 ---
-title: This is the title of news Section where we disscuss about the latest news & Updates
+title: How I Started Earning More Than $3,000 a Month From Home
 description: This is the description for news blog
 slug: news-4
 img: blog-3.jpg

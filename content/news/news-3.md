@@ -1,5 +1,5 @@
 ---
-title: This is the title of news. we should follow and obey the traffic rules which are important or not doesn't matter
+title: Follow Elon Musk’s Advice and Skip the MBA. Read These 10 Books Insteadare important or not doesn't matter
 description: this is the description for news blog
 slug: news-3
 img: news-3.jpg

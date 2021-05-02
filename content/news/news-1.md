@@ -1,5 +1,5 @@
 ---
-title: This is the title of cov Section where we disscuss about the latest news & Updates
+title: Sony’s See-Through Camera Disaster Cost Them $100 Millions
 description: This is the description for news blog. But here i will have to write a more long description for jst the purpose of testing
 slug: news-1
 img: news-1.jpg

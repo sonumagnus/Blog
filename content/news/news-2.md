@@ -1,5 +1,5 @@
 ---
-title: This is the title of news, climate change is a very big problem for this world. we should focus on this problem
+title: This Is How Reading Rewires Your Brain, According to Neuroscience
 description: The description for news blog. his is the description for news blog. But here i will have to write a more long description for jst the purpose of testing
 slug: news-2
 img: news-2.jpg

@@ -55,6 +55,7 @@ class="grid p-10 grid-cols-5 md:grid-cols-10 gap-8 text-3xl md:text-5xl text-gra
 <i class="fab fa-facebook-f"></i>
 <i class="fab fa-twitter"></i>
 <i class="fal fa-clock"></i>
+<i class="fal fa-times"></i>
 </div>
 </div>
 </template>
