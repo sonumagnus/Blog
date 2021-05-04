@@ -44,8 +44,7 @@
                       height="10"
                       icon-name="clock" class="mr-1 mt-0.5 md:mt-[3px]"
                     ></icon-clock>
-                    <p class="text-xs">{{ formatDate(`${article.updatedAt }`)}}</p>
-                    
+                    <p class="text-xs">{{ formatDate(`${article.createdAt }`)}}</p>
                   </div>
                   <p
                     class="text-gray-800 px-1 md:p-0 md:text-xl font-bold mb-1.5 line-clamp-3 h-[75px] sm:h-20 md:h-[85px]"
@@ -75,7 +74,7 @@ export default {
   components: { Newsfeed, IconMore, IconClock },
   async asyncData({ $content, params }) {
     const articles = await $content("blog/Gadgets", params.slug)
-      // .only(["title", "description", "img", "date", "slug"])
+      .only(["title", "description", "img", "createdAt", "slug"])
       .sortBy("createdAt", "asc")
       .fetch();
     return {
