@@ -44,7 +44,7 @@
                       height="10"
                       icon-name="clock" class="mr-1 mt-0.5 md:mt-[3px]"
                     ></icon-clock>
-                    <p class="text-xs">{{ formatDate(`${article.createdAt }`)}}</p>
+                    <p class="text-xs">{{ formatDate(`${article.updatedAt }`)}}</p>
                     
                   </div>
                   <p
@@ -83,9 +83,9 @@ export default {
     };
   },
   methods: {
-    formatDate(date) {
+    formatDate(createdAt) {
       const options = { year: "numeric", month: "long", day: "numeric" };
-      return new Date(date).toLocaleDateString("en", options);
+      return new Date(createdAt).toLocaleDateString("en", options);
     },
   },
 };

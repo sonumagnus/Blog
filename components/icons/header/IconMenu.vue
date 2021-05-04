@@ -14,12 +14,12 @@
   >
     <g class="fa-group">
       <path
-        class="fa-secondary"
+        class="opacity-50"
         fill="currentColor"
         d="M16 288h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16z"
       ></path>
       <path
-        class="fa-primary"
+        class="opacity-80"
         fill="currentColor"
         d="M432 384H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H16A16 16 0 0 0 0 80v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16z"
       ></path>
