@@ -6,9 +6,7 @@ img: blog-3.jpg
 category: Android
 ---
 
-# A Man In His 30s Explains To Me What’s Wrong With Women In Their 30s
- 
-![images](/resources/blog-6.jpg)
+# A Man In His 30s Explains
  ## Welcome to sub-heading
 
  Holland began dancing at a hip hop class at Nifty Feet Dance School in Wimbledon. His potential was spotted by choreographer Lynne Page (who was an associate to Peter Darling, choreographer of Billy Elliot and Billy Elliot the Musical) when he performed with his dance school as part of the 2006 Richmond Dance Festival.<br><br>

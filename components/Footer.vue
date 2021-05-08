@@ -5,12 +5,12 @@
       <div class="w-5/6 m-auto py-7 flex flex-col md:flex-row justify-between">
         <!-- left-about-us-div -->
         <div class="flex flex-col md:flex-row items-center w-full md:w-1/2">
-          <div class="h-12 w-12 md:h-14 md:w-14 rounded-full overflow-hidden mr-2 md:my-4 md:mr-4">
-            <img src="/resources/logo.png" >
-          </div>
           <div
-            class="text-center md:text-left my-4 md:my-0"
+            class="h-12 w-12 md:h-14 md:w-14 rounded-full overflow-hidden mr-2 md:my-4 md:mr-4"
           >
+            <img src="/resources/logo.png" />
+          </div>
+          <div class="text-center md:text-left my-4 md:my-0">
             <p class="text-gray-300 font-bold py-2 md:py-0">ABOUT US</p>
             <p class="text-gray-400 md:py-2 md:p-0">
               BlogTag is the place where you will find Latest News and Blogs
@@ -19,11 +19,11 @@
           </div>
         </div>
         <!-- right-social-icons-div -->
-        <div
-          class="w-full md:w-1/6 md:text-left text-center mt-1.5 md:mt-0"
-        >
-          <p class="text-gray-300 font-bold mb-2 md:mb-4 ">FOLLOW US</p>
-          <div class="flex text-gray-200 md:justify-start justify-center mt-2 md:mt-0 justify-self-center">
+        <div class="w-full md:w-1/6 md:text-left text-center mt-1.5 md:mt-0">
+          <p class="text-gray-300 font-bold mb-2 md:mb-4">FOLLOW US</p>
+          <div
+            class="flex text-gray-200 md:justify-start justify-center mt-2 md:mt-0 justify-self-center"
+          >
             <nuxt-link
               to="#"
               class="h-8 w-8 bg-gray-900 flex justify-center items-center mr-1 rounded"
@@ -73,7 +73,7 @@
       </div>
     </div>
     <!-- bottom-footer-div -->
-    <div class="bg-gray-900 h-36 md:h-14 text-center">
+    <div class="bg-gray-900 h-32 md:h-14 text-center">
       <div class="py-4 w-5/6 m-auto flex flex-col md:flex-row justify-between">
         <span class="text-gray-50 my-2 md:my-0"
           >Copyright © 2021 BlogTag All Rights Reserved</span

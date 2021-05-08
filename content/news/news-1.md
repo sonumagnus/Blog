@@ -1,15 +1,13 @@
 ---
 title: Sony’s See-Through Camera Disaster Cost Them $100 Millions
-description: This is the description for news blog. But here i will have to write a more long description for jst the purpose of testing
+description: This is the description for news blog. But here i will have to 
 slug: news-1
 img: news-1.jpg
 category: "#Android"
 ---
 
-# Stop Using React Context and Redux Use Component Composition Instead
-## Who is Captain America? 
-![img](/resources/news-2.jpg)
-## Who is Steve Rogers
-_well, this is the news section writing blog for testing purpose_
-
-Captain America is a superhero appearing in American comic books published by Marvel Comics. Created by cartoonists Joe Simon and Jack Kirby, the character first appeared in Captain America Comics #1 (cover dated March 1941) from Timely Comics, a predecessor of Marvel Comics. Captain America was designed as a patriotic supersoldier who often fought the Axis powers of World War II and was Timely Comics' most popular character during the wartime period. The popularity of superheroes waned following the war, and the Captain America comic book was discontinued in 1950, with a short-lived revival in 1953. Since Marvel Comics revived the character in 1964, Captain America has remained in publication.
+# Stop Using React Context :
+ Holland began dancing at a hip hop class at Nifty Feet Dance School in Wimbledon. His potential was spotted by choreographer Lynne Page (who was an associate to Peter Darling, choreographer of Billy Elliot and Billy Elliot the Musical) when he performed with his dance school as part of the 2006 Richmond Dance Festival.<br><br>
+After eight auditions and two subsequent years of training, on 28 June 2008, Holland made his West End debut in Billy Elliot the Musical as Michael, Billy's best friend. He gave his first performance in the title role on 8 September 2008, receiving positive notices.<br><br>
+In September 2008, Holland (together with co-star Tanner Pflueger) appeared on the news programme on channel FIVE and gave his first TV interview. The following year, he was featured on ITV1 show The Feel Good Factor. At the premiere on 31 January, Holland and two actors also playing the title role, Pflueger and Layton Williams, performed a version of "Angry Dance" from Billy Elliot the Musical, after which Holland was interviewed by host Myleene Klass. He trained five British schoolboys for a dance routine he fronted for the final The Feel Good Factor show on 28 March 2009.<br><br>
+On 8 March 2010, to mark the fifth anniversary of Billy Elliot the Musical, four current Billy Elliots, including Holland, were invited to 10 Downing Street to meet the Prime Minister, Gordon Brown. Holland was chosen to be a lead at the fifth-anniversary show on 31 March Holland appeared on a regular basis as Billy in Billy Elliot the Musical, rotating with three other performers,until 29 May 2010, when he finished his run.

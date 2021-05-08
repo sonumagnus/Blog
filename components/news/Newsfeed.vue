@@ -1,7 +1,5 @@
 <template>
-  <p v-if="$fetchState.pending">Fetching News...</p>
-  <p v-else-if="$fetchState.error">An error occurred :(</p>
-  <div v-else>
+  <div>
     <div class="w-full m-auto px-2">
       <div>
         <ul class="flex justify-between mt-4">

@@ -55,10 +55,10 @@
         <span class="md:hidden">
           <span @click="display"
             ><icon-menu
-              width="18"
-              height="18"
+              width="22"
+              height="22"
               icon-name="bars"
-              class="mt-4 absolute left-2 text-gray-400"
+              class="mt-3 absolute right-3 text-gray-400"
               v-show="!show"
             ></icon-menu
           ></span>
@@ -89,16 +89,16 @@
         </div>
         <!-- sliding-munubar-links-below -->
         <div>
-          <nuxt-link to="/" class="p-2 block font-bold mt-8">Home</nuxt-link>
-          <nuxt-link to="/Blog" class="p-2 block font-bold">Blog</nuxt-link>
-          <nuxt-link to="/News" class="p-2 block font-bold">News</nuxt-link>
-          <nuxt-link to="/contact" class="p-2 block font-bold"
+          <nuxt-link to="/" class="p-3 block font-bold mt-8">Home</nuxt-link>
+          <nuxt-link to="/Blog" class="p-3 block font-bold">Blog</nuxt-link>
+          <nuxt-link to="/News" class="p-3 block font-bold">News</nuxt-link>
+          <nuxt-link to="/contact" class="p-3 block font-bold"
             >Contact</nuxt-link
           >
-          <nuxt-link to="/icons" class="p-2 block font-bold"
+          <nuxt-link to="/icons" class="p-3 block font-bold"
             >About us</nuxt-link
           >
-          <nuxt-link to="/privacy" class="p-2 block font-bold"
+          <nuxt-link to="/privacy" class="p-3 block font-bold"
             >Privacy Policy</nuxt-link
           >
         </div>
