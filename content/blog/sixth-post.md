@@ -1,14 +1,16 @@
 ---
-title: Chris Hemsworth Is Exactly What’s Wrong With the Fitness Industry
-description: This is description part. here we can write a really long description
-slug: forth-post
-img: blog-4.jpg
+title: Green Plants are goint to extinct about 500 times faster than they should, study finds
+description: If you are sort of person who just can not keep a plant alive, you are not alone according to the new study publised june 10 in journal Nature
+slug: sixth-post
+img: blog-6.jpg
 category: smartphone
 ---
 
-# This is the heading
- ![](/resources/news-3.jpg)
- ## Welcome to sub-heading
+# Learn These 10 Things in Your 20s, Fly in Your 40s
+
+## For when you want to pass a limited number of props to multiple levels using inheritance.
+ ![](/resources/blog-3.jpg)
+ ## Read about Tony Stark
 
  Holland began dancing at a hip hop class at Nifty Feet Dance School in Wimbledon. His potential was spotted by choreographer Lynne Page (who was an associate to Peter Darling, choreographer of Billy Elliot and Billy Elliot the Musical) when he performed with his dance school as part of the 2006 Richmond Dance Festival.<br><br>
 After eight auditions and two subsequent years of training, on 28 June 2008, Holland made his West End debut in Billy Elliot the Musical as Michael, Billy's best friend. He gave his first performance in the title role on 8 September 2008, receiving positive notices.<br><br>

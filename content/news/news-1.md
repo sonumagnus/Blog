@@ -6,7 +6,7 @@ img: news-1.jpg
 category: "#Android"
 ---
 
-# Hello there how are you
+# Stop Using React Context and Redux Use Component Composition Instead
 ## Who is Captain America? 
 ![img](/resources/news-2.jpg)
 ## Who is Steve Rogers

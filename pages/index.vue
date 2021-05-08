@@ -36,7 +36,7 @@
               >
                 <img :src="`/resources/${article.img}`" class="block w-full" />
                 <div
-                  class="detail p-1 md:p-2 md:px-4 h-24 lg:h-44 overflow-hidden"
+                  class="detail p-1 md:p-2 md:px-4 h-24 md:h-44 overflow-hidden"
                 >
                   <div class="flex px-[5px] md:px-0.5">
                     <icon-clock
@@ -52,7 +52,7 @@
                     {{ article.title }}
                   </p>
                   <p
-                    class="text-gray-500 text-lg h-auto lg:h-16 lg:line-clamp-2 hidden"
+                    class="text-gray-500 text-lg h-auto lg:h-16 lg:line-clamp-2 hidden md:block"
                   >
                     {{ article.description }}
                   </p>
@@ -73,8 +73,8 @@ import IconClock from "~/components/icons/ui/IconClock";
 export default {
   components: { Newsfeed, IconMore, IconClock },
   async asyncData({ $content, params }) {
-    const articles = await $content("blog/Gadgets", params.slug)
-      .only(["title", "description", "img", "createdAt", "slug"])
+    const articles = await $content("blog", params.slug)
+      // .only(["title", "description", "img", "date", "slug"])
       .sortBy("createdAt", "asc")
       .fetch();
     return {
@@ -82,9 +82,9 @@ export default {
     };
   },
   methods: {
-    formatDate(createdAt) {
+    formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
-      return new Date(createdAt).toLocaleDateString("en", options);
+      return new Date(date).toLocaleDateString("en", options);
     },
   },
 };

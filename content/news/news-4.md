@@ -6,7 +6,7 @@ img: blog-3.jpg
 category: "#Android"
 ---
 
-# hello there how are you
+# How to Stop Spending So Much Time in Your Head
 ![img](/resources/news-2.jpg)
 ## Are you really want to visit us
 _well, this is the news section writing blog for testing purpose_

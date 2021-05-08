@@ -11,8 +11,8 @@
           <div
             class="text-center md:text-left my-4 md:my-0"
           >
-            <p class="text-gray-50 font-bold py-2 md:py-0">ABOUT US</p>
-            <p class="text-gray-300 md:py-2 md:p-0">
+            <p class="text-gray-300 font-bold py-2 md:py-0">ABOUT US</p>
+            <p class="text-gray-400 md:py-2 md:p-0">
               BlogTag is the place where you will find Latest News and Blogs
               related to Gadgets and Tech Products
             </p>
@@ -22,7 +22,7 @@
         <div
           class="w-full md:w-1/6 md:text-left text-center mt-1.5 md:mt-0"
         >
-          <p class="text-gray-50 font-bold mb-2 md:mb-4 ">FOLLOW US</p>
+          <p class="text-gray-300 font-bold mb-2 md:mb-4 ">FOLLOW US</p>
           <div class="flex text-gray-200 md:justify-start justify-center mt-2 md:mt-0 justify-self-center">
             <nuxt-link
               to="#"

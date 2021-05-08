@@ -58,7 +58,7 @@
               width="18"
               height="18"
               icon-name="bars"
-              class="mt-4 absolute left-2 text-white"
+              class="mt-4 absolute left-2 text-gray-400"
               v-show="!show"
             ></icon-menu
           ></span>
@@ -103,7 +103,7 @@
           >
         </div>
         <!-- Bottom-social-icons-div-in navbar -->
-        <div class="flex text-gray-200 fixed bottom-2 ml-4">
+        <div class="flex text-gray-200 fixed bottom-2 pl-4 bg-gray-900">
           <nuxt-link to="#">
             <icon-facebook
               width="17"

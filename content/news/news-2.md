@@ -6,7 +6,7 @@ img: news-2.jpg
 category: "#Phones"
 ---
 
-# hello there, 2nd news is here
+# Work In A Flow State For 2+ Hours Per Day Using The ‘3C Method’
 ![](/resources/blog-6.jpg)
 ## Who is Spider Man
 _well, this is the news section writing blog for testing purpose_

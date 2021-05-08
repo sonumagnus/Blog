@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar class=" sticky top-0 z-50"/>
-    <Nuxt class="md:w-5/6 m-auto  min-h-screen" />
+    <Nuxt class="lg:w-5/6 m-auto  min-h-screen" />
     <Footer />
   </div>
 </template>

@@ -1,13 +1,14 @@
 ---
-title: Green Plants are goint to extinct about 500 times faster than they should, study finds
-description: If you are sort of person who just can not keep a plant alive, you are not alone according to the new study publised june 10 in journal Nature
-slug: fifth-post
-img: blog-5.jpg
-category: smartphone
+title: I tried planking for 5 minutes every day for a month and it made my back feel great
+description: This is description part. here we can write a really long description
+slug: third-post
+img: blog-3.jpg
+category: Android
 ---
 
-# Asus is the big tech company
- ![images](/resources/blog-2.jpg)
+# A Man In His 30s Explains To Me What’s Wrong With Women In Their 30s
+ 
+![images](/resources/blog-6.jpg)
  ## Welcome to sub-heading
 
  Holland began dancing at a hip hop class at Nifty Feet Dance School in Wimbledon. His potential was spotted by choreographer Lynne Page (who was an associate to Peter Darling, choreographer of Billy Elliot and Billy Elliot the Musical) when he performed with his dance school as part of the 2006 Richmond Dance Festival.<br><br>
