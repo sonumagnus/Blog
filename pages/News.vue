@@ -1,51 +1,53 @@
 <template>
   <div>
-    <div>
-      <p class="text-2xl font-bold text-center p-4">All News</p>
-    </div>
-    <div class="articles px-1.5 md:px-0 m-auto">
-      <ul class="grid grid-cols-1 md:grid-cols-4 gap-2.5">
-        <li class="article w-full" v-for="doc of docs" :key="doc">
-          <nuxt-link :to="`${doc.path}`">
-            <!-- we can use this too for redirecting to the blog page :to="`/blog/${article.slug}`"-->
-            <div class="border hover:shadow-md rounded-lg overflow-hidden flex md:block">
-              <img
-                :src="`/resources/${doc.img}`"
-                class=" w-1/2 md:w-full"
-              />
-              <div class="h-auto px-2.5 py-0.5">
-                <p
-                  class="text-medium md:text-lg font-bold line-clamp-3 text-gray-700 leading-6 md:leading-7 md:px-1"
-                >
-                  {{ doc.title }}
-                </p> 
-                <p
-                  class="text-sm md:text-lg line-clamp-1 md:line-clamp-2 leading-5 text-gray-600 mt-1 md:mt-0.5"
-                >
-                  {{ doc.description }}
-                </p>
-                <span class="flex items-center mt-2">
-                  <icon-clock
-                    width="11"
-                    height="11"
-                    icon-name="clock"
-                    class="mr-1 mb-0.5 md:mb-0"
-                  ></icon-clock>
-                  <p class="text-xs text-red-900">{{ formatDate(doc.createdAt) }}</p>
-                </span>
-              </div>
-            </div>
-          </nuxt-link>
-        </li>
-      </ul>
+    <div class="w-full m-auto px-2">
+      <div>
+        <ul class="flex justify-between mt-4">
+          <li class="flex">
+            <p class="text-2xl lg:text-3xl font-bold text-yellow-600 mr-2">
+              Latest
+            </p>
+            <p class="text-2xl lg:text-3xl font-bold text-green-800">
+              News
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="flex">
+        <div class="w-full">
+          <ul class=" border-gray-400 rounded-lg">
+            <li v-for="doc of docs" :key="doc">
+              <nuxt-link :to="`${doc.path}`">
+                <div class="article-inside my-4 md:mb-6 flex">
+                  <img
+                    :src="`resources/${doc.img}`"
+                    class="w-auto h-24 rounded-lg content-center mt-1"
+                  />
+                  <div class="article-details px-4 md:pl-5 md:pr-10">
+                    <span class="font-bold text-lg text-pink-600">{{
+                      doc.category
+                    }}</span>
+                    <p class="font-bold md:text-lg line-clamp-3 mb-1">
+                      {{ doc.title }}
+                    </p>
+                    <!-- <h5>{{ doc.description }}</h5> -->
+                  </div>
+                </div>
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Newsfeed from "~/components/news/Newsfeed";
+import IconMore from "~/components/icons/ui/IconMore";
 import IconClock from "~/components/icons/ui/IconClock";
 export default {
-  components: { IconClock },
+  components: { Newsfeed, IconMore, IconClock },
   async asyncData({ $content, params }) {
     const docs = await $content("news", params.slug)
       // .only(["title", "description", "img", "date", "slug"])
@@ -65,4 +67,4 @@ export default {
 </script>
 
 <style>
-</style> 
+</style>

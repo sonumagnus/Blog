@@ -19,7 +19,7 @@
             <icon-more
               width="10"
               height="10"
-              iconName="chevron-right"
+              iconName="chevron-right" class="text-gray-500"
             ></icon-more
           ></span>
         </nuxt-link>

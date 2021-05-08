@@ -1,14 +1,12 @@
 <template>
-  <div class="w-full bg-gray-800">
+  <div class="w-full bg-white border-b shadow-sm">
     <div class="w-full md:w-5/6 h-auto m-auto">
-      <div class="w-full flex justify-center md:justify-between">
+      <div class="w-full flex md:justify-between">
         <!--main-Navbar-div-->
         <div class="py-2">
           <!--Navbar-Left-Div{Contains: heading}-->
           <nuxt-link to="/">
-            <h1 class="text-2xl font-extrabold px-2 md:px-0 text-white">
-              𝕭𝖑𝖔𝖌𝕿𝖆𝖌
-            </h1>
+            <h1 class="text-2xl font-extrabold px-2 text-black">BlogTag</h1>
           </nuxt-link>
         </div>
         <div class="w-2/5 hidden md:flex justify-end py-3">
@@ -58,9 +56,16 @@
               width="22"
               height="22"
               icon-name="bars"
-              class="mt-3 absolute right-3 text-gray-400"
+              class="mt-3 absolute right-3 text-gray-600"
               v-show="!show"
-            ></icon-menu
+            ></icon-menu>
+            <icon-close
+              width="26"
+              height="26"
+              icon-name="times"
+              class="mt-2.5 absolute right-2.5 text-gray-600"
+              v-show="show"
+            ></icon-close
           ></span>
         </span>
       </div>
@@ -72,20 +77,13 @@
         @click="display"
       ></div>
       <div
-        class="w-64 h-screen px-4 bg-gray-900 fixed transition-all duration-300 text-lg text-gray-400 z-50 top-0 left-0 pl-6 overflow-hidden"
+        class="w-64 h-screen px-4 bg-gray-100 fixed transition-all duration-300 text-lg text-gray-800 z-50 top-0 left-0 pl-6 overflow-hidden"
         :class="{ 'left-0': show, '-left-full': !show }"
         @click="display"
       >
         <div class="text-2xl mx-2 my-4 flex justify-between">
-          <p class="font-semibold text-gray-100">BlogTag</p>
+          <p class="font-semibold text-gray-800">BlogTag</p>
           <!-- three-line-hamburger-menu-icon -->
-          <icon-close
-            width="22"
-            height="22"
-            icon-name="times"
-            class="text-white"
-            v-show="show"
-          ></icon-close>
         </div>
         <!-- sliding-munubar-links-below -->
         <div>
@@ -103,7 +101,7 @@
           >
         </div>
         <!-- Bottom-social-icons-div-in navbar -->
-        <div class="flex text-gray-200 fixed bottom-2 pl-4 bg-gray-900">
+        <div class="flex text-gray-800 fixed bottom-2 pl-4">
           <nuxt-link to="#">
             <icon-facebook
               width="17"

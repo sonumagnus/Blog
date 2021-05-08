@@ -95,7 +95,7 @@ export default {
   components: { Gadgets, Phone, IconMore, IconClock },
   async asyncData({ $content, params }) {
     const articles = await $content("blog", params.slug)
-      // .only(["title", "description", "img", "date", "slug"])
+      .only(["title", "description", "img", "createdAt", "slug"])
       .sortBy("createdAt", "asc")
       .fetch();
     return {

@@ -1,9 +1,9 @@
 <template>
-  <div class="px-2.5 md:px-52 m-auto">
+  <div class="px-3.5 md:px-52 m-auto">
     <div>
       <!--this-div-contains-title and description-only-->
       <h1 class="text-3xl md:text-5xl font-semibold my-2">{{ doc.title }}</h1>
-      <h2 class="text-xl md:text-2xl text-gray-600 font-medium md:font-normal py-1">{{ doc.description }}</h2>
+      <h2 class="text-lg md:text-2xl text-gray-600 font-medium md:font-normal py-1">{{ doc.description }}</h2>
       <div class="flex justify-between py-4 opacity-60">
         <!-- this-div-contains-social-icons -->
         <span class="flex">
@@ -93,7 +93,7 @@ export default {
   @apply text-xl font-medium text-gray-600;
 }
 .nuxt-content p {
-  @apply text-xl my-0.5;
+  @apply text-lg my-0.5;
 }
 .nuxt-content img {
   @apply rounded;

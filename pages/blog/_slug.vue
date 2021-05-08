@@ -1,9 +1,9 @@
 <template>
-  <div class="px-2.5 md:px-52 m-auto">
+  <div class="mx-3.5 md:px-52 m-auto">
     <div>
       <!--this-div-contains-title and description-only-->
-      <h1 class="text-3xl md:text-5xl font-semibold my-2">{{ article.title }}</h1>
-      <h2 class="text-xl md:text-2xl md:font-normal text-gray-600 font-medium py-1">{{ article.description }}</h2>
+      <h1 class="text-3xl md:text-5xl font-semibold my-2 text-gray-900">{{ article.title }}</h1>
+      <h2 class="text-lg md:text-2xl md:font-normal text-gray-600 font-medium py-1">{{ article.description }}</h2>
       <div class="flex justify-between py-4 opacity-60">
         <!-- this-div-contains-social-icons -->
         <span class="flex">
@@ -87,12 +87,12 @@ export default {
 
 <style>
 .nuxt-content h1 {
-  @apply text-xl font-semibold mb-2 text-gray-800;
+  @apply text-xl font-semibold text-gray-700;
 }
 .nuxt-content h2 {
   @apply text-xl font-medium text-gray-600;
 }
 .nuxt-content p {
-  @apply text-xl my-0.5;
+  @apply text-lg my-0.5 text-gray-700;
 }
 </style>
