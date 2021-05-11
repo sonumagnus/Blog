@@ -1,9 +1,13 @@
 <template>
-  <div class="px-3.5 md:px-52 m-auto">
+  <div class="mx-3.5 md:mx-72 m-auto">
     <div>
       <!--this-div-contains-title and description-only-->
       <h1 class="text-3xl md:text-5xl font-semibold my-2">{{ doc.title }}</h1>
-      <h2 class="text-lg md:text-2xl text-gray-600 font-medium md:font-normal py-1">{{ doc.description }}</h2>
+      <h2
+        class="text-lg md:text-2xl text-gray-600 font-medium md:font-normal py-1"
+      >
+        {{ doc.description }}
+      </h2>
       <div class="flex justify-between py-4 opacity-60">
         <!-- this-div-contains-social-icons -->
         <span class="flex">
@@ -54,6 +58,7 @@
       <article>
         <nuxt-content :document="doc"></nuxt-content>
       </article>
+      <prev-next-news :prev="prev" :next="next" />
     </div>
   </div>
 </template>
@@ -63,17 +68,28 @@ import IconTwitter from "~/components/icons/contact/IconTwitter";
 import IconFacebook from "~/components/icons/contact/IconFacebook";
 import IconInsta from "~/components/icons/contact/IconInsta";
 import IconShare from "~/components/icons/ui/IconShare";
+import PrevNextNews from '~/components/PrevNextNews';
 export default {
   components: {
     IconTwitter,
     IconFacebook,
     IconInsta,
     IconShare,
+    PrevNextNews,
   },
   async asyncData({ $content, params }) {
     const doc = await $content("news", params.slug).fetch();
+
+    const [prev, next] = await $content("news")
+      .only(["title", "slug"])
+      .sortBy("createdAt", "asc")
+      .surround(params.slug)
+      .fetch();
+
     return {
       doc,
+      prev,
+      next,
     };
   },
   methods: {

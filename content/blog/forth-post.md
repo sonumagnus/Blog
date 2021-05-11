@@ -4,6 +4,8 @@ description: In September 2008, Holland (co-star Tanner Pflueger) appeared on th
 slug: forth-post
 img: blog-4.jpg
 category: smartphone
+tags: 
+ - top list
 ---
 
 # How I Solved the Problem:

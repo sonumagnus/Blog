@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <Navbar />
     <div class="lg:w-5/6 mx-auto mt-2 md:mt-12">
       <div
         class="w-[95%] md:w-10/12 bg-gray-50 m-auto flex flex-col md:flex-row shadow-md overflow-hidden relative rounded-xl"
@@ -11,7 +12,9 @@
           <h2 class="text-gray-50 text-xl font-medium p-2 text-center">
             Contact Information
           </h2>
-          <div class="h-1/4 w-full flex justify-evenly py-2 md:pt-8 px-4 text-gray-100">
+          <div
+            class="h-1/4 w-full flex justify-evenly py-2 md:pt-8 px-4 text-gray-100"
+          >
             <!--left-mid-div-->
             <icon-facebook
               width="28"

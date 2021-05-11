@@ -3,7 +3,7 @@ title: This How Reading Rewires Your Brain, According to Neuroscience
 description: Reading doesn't just cram information into your brain. It change how your brain. 
 slug: news-2
 img: news-2.jpg
-category: "#Phones"
+category: Phones
 ---
 
 # Work In A Flow State:

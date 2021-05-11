@@ -1,72 +1,72 @@
 <template>
-  <div>
-    <div class="w-full m-auto px-2">
-      <div>
-        <ul class="flex justify-between mt-4">
-          <li class="flex">
-            <p class="text-2xl lg:text-3xl font-bold text-yellow-600 mr-2">
-              Latest
-            </p>
-            <p class="text-2xl lg:text-3xl font-bold text-green-800">
-              News
-            </p>
-          </li>
-          <nuxt-link
-            to="/News"
-            class="text-xs rounded-lg py-0.5 flex justify-center items-center"
-          >
-            <span class="text-xs px-1.5 py-0.5 bg-indigo-50 rounded-xl flex items-center">See all
-            <icon-more
-              width="10"
-              height="10"
-              iconName="chevron-right" class="text-gray-500"
-            ></icon-more></span>
+  <div class="border-b">
+    <div class="py-8 mx-6 lg:mx-24">
+      <span class="flex px-6">
+        <IconCheckCircle
+          width="20"
+          height="20"
+          IconName="check-circle"
+          class="mr-3"
+        />
+        <p class="text-xs font-bold self-center uppercase">all latest news</p>
+      </span>
+      <ul class="lg:grid lg:grid-cols-3 lg:gap-x-5">
+        <li v-for="(doc, index) of docs" :key="index" class="my-3.5">
+          <nuxt-link :to="`${doc.path}`" class="flex">
+            <div class="text-3xl font-bold text-gray-300 mr-4">
+              0{{ index + 1 }}
+            </div>
+            <div class="mt-2">
+              <div class="flex text-sm font-medium mb-2">
+                <span
+                  class="px-1.5 bg-gray-500 text-gray-300 mr-1.5 rounded items-start uppercase"
+                >
+                  {{ doc.category[0] }}
+                </span>
+                <div>{{ doc.category }}</div>
+                <p class="mx-0.5 text-gray-600">in</p>
+                <p>Latest News</p>
+              </div>
+              <div class="font-bold line-clamp-2 mb-2 text-gray-800 so">
+                {{ doc.title }}
+              </div>
+              <div class="text-sm text-gray-500 flex">
+                <p>{{ formatDate(doc.createdAt) }}</p>
+                <icon-star
+                  width="11"
+                  height="11"
+                  IconName="star"
+                  class="self-center mx-1"
+                ></icon-star>
+              </div>
+            </div>
           </nuxt-link>
-        </ul>
-      </div>
-      <div class="flex">
-        <div class="w-full md:w-1/2">
-          <ul class=" border-gray-400 border-b md:border-b-0 rounded-lg">
-            <li v-for="doc of docs" :key="doc">
-              <nuxt-link :to="`${doc.path}`">
-                <div class="article-inside my-4 md:mb-6 flex">
-                  <img
-                    :src="`resources/${doc.img}`"
-                    class="w-auto h-24 rounded-lg content-center mt-1"
-                  />
-                  <div class="article-details px-4 md:pl-5 md:pr-10">
-                    <span class="font-bold text-lg text-pink-600">{{
-                      doc.category
-                    }}</span>
-                    <p class="font-bold md:text-lg line-clamp-3 mb-1">
-                      {{ doc.title }}
-                    </p>
-                    <!-- <h5>{{ doc.description }}</h5> -->
-                  </div>
-                </div>
-              </nuxt-link>
-            </li>
-          </ul>
-        </div>
-        <div class="w-1/2 overflow-hidden hidden md:inline pt-5">
-          <img src="resources/Right-Giant.jpg" class="rounded-2xl my-auto" />
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
-import IconMore from "~/components/icons/ui/IconMore";
+import IconCheckCircle from "~/components/icons/ui/IconCheckCircle";
+import IconStar from "~/components/icons/ui/IconStar"
 export default {
-  components: { IconMore },
+  components: { IconCheckCircle, IconStar },
   data() {
     return {
       docs: [],
     };
   },
   async fetch() {
-    this.docs = await this.$content("news").sortBy("asc").limit(3).fetch();
+    this.docs = await this.$content("news").sortBy("asc")
+    .limit(6)
+    .fetch();
+  },
+    methods: {
+    formatDate(date) {
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      return new Date(date).toLocaleDateString("en", options);
+    },
   },
 };
 </script>

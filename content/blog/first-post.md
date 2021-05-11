@@ -3,6 +3,9 @@ title: Green Plants are goint to extinct about 500 times faster than they should
 description: If you are sort of person who just can not keep a plant alive, you are not alone according to the new study publised june 10 in journal Nature
 slug: first-post
 img: blog-1.jpg
+category: Blogging
+tags: 
+ - smartphone
 ---
 # Inslee signs Fair Start for Kids Act
 A computer is a machine that can be instructed to carry out sequences of arithmetic or logical operations automatically via computer programming. Modern computers have the ability to follow generalized sets of operations, called programs. These programs enable computers to perform an extremely wide range of tasks. A "complete" computer including the hardware, the operating system (main software), and peripheral equipment required and used for "full" operation can be referred to as a computer system. This term may as well be used for a group of computers that are connected and work together, in particular a computer network or computer cluster.

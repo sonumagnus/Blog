@@ -4,6 +4,9 @@ description: If you are sort of person who just can not keep a plant alive, you 
 slug: sixth-post
 img: blog-6.jpg
 category: smartphone
+tags: 
+ - smartphone
+ - top list
 ---
 
 # Learn These 10 Things in Your 20s, Fly in Your 40s

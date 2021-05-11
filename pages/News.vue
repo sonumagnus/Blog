@@ -1,53 +1,60 @@
 <template>
   <div>
-    <div class="w-full m-auto px-2">
-      <div>
-        <ul class="flex justify-between mt-4">
-          <li class="flex">
-            <p class="text-2xl lg:text-3xl font-bold text-yellow-600 mr-2">
-              Latest
-            </p>
-            <p class="text-2xl lg:text-3xl font-bold text-green-800">
-              News
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div class="flex">
-        <div class="w-full">
-          <ul class=" border-gray-400 rounded-lg">
-            <li v-for="doc of docs" :key="doc">
-              <nuxt-link :to="`${doc.path}`">
-                <div class="article-inside my-4 md:mb-6 flex">
-                  <img
-                    :src="`resources/${doc.img}`"
-                    class="w-auto h-24 rounded-lg content-center mt-1"
-                  />
-                  <div class="article-details px-4 md:pl-5 md:pr-10">
-                    <span class="font-bold text-lg text-pink-600">{{
-                      doc.category
-                    }}</span>
-                    <p class="font-bold md:text-lg line-clamp-3 mb-1">
-                      {{ doc.title }}
-                    </p>
-                    <!-- <h5>{{ doc.description }}</h5> -->
-                  </div>
-                </div>
-              </nuxt-link>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <Navbar />
+    <!-- this-div contains the main news element-->
+    <div class="py-8 mx-3 lg:mx-24">
+      <span class="flex px-6">
+        <IconCheckCircle
+          width="20"
+          height="20"
+          IconName="check-circle"
+          class="mr-3"
+        />
+        <p class="text-xs font-bold self-center uppercase">all latest news</p>
+      </span>
+      <ul class="lg:grid lg:grid-cols-3">
+        <li v-for="(doc, index) in docs" :key="index" class="my-3.5">
+          <nuxt-link :to="`${doc.path}`" class="flex ">
+            <div class="text-3xl font-bold text-gray-300 px-4">
+              0{{ index + 1 }}
+            </div>
+            <div class="mt-2">
+              <div class="flex text-sm font-medium mb-2">
+                <span
+                  class="px-1.5 bg-gray-500 text-gray-300 mr-1.5 rounded items-start uppercase"
+                >
+                  {{ doc.category[0] }}
+                </span>
+                <div>{{ doc.category }}</div>
+                <p class="mx-0.5 text-gray-600">in</p>
+                <p>Latest News</p>
+              </div>
+              <div class="font-bold line-clamp-2 mb-2 text-gray-800">{{ doc.title }}</div>
+              <div class="text-sm text-gray-500 flex">
+                <p>{{ formatDate(doc.createdAt) }}</p>
+                <icon-star
+                  width="11"
+                  height="11"
+                  IconName="star"
+                  class="self-center mx-1"
+                ></icon-star>
+              </div>
+            </div>
+          </nuxt-link>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
-import Newsfeed from "~/components/news/Newsfeed";
-import IconMore from "~/components/icons/ui/IconMore";
-import IconClock from "~/components/icons/ui/IconClock";
+import IconStar from "~/components/icons/ui/IconStar";
+import IconCheckCircle from "~/components/icons/ui/IconCheckCircle";
 export default {
-  components: { Newsfeed, IconMore, IconClock },
+  components: {
+    IconStar,
+    IconCheckCircle,
+  },
   async asyncData({ $content, params }) {
     const docs = await $content("news", params.slug)
       // .only(["title", "description", "img", "date", "slug"])

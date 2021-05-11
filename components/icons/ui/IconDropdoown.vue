@@ -30,7 +30,7 @@
 <script>
 export default {
   props: {
-    name: {
+    IconName: {
       type: String,
       default: "box",
     },

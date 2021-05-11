@@ -4,6 +4,9 @@ description: This is description part. here we can write a really long descripti
 slug: third-post
 img: blog-3.jpg
 category: Android
+tags: 
+ - smartphone
+ - technology
 ---
 
 # A Man In His 30s Explains

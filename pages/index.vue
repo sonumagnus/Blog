@@ -1,80 +1,64 @@
 <template>
   <div>
-    <newsfeed />
-    <div class="py-2 px-2 flex flex-col justify-between">
-      <ul class="flex justify-between mt-5">
-        <li class="flex px-1">
-          <p class="pt-1 text-2xl lg:text-3xl font-bold text-yellow-600 mr-2">
-            Latest
-          </p>
-          <p class="py-1 text-2xl lg:text-3xl font-bold text-green-800">Post</p>
-        </li>
-        <nuxt-link
-          to="/Blog"
-          class="text-xs rounded-lg py-0.5 flex justify-center items-center"
+    <Navbar />
+    <NewsNewsfeed />
+    <div class="mx-6 lg:mx-24">
+      <ul class="lg:grid lg:grid-cols-2 lg:gap-x-12">
+        <li
+          v-for="(article, index) in articles"
+          :key="index"
+          class="my-6 w-full"
         >
-          <span
-            class="text-xs px-1.5 py-0.5 bg-indigo-50 rounded-xl flex items-center"
-            >See all
-            <icon-more
-              width="10"
-              height="10"
-              iconName="chevron-right" class="text-gray-500"
-            ></icon-more
-          ></span>
-        </nuxt-link>
-      </ul>
-      <div class="articles m-auto">
-        <ul
-          class="grid sm:grid-cols-3 gap-3 sm:gap-5 grid-cols-2 border-t md:border-t-0 rounded-lg pt-3 border-red-300"
-        >
-          <li class="article w-full" v-for="article of articles" :key="article">
-            <nuxt-link :to="`${article.path}`">
-              <!-- we can use this too for redirecting to the blog page :to="`/blog/${article.slug}`"-->
-              <div
-                class="article-inner border hover:shadow-md overflow-hidden rounded-lg"
-              >
-                <img :src="`/resources/${article.img}`" class="block w-full" />
-                <div
-                  class="detail p-1 md:p-2 md:px-4 h-24 md:h-44 overflow-hidden"
-                >
-                  <div class="flex px-[5px] md:px-0.5">
-                    <icon-clock
-                      width="10"
-                      height="10"
-                      icon-name="clock" class="mr-1 mt-0.5 md:mt-[3px]"
-                    ></icon-clock>
-                    <p class="text-xs">{{ formatDate(`${article.createdAt }`)}}</p>
-                  </div>
+          <nuxt-link :to="`${article.path}`">
+            <div class="flex justify-between">
+              <div class="pr-4">
+                <span class="flex mb-2 text-sm font-medium">
                   <p
-                    class="text-gray-800 px-1 md:p-0 md:text-xl font-bold mb-1.5 line-clamp-3 h-[75px] sm:h-20 md:h-[85px]"
+                    class="px-1.5 bg-gray-400 rounded text-gray-200 mr-2 uppercase"
                   >
-                    {{ article.title }}
+                    {{ article.category[0] }}
                   </p>
-                  <p
-                    class="text-gray-500 text-lg h-auto lg:h-16 lg:line-clamp-2 hidden md:block"
-                  >
-                    {{ article.description }}
+                  <p class="capitalize">{{ article.category }}</p>
+                  <p class="mx-0.5 text-gray-600">in</p>
+                  <p>Blogs</p>
+                </span>
+                <p class="font-bold line-clamp-2 mb-1.5 leading-5 sohne">
+                  {{ article.title }}
+                </p>
+                <span class="flex">
+                  <p class="text-sm text-gray-600">
+                    {{ formatDate(article.createdAt) }}
                   </p>
-                </div>
+                  <icon-star
+                    width="11"
+                    height="11"
+                    IconName="star"
+                    class="mx-1 self-center"
+                  ></icon-star>
+                </span>
               </div>
-            </nuxt-link>
-          </li>
-        </ul>
-      </div>
+              <img
+                :src="`/resources/${article.img}`"
+                alt=""
+                class="w-[6.25rem] h-[6.25rem] lg:w-auto object-cover"
+              />
+            </div>
+          </nuxt-link>
+        </li>
+      </ul>
     </div>
+    <Category />
   </div>
 </template>
 
 <script>
-import Newsfeed from "~/components/news/Newsfeed";
-import IconMore from "~/components/icons/ui/IconMore";
-import IconClock from "~/components/icons/ui/IconClock";
+import Category from '~/components/category';
+import IconStar from "~/components/icons/ui/IconStar";
 export default {
-  components: { Newsfeed, IconMore, IconClock },
+  components: { IconStar, Category },
   async asyncData({ $content, params }) {
     const articles = await $content("blog", params.slug)
-      // .only(["title", "description", "img", "date", "slug"])
+      // .only(["title", "description", "img", "createdAt", "slug"])
       .sortBy("createdAt", "asc")
       .fetch();
     return {

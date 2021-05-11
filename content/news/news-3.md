@@ -3,7 +3,7 @@ title: Follow Elon Musk’s Advice and Skip the MBA. Read These 10 Books Instead
 description: this is the description for news blog
 slug: news-3
 img: news-3.jpg
-category: "#Computer"
+category: Computer
 ---
 
 # 7 signs you’re rich, even if it doesn’t feel like it

@@ -1,9 +1,24 @@
 <template>
-  <div class="mx-3.5 md:px-52 m-auto">
+  <div class="px-3.5 md:px-72">
+    <span v-for="(tag, id) in article.tags" :key="id">
+      <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
+        <span
+          class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
+        >
+          {{ tags[tag].name }}
+        </span>
+      </NuxtLink>
+    </span>
     <div>
       <!--this-div-contains-title and description-only-->
-      <h1 class="text-3xl md:text-5xl font-semibold my-2 text-gray-900">{{ article.title }}</h1>
-      <h2 class="text-lg md:text-2xl md:font-normal text-gray-600 font-medium py-1">{{ article.description }}</h2>
+      <h1 class="text-3xl md:text-5xl font-semibold my-2 text-gray-900">
+        {{ article.title }}
+      </h1>
+      <h2
+        class="text-lg md:text-2xl md:font-normal text-gray-600 font-medium py-1"
+      >
+        {{ article.description }}
+      </h2>
       <div class="flex justify-between py-4 opacity-60">
         <!-- this-div-contains-social-icons -->
         <span class="flex">
@@ -53,6 +68,7 @@
     <div>
       <article>
         <nuxt-content :document="article"></nuxt-content>
+        <prev-next :prev="prev" :next="next" />
       </article>
     </div>
   </div>
@@ -72,8 +88,21 @@ export default {
   },
   async asyncData({ $content, params }) {
     const article = await $content("blog", params.slug).fetch();
+    const tagsList = await $content("tags")
+      .only(["name", "slug"])
+      .where({ name: { $containsAny: article.tags } })
+      .fetch();
+    const tags = Object.assign({}, ...tagsList.map((s) => ({ [s.name]: s })));
+    const [prev, next] = await $content("blog")
+      .only(["title", "slug"])
+      .sortBy("createdAt", "asc")
+      .surround(params.slug)
+      .fetch();
     return {
       article,
+      tags,
+      prev,
+      next,
     };
   },
   methods: {

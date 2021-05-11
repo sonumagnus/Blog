@@ -1,5 +1,6 @@
 <template>
 <div>
+      <Navbar />
 <div
 class="grid p-10 grid-cols-5 md:grid-cols-10 gap-8 text-3xl md:text-5xl text-gray-500 pt-4"
 >
@@ -60,7 +61,8 @@ class="grid p-10 grid-cols-5 md:grid-cols-10 gap-8 text-3xl md:text-5xl text-gra
 <i class="fab fa-twitter-square"></i>
 <i class="fab fa-instagram-square"></i>
 <i class="fad fa-share"></i>
-
+<i class="fas fa-star"></i>
+<i class="fal fa-check-circle"></i>
 </div>
 </div>
 </template>
