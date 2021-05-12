@@ -2,12 +2,13 @@
   <div>
     <Navbar />
     <NewsNewsfeed />
-    <div class="mx-6 lg:mx-24">
+    <div class="m-6 md:mx-20">
+      <seemore category="blog" />
       <ul class="lg:grid lg:grid-cols-2 lg:gap-x-12">
         <li
           v-for="(article, index) in articles"
           :key="index"
-          class="my-6 w-full"
+          class="my-6 md:my-14 lg:my-6 w-full"
         >
           <nuxt-link :to="`${article.path}`">
             <div class="flex justify-between">
@@ -22,40 +23,50 @@
                   <p class="mx-0.5 text-gray-600">in</p>
                   <p>Blogs</p>
                 </span>
-                <p class="font-bold line-clamp-2 mb-1.5 leading-5 sohne">
+                <p
+                  class="font-bold line-clamp-2 leading-5 md:text-lg md:leading-7 capitalize"
+                >
                   {{ article.title }}
                 </p>
-                <span class="flex">
-                  <p class="text-sm text-gray-600">
+                <p
+                  class="hidden md:block md:line-clamp-1 text-gray-500 md:leading-5 md:mt-1"
+                >
+                  {{ article.description }}
+                </p>
+                <span class="flex text-sm text-gray-600 opacity-80 mt-1.5">
+                  <p>
                     {{ formatDate(article.createdAt) }}
                   </p>
+                  <p class="px-1.5 font-semibold">·</p>
+                  <ReadingTime :content="article.body" />
                   <icon-star
-                    width="11"
-                    height="11"
-                    IconName="star"
-                    class="mx-1 self-center"
+                    width="15"
+                    height="15"
+                    iconName="star"
+                    class="mx-1 self-center opacity-70"
                   ></icon-star>
                 </span>
               </div>
               <img
                 :src="`/resources/${article.img}`"
                 alt=""
-                class="w-[6.25rem] h-[6.25rem] lg:w-auto object-cover"
+                class="w-[6.25rem] h-[6.25rem] sm:w-auto md:h-32 object-cover md:self-center"
               />
             </div>
           </nuxt-link>
         </li>
       </ul>
     </div>
+    <!-- this-category div contains category button in bottom of the page -->
     <Category />
   </div>
 </template>
 
 <script>
-import Category from '~/components/category';
 import IconStar from "~/components/icons/ui/IconStar";
+import Seemore from '~/components/seemore.vue';
 export default {
-  components: { IconStar, Category },
+  components: { IconStar, Seemore },
   async asyncData({ $content, params }) {
     const articles = await $content("blog", params.slug)
       // .only(["title", "description", "img", "createdAt", "slug"])
@@ -67,7 +78,7 @@ export default {
   },
   methods: {
     formatDate(date) {
-      const options = { year: "numeric", month: "long", day: "numeric" };
+      const options = { month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);
     },
   },

@@ -1,6 +1,7 @@
 <template>
-  <div class="mx-3.5 md:mx-72 m-auto">
-    <div>
+  <div>
+    <Navbar />
+    <div class="mx-3.5 md:mx-72 m-auto">
       <!--this-div-contains-title and description-only-->
       <h1 class="text-3xl md:text-5xl font-semibold my-2">{{ doc.title }}</h1>
       <h2
@@ -15,7 +16,7 @@
             ><icon-twitter
               width="18"
               height="18"
-              icon-name="twitter"
+              iconName="twitter"
               class="m-1"
             ></icon-twitter
           ></nuxt-link>
@@ -23,7 +24,7 @@
             ><icon-insta
               width="18"
               height="18"
-              icon-name="instagram"
+              iconName="instagram"
               class="m-1"
             ></icon-insta
           ></nuxt-link>
@@ -31,7 +32,7 @@
             ><icon-facebook
               width="18"
               height="18"
-              icon-name="facebook"
+              iconName="facebook"
               class="m-1"
             ></icon-facebook
           ></nuxt-link>
@@ -39,7 +40,7 @@
             <icon-share
               width="18"
               height="18"
-              icon-name="share"
+              iconName="share"
               class="m-1"
             ></icon-share>
           </nuxt-link>
@@ -52,13 +53,13 @@
       <div>
         <img :src="`/resources/${doc.img}`" alt="" class="mb-2.5 w-full" />
       </div>
-    </div>
-    <!-- Document-article-div -->
-    <div>
-      <article>
-        <nuxt-content :document="doc"></nuxt-content>
-      </article>
-      <prev-next-news :prev="prev" :next="next" />
+      <!-- Document-article-div -->
+      <div>
+        <article>
+          <nuxt-content :document="doc"></nuxt-content>
+        </article>
+        <prev-next-news :prev="prev" :next="next" />
+      </div>
     </div>
   </div>
 </template>
@@ -68,7 +69,7 @@ import IconTwitter from "~/components/icons/contact/IconTwitter";
 import IconFacebook from "~/components/icons/contact/IconFacebook";
 import IconInsta from "~/components/icons/contact/IconInsta";
 import IconShare from "~/components/icons/ui/IconShare";
-import PrevNextNews from '~/components/PrevNextNews';
+import PrevNextNews from "~/components/PrevNextNews";
 export default {
   components: {
     IconTwitter,

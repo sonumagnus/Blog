@@ -6,22 +6,22 @@
     aria-hidden="true"
     focusable="false"
     data-prefix="fad"
-    data-icon="user"
+    data-icon="check-circle"
     role="img"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 448 512"
+    viewBox="0 0 512 512"
     data-fa-i2svg=""
   >
     <g class="fa-group">
       <path
-        class="fa-secondary"
+        class="fa-secondary text-gray-300"
         fill="currentColor"
-        d="M352 128A128 128 0 1 1 224 0a128 128 0 0 1 128 128z"
+        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm155.31 195.31l-184 184a16 16 0 0 1-22.62 0l-104-104a16 16 0 0 1 0-22.62l22.62-22.63a16 16 0 0 1 22.63 0L216 308.12l150.06-150.06a16 16 0 0 1 22.63 0l22.62 22.63a16 16 0 0 1 0 22.62z"
       ></path>
       <path
-        class="fa-primary"
+        class="fa-primary text-green-800 opacity-70"
         fill="currentColor"
-        d="M313.6 288h-16.7a174.1 174.1 0 0 1-145.8 0h-16.7A134.43 134.43 0 0 0 0 422.4V464a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48v-41.6A134.43 134.43 0 0 0 313.6 288z"
+        d="M227.31 387.31a16 16 0 0 1-22.62 0l-104-104a16 16 0 0 1 0-22.62l22.62-22.63a16 16 0 0 1 22.63 0L216 308.12l150.06-150.06a16 16 0 0 1 22.63 0l22.62 22.63a16 16 0 0 1 0 22.62l-184 184z"
       ></path>
     </g>
   </svg>

@@ -5,11 +5,11 @@
       type="search"
       autocomplete="off"
       placeholder="Search Articles"
-      class="block w-full pl-10 pr-3 py-2 truncate leading-5 placeholder-gray-500 border border-gray-500 text-gray-700 focus:border-gray-300 rounded-md focus:outline-none focus:bg-white bg-white"
+      class="block w-full pl-10 pr-3 py-2 truncate leading-5 placeholder-gray-500 border border-gray-500 text-gray-700 focus:border-gray-300 rounded-md focus:outline-none bg-white"
     />
     <ul
       v-if="articles.length"
-      class="z-10 absolute w-auto flex-1 top-40 bg-white dark:bg-gray-900 rounded-md border border-gray-300 overflow-hidden"
+      class="z-10 absolute w-auto flex-1 bg-white dark:bg-gray-900 rounded-md border border-gray-300 overflow-hidden"
     >
       <li v-for="article of articles" :key="article.slug">
         <NuxtLink
@@ -37,7 +37,7 @@ export default {
         return
       }
       this.articles = await this.$content('blog')
-        .limit(6)
+        .limit(3)
         .search(searchQuery)
         .fetch()
     }

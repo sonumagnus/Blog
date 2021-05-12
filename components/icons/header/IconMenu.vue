@@ -17,12 +17,12 @@
       <path
         fill="currentColor"
         d="M16 288h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H116a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16z"
-        class="fa-secondary"
+        class="fa-secondary text-green-600"
       ></path>
       <path
         fill="currentColor"
         d="M432 384H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H16A16 16 0 0 0 0 80v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16z"
-        class="opacity-70 text-green-900"
+        class="opacity-90 text-green-900"
       ></path>
     </g>
   </svg>

@@ -1,5 +1,5 @@
 <template>
-  <div class="px-3.5 md:px-72">
+  <div class="p-3.5 md:px-72">
     <span v-for="(tag, id) in article.tags" :key="id">
       <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
         <span
@@ -26,7 +26,7 @@
             ><icon-twitter
               width="18"
               height="18"
-              icon-name="twitter"
+              iconName="twitter"
               class="m-1"
             ></icon-twitter
           ></nuxt-link>
@@ -34,7 +34,7 @@
             ><icon-insta
               width="18"
               height="18"
-              icon-name="instagram"
+              iconName="instagram"
               class="m-1"
             ></icon-insta
           ></nuxt-link>
@@ -42,7 +42,7 @@
             ><icon-facebook
               width="18"
               height="18"
-              icon-name="facebook"
+              iconName="facebook"
               class="m-1"
             ></icon-facebook
           ></nuxt-link>
@@ -50,7 +50,7 @@
             <icon-share
               width="18"
               height="18"
-              icon-name="share"
+              iconName="share"
               class="m-1"
             ></icon-share>
           </nuxt-link>

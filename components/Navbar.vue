@@ -1,6 +1,6 @@
 <template>
   <div class="w-full bg-white border-b shadow-sm">
-    <div class="w-full md:w-5/6 h-auto m-auto">
+    <div class="w-full md:w-5/6 h-auto m-auto px-3">
       <div class="w-full flex md:justify-between">
         <!--main-Navbar-div-->
         <div class="py-2">
@@ -64,8 +64,8 @@
             <icon-menu
               width="22"
               height="22"
-              icon-name="bars"
-              class="mt-3 absolute right-3 text-gray-600 hue-rotate-180"
+              IconName="bars"
+              class="mt-3 absolute right-3 text-gray-600"
             ></icon-menu>
           </span>
         </span>

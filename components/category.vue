@@ -1,13 +1,13 @@
 <template>
-    <div class="px-6 lg:px-24 py-3 text-center border-t">
-      <h3 class="uppercase text-xl lg:text-2xl font-bold">read more about</h3>
-      <ul class="flex flex-wrap mb-4 justify-between ">
+    <div class="px-6 lg:px-24 py-2 text-center border-t border-b ">
+      <h3 class="uppercase text-sm lg:text-lg font-bold mb-4 text-gray-500">discover by category</h3>
+      <ul class="flex flex-wrap mb-2 justify-between ">
         <li
           v-for="tag of tags"
           :key="tag.slug"
         >
           <NuxtLink :to="`/blog/tag/${tag.slug}`">
-            <p class="my-2 hover:underline capitalize font-medium lg:text-xl">
+            <p class="px-2 py-1 text-gray-800 opacity-70 capitalize text-sm lg:text-xl border border-gray-400 rounded">
               {{ tag.name }}
             </p>
           </NuxtLink>

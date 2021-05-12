@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Navbar />
-    <div class="lg:w-5/6 mx-auto mt-2 md:mt-12">
+    <div class="lg:w-5/6 mx-auto mt-2 md:mt-12 md:px-20">
       <div
         class="w-[95%] md:w-10/12 bg-gray-50 m-auto flex flex-col md:flex-row shadow-md overflow-hidden relative rounded-xl"
       >
@@ -19,17 +19,17 @@
             <icon-facebook
               width="28"
               height="28"
-              icon-name="facebook"
+              iconName="facebook"
             ></icon-facebook>
             <icon-insta
               width="28"
               height="28"
-              icon-name="Instagram"
+              iconName="Instagram"
             ></icon-insta>
             <icon-envelope
               width="28"
               height="28"
-              icon-name="Envelope"
+              iconName="Envelope"
             ></icon-envelope>
           </div>
         </div>

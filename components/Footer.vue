@@ -31,7 +31,7 @@
               <icon-facebook
                 width="16"
                 height="16"
-                icon-name="facebook"
+                iconName="facebook"
                 class="my-2 mr-2"
               >
               </icon-facebook>
@@ -43,7 +43,7 @@
               <icon-insta
                 width="17"
                 height="17"
-                icon-name="instagram"
+                iconName="instagram"
                 class="m-2"
               ></icon-insta>
             </nuxt-link>
@@ -54,7 +54,7 @@
               <icon-envelope
                 width="18"
                 height="18"
-                icon-name="Envelope"
+                iconName="Envelope"
                 class="m-2"
               ></icon-envelope>
             </nuxt-link>
@@ -65,7 +65,7 @@
               <icon-twitter
                 width="18"
                 height="18"
-                icon-name="twitter"
+                iconName="twitter"
               ></icon-twitter>
             </nuxt-link>
           </div>

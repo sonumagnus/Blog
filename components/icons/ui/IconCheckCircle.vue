@@ -2,7 +2,7 @@
   <svg
     :width="width"
     :height="height"
-    :aria-labelledby="IconName"
+    :aria-labelledby="iconName"
     aria-hidden="true"
     focusable="false"
     data-prefix="fal"
@@ -22,7 +22,7 @@
 <script>
 export default {
   props: {
-    IconName: {
+    iconName: {
       type: String,
       default: "box",
     },
