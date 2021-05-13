@@ -1,6 +1,6 @@
 ---
 title: I tried planking for 5 minutes every day for a month and it made my back feel great
-description: This is description part. here we can write a really long description
+description: Actions may speak louder than words, but our words still hold tremendous power
 slug: third-post
 img: blog-3.jpg
 category: Android

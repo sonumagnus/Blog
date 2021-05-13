@@ -1,5 +1,5 @@
 <template>
-  <div class="p-3.5 md:px-72">
+  <div class="p-5 md:mx-36 lg:mx-72">
     <span v-for="(tag, id) in article.tags" :key="id">
       <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
         <span
@@ -11,18 +11,20 @@
     </span>
     <div>
       <!--this-div-contains-title and description-only-->
-      <h1 class="text-3xl md:text-5xl font-semibold my-2 text-gray-900">
+      <h1 class="text-3xl md:text-5xl font-medium my-4 text-gray-900">
         {{ article.title }}
       </h1>
       <h2
-        class="text-lg md:text-2xl md:font-normal text-gray-600 font-medium py-1"
+        class="text-lg md:text-xl md:font-normal text-gray-600 font-medium"
       >
         {{ article.description }}
       </h2>
-      <div class="flex justify-between py-4 opacity-60">
+      <div class="flex justify-between my-6">
         <!-- this-div-contains-social-icons -->
         <span class="flex">
-          <nuxt-link to="#"
+          <nuxt-link
+            to="#"
+            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
             ><icon-twitter
               width="18"
               height="18"
@@ -30,7 +32,9 @@
               class="m-1"
             ></icon-twitter
           ></nuxt-link>
-          <nuxt-link to="#"
+          <nuxt-link
+            to="#"
+            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
             ><icon-insta
               width="18"
               height="18"
@@ -38,7 +42,9 @@
               class="m-1"
             ></icon-insta
           ></nuxt-link>
-          <nuxt-link to="#"
+          <nuxt-link
+            to="#"
+            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
             ><icon-facebook
               width="18"
               height="18"
@@ -46,7 +52,10 @@
               class="m-1"
             ></icon-facebook
           ></nuxt-link>
-          <nuxt-link to="#">
+          <nuxt-link
+            to="#"
+            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+          >
             <icon-share
               width="18"
               height="18"
@@ -57,7 +66,7 @@
         </span>
         <span>
           <!-- this-span-contains-created-time -->
-          <p>Last Updated : {{ formatDate(article.updatedAt) }}</p>
+          <p class="text-sm md:text-base mt-0.5 opacity-70">Last Updated : {{ formatDate(article.updatedAt) }}</p>
         </span>
       </div>
       <div>

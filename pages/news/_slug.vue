@@ -1,18 +1,20 @@
 <template>
   <div>
     <Navbar />
-    <div class="mx-3.5 md:mx-72 m-auto">
+    <div class="mx-5 md:mx-72 m-auto">
       <!--this-div-contains-title and description-only-->
-      <h1 class="text-3xl md:text-5xl font-semibold my-2">{{ doc.title }}</h1>
+      <h1 class="text-3xl md:text-5xl font-medium my-2">{{ doc.title }}</h1>
       <h2
         class="text-lg md:text-2xl text-gray-600 font-medium md:font-normal py-1"
       >
         {{ doc.description }}
       </h2>
-      <div class="flex justify-between py-4 opacity-60">
+      <div class="flex justify-between py-4">
         <!-- this-div-contains-social-icons -->
         <span class="flex">
-          <nuxt-link to="#"
+          <nuxt-link
+            to="#"
+            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
             ><icon-twitter
               width="18"
               height="18"
@@ -20,7 +22,9 @@
               class="m-1"
             ></icon-twitter
           ></nuxt-link>
-          <nuxt-link to="#"
+          <nuxt-link
+            to="#"
+            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
             ><icon-insta
               width="18"
               height="18"
@@ -28,7 +32,9 @@
               class="m-1"
             ></icon-insta
           ></nuxt-link>
-          <nuxt-link to="#"
+          <nuxt-link
+            to="#"
+            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
             ><icon-facebook
               width="18"
               height="18"
@@ -36,7 +42,10 @@
               class="m-1"
             ></icon-facebook
           ></nuxt-link>
-          <nuxt-link to="#">
+          <nuxt-link
+            to="#"
+            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+          >
             <icon-share
               width="18"
               height="18"

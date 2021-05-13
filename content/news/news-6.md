@@ -6,8 +6,7 @@ img: news-3.jpg
 category: Computer
 ---
 
-# 7 signs you’re rich, even if it doesn’t feel like it
-![img](/resources/news-2.jpg)
+# 7 signs you’re rich, even if it doesn’t feel like
 ##  Who is Robert Downey Jr.
 _well, this is the news section writing blog for testing purpose_
 

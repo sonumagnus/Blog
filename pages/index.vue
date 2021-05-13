@@ -24,7 +24,7 @@
                   <p>Blogs</p>
                 </span>
                 <p
-                  class="font-bold line-clamp-2 leading-5 md:text-lg md:leading-7 capitalize"
+                  class="font-bold line-clamp-2 leading-5 sm:text-lg md:leading-7 capitalize"
                 >
                   {{ article.title }}
                 </p>
@@ -64,7 +64,7 @@
 
 <script>
 import IconStar from "~/components/icons/ui/IconStar";
-import Seemore from '~/components/seemore.vue';
+import Seemore from "~/components/seemore.vue";
 export default {
   components: { IconStar, Seemore },
   async asyncData({ $content, params }) {

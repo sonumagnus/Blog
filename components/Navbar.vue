@@ -83,7 +83,6 @@ export default {
     IconMenu,
     IconSearch,
   },
-  props: ["show"],
   data() {
     return { menu: false, search: false };
   },
@@ -93,9 +92,6 @@ export default {
     },
     searchbox() {
       this.search = !this.search;
-    },
-    close: function () {
-      this.$emit("close");
     },
   },
 };

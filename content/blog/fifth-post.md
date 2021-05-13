@@ -1,6 +1,6 @@
 ---
-title: Green Plants are goint to extinct about 500 times faster than they should, study finds
-description: If you are sort of person who just can not keep a plant alive, you are not alone according to the new study publised june 10 in journal Nature
+title: How To Learn To Code A Practical Guide For Beginners
+description: How to access the zone of optimal mental performance that boosts productivity by 500%
 slug: fifth-post
 img: blog-5.jpg
 category: smartphone

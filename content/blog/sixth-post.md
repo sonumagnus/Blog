@@ -1,6 +1,6 @@
 ---
-title: Green Plants are goint to extinct about 500 times faster than they should, study finds
-description: If you are sort of person who just can not keep a plant alive, you are not alone according to the new study publised june 10 in journal Nature
+title: The Worst Question You Can Ask a Software Developer
+description: Managers ask it. Developers hate it. Know why that is and what you should be asking instead
 slug: sixth-post
 img: blog-6.jpg
 category: smartphone
@@ -11,9 +11,7 @@ tags:
 
 # Learn These 10 Things in Your 20s, Fly in Your 40s
 
-## For when you want to pass a limited number of props to multiple levels using inheritance.
- ![](/resources/blog-3.jpg)
- ## Read about Tony Stark
+## For when you want to pass a limited number of props to multiple levels using inheritance
 
  Holland began dancing at a hip hop class at Nifty Feet Dance School in Wimbledon. His potential was spotted by choreographer Lynne Page (who was an associate to Peter Darling, choreographer of Billy Elliot and Billy Elliot the Musical) when he performed with his dance school as part of the 2006 Richmond Dance Festival.<br><br>
 After eight auditions and two subsequent years of training, on 28 June 2008, Holland made his West End debut in Billy Elliot the Musical as Michael, Billy's best friend. He gave his first performance in the title role on 8 September 2008, receiving positive notices.<br><br>

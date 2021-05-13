@@ -1,6 +1,6 @@
 ---
 title: How to add the "Blue Arrow" button on your website (WebApp)
-description: As you Know Web development is very unique and productive and profitable profession for u 
+description: Losing complete interest in your spouse, no longer arguing, and having no trust in them are all red flags
 slug: second-post
 img: blog-2.jpg
 category: Technology
