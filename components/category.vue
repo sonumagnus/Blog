@@ -1,7 +1,7 @@
 <template>
     <div class="px-6 lg:px-24 py-2 text-center border-t border-b ">
       <h3 class="uppercase text-sm lg:text-lg font-bold mb-4 text-gray-500">discover by category</h3>
-      <ul class="flex flex-wrap mb-2 justify-between ">
+      <ul class="flex flex-wrap mb-2 justify-evenly ">
         <li
           v-for="tag of tags"
           :key="tag.slug"

@@ -3,9 +3,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'sohne': ["sohne, Helvetica Neue, Helvetica, Arial, sans-serif"],
+      sohne: ["sohne, Helvetica Neue, Helvetica, Arial, sans-serif"]
     },
-    extend: {}
+    extend: {
+      backgroundColor: ["active"]
+    }
   },
   variants: {
     extend: {}

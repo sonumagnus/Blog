@@ -2,26 +2,28 @@
   <div
     class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
   >
+    <!-- Left-image-div-starts-here -->
+
     <div class="relative lg:w-2/5 xs:w-full xs:h-84 lg:h-full post-left">
-      <img
-        :src="tag.img"
-        :alt="tag.name"
-        class="absolute h-full w-full object-cover"
-      />
+      <div class="svg h-full w-full"></div>
     </div>
     <div class="overlay"></div>
-    <div class="absolute top-32 left-32 right-32 text-white">
+    <div class="absolute left-4 right-36 text-white">
       <div class="mt-16 -mb-3 flex flex-col text-sm">
         <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
           <h1 class="text-4xl font-bold uppercase">
             {{ tag.name }}
           </h1>
-          <p class="mb-4 uppercase">{{ tag.description }}</p>
+          <p class="my-4 text-lg capitalize font-medium">
+            {{ tag.description }}
+          </p>
 
           <nuxt-content :document="tag" />
         </div>
       </div>
     </div>
+    <!-- Left-image-div-ends-here -->
+    <!-- Right-blog-list-div-starts-here -->
     <div
       class="relative mx-6 xs:py-8 lg:p-4 lg:w-3/5 xs:w-full h-full overflow-y-scroll markdown-body post-right custom-scroll"
     >
@@ -33,7 +35,7 @@
             iconName="long-left-arrow"
             class="self-center mr-1"
           ></icon-left-arrow>
-          <p class="hover:underline underline">Back to All Articles</p>
+          <p class="hover:underline">Back to All Blogs</p>
         </span>
       </NuxtLink>
       <p class="mb-4 font-bold text-2xl capitalize text-gray-400">
@@ -123,3 +125,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.svg {
+  background-color: #28324e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23ca002c' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23a70022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23c6004c' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23a3003c' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23c0006a' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%239d0055' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23b7008a' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%2394006e' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>

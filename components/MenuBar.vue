@@ -6,7 +6,7 @@
       v-show="show"
     >
       <div
-        class="pt-6 pr-6 pb-32 pl-6 bg-gray-50 w-2/3 ml-1/5 mr-1/4 h-screen"
+        class="pt-6 pr-6 pb-32 pl-6 bg-gray-50 w-2/3 ml-1/5 mr-1/4 h-screen transition-all duration-300 ease-in-out  modal-container"
         @click.stop
       >
         <nuxt-link to="/" class="p-3 block font-bold mt-8">Home</nuxt-link>
@@ -38,17 +38,7 @@ export default {
 };
 </script>
 
-
 <style>
-/*
-* The following styles are auto-applied to elements with
-* transition="modal" when their visibility is toggled
-* by Vue.js.
-*
-* You can easily play with the modal transition by editing
-* these styles.
-*/
-
 .modal-enter .modal-container {
   transform: translate(-100%, 0);
 }

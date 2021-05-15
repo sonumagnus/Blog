@@ -64,6 +64,7 @@ class="grid p-10 grid-cols-5 md:grid-cols-10 gap-8 text-3xl md:text-5xl text-gra
 <i class="fas fa-star"></i>
 <i class="fal fa-check-circle"></i>
 <i class="fad fa-check-circle"></i>
+<i class="far fa-map-marker-alt"></i>
 </div>
 </div>
 </template>

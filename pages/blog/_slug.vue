@@ -1,84 +1,91 @@
 <template>
-  <div class="p-5 md:mx-36 lg:mx-72">
-    <span v-for="(tag, id) in article.tags" :key="id">
-      <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
-        <span
-          class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
-        >
-          {{ tags[tag].name }}
-        </span>
-      </NuxtLink>
-    </span>
-    <div>
-      <!--this-div-contains-title and description-only-->
-      <h1 class="text-3xl md:text-5xl font-medium my-4 text-gray-900">
-        {{ article.title }}
-      </h1>
-      <h2
-        class="text-lg md:text-xl md:font-normal text-gray-600 font-medium"
-      >
-        {{ article.description }}
-      </h2>
-      <div class="flex justify-between my-6">
-        <!-- this-div-contains-social-icons -->
-        <span class="flex">
-          <nuxt-link
-            to="#"
-            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
-            ><icon-twitter
-              width="18"
-              height="18"
-              iconName="twitter"
-              class="m-1"
-            ></icon-twitter
-          ></nuxt-link>
-          <nuxt-link
-            to="#"
-            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
-            ><icon-insta
-              width="18"
-              height="18"
-              iconName="instagram"
-              class="m-1"
-            ></icon-insta
-          ></nuxt-link>
-          <nuxt-link
-            to="#"
-            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
-            ><icon-facebook
-              width="18"
-              height="18"
-              iconName="facebook"
-              class="m-1"
-            ></icon-facebook
-          ></nuxt-link>
-          <nuxt-link
-            to="#"
-            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+  <div>
+    <Navbar />
+    <div class="p-5 md:mx-36 lg:mx-72">
+      <span v-for="(tag, id) in article.tags" :key="id">
+        <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
+          <span
+            class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
           >
-            <icon-share
-              width="18"
-              height="18"
-              iconName="share"
-              class="m-1"
-            ></icon-share>
-          </nuxt-link>
-        </span>
-        <span>
-          <!-- this-span-contains-created-time -->
-          <p class="text-sm md:text-base mt-0.5 opacity-70">Last Updated : {{ formatDate(article.updatedAt) }}</p>
-        </span>
-      </div>
+            {{ tags[tag].name }}
+          </span>
+        </NuxtLink>
+      </span>
       <div>
-        <img :src="`/resources/${article.img}`" alt="" class="mb-2.5 w-full" />
+        <!--this-div-contains-title and description-only-->
+        <h1 class="text-3xl md:text-5xl font-medium my-4 text-gray-900">
+          {{ article.title }}
+        </h1>
+        <h2 class="text-lg md:text-xl md:font-normal text-gray-600 font-medium">
+          {{ article.description }}
+        </h2>
+        <div class="flex justify-between my-6">
+          <!-- this-div-contains-social-icons -->
+          <span class="flex">
+            <nuxt-link
+              to="#"
+              class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+              ><icon-twitter
+                width="18"
+                height="18"
+                iconName="twitter"
+                class="m-1"
+              ></icon-twitter
+            ></nuxt-link>
+            <nuxt-link
+              to="#"
+              class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+              ><icon-insta
+                width="18"
+                height="18"
+                iconName="instagram"
+                class="m-1"
+              ></icon-insta
+            ></nuxt-link>
+            <nuxt-link
+              to="#"
+              class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+              ><icon-facebook
+                width="18"
+                height="18"
+                iconName="facebook"
+                class="m-1"
+              ></icon-facebook
+            ></nuxt-link>
+            <nuxt-link
+              to="#"
+              class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+            >
+              <icon-share
+                width="18"
+                height="18"
+                iconName="share"
+                class="m-1"
+              ></icon-share>
+            </nuxt-link>
+          </span>
+          <span>
+            <!-- this-span-contains-created-time -->
+            <p class="text-sm md:text-base mt-0.5 opacity-70">
+              Last Updated : {{ formatDate(article.updatedAt) }}
+            </p>
+          </span>
+        </div>
+        <div>
+          <img
+            :src="`/resources/${article.img}`"
+            alt=""
+            class="mb-2.5 w-full"
+          />
+        </div>
       </div>
-    </div>
-    <!-- Document-article-div -->
-    <div>
-      <article>
-        <nuxt-content :document="article"></nuxt-content>
-        <prev-next :prev="prev" :next="next" />
-      </article>
+      <!-- Document-article-div -->
+      <div>
+        <article>
+          <nuxt-content :document="article"></nuxt-content>
+          <prev-next :prev="prev" :next="next" />
+        </article>
+      </div>
     </div>
   </div>
 </template>
