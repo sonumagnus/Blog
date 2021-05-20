@@ -11,4 +11,4 @@ Well, this is the news section writing blog for testing purpose
 
 ## Who is Spider Man
 
-hello there do you know Pubg mobile india soon gonna launch in india as per indian government and misintery of informantion & technoly.
+hello there do you know Pubg mobile india soon gonna launch in india as per indian government and misintery of informantion & technology.

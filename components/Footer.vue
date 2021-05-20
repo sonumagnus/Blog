@@ -12,7 +12,7 @@
           </div>
           <div class="text-center md:text-left my-4 md:my-0">
             <p class="text-gray-300 font-bold py-2 md:py-0">ABOUT US</p>
-            <p class="text-gray-400 md:py-2 md:p-0">
+            <p class="text-gray-300 md:py-2 md:p-0">
               BlogTag is the place where you will find Latest News and Blogs
               related to Gadgets and Tech Products
             </p>

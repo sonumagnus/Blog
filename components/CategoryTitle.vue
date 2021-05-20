@@ -15,7 +15,12 @@ export default {
   components: {
     IconCheckedCircle,
   },
-  props: ["category"]
+  props: {
+    category: {
+      type: String,
+      default: "",
+    },
+  }
 };
 </script>
 

@@ -4,9 +4,11 @@ module.exports = {
   theme: {
     fontFamily: {
       sohne: ["sohne, Helvetica Neue, Helvetica, Arial, sans-serif"]
-    },
+    }, 
     extend: {
-      backgroundColor: ["active"]
+      colors: {
+        NavyBlue: "#09115e"
+      }
     }
   },
   variants: {

@@ -6,7 +6,7 @@ img: blog-3.jpg
 category: Android
 tags: 
  - smartphone
- - technology
+ - how to 
 ---
 
 # A Man In His 30s Explains

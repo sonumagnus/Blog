@@ -3,22 +3,22 @@
     <Navbar />
     <div class="w-full md:w-11/12 m-auto">
       <div
-        class="w-full md:w-2/3 m-auto md:mt-6 bg-indigo-900 h-auto flex flex-col md:flex-row box-content md:p-11 md:rounded-xl"
+        class="w-full md:w-2/3 m-auto md:mt-6 bg-NavyBlue h-auto flex flex-col md:flex-row box-content md:p-11 md:rounded-xl"
       >
         <!-- left-div-contains-quote-and icons-starts-here -->
         <div class="w-full md:w-[55%] h-80 md:h-[26rem] flex flex-col md:justify-between md:pl-8 md:pr-32">
           <!-- left-top-div-starts-here -->
           <div class="m-5 md:m-0">
             <p class="text-2xl font-semibold mb-2 text-white">Contact Info</p>
-            <p class="text-gray-300">
-              Fill up the form and out team will be get back to you within 24
+            <p class="text-gray-400">
+              Fill up the form and our team will be get back to you within 24
               hours
             </p>
           </div>
           <!-- left-mid-div-starts-here -->
-          <div>
+          <div class="md:w-48">
             <span
-              class="flex items-center px-4 py-3 md:hover:border-2 hover:border-blue-700 rounded-md"
+              class="flex items-center px-4 py-3 hover:ring-2 hover:ring-blue-700 rounded-md"
             >
               <icon-phone
                 width="14"
@@ -26,10 +26,10 @@
                 iconName="phone-alt"
                 class="mr-3 text-indigo-400"
               ></icon-phone>
-              <p class="text-xs text-gray-200">+0123 4567 8910</p>
+              <p class="text-xs text-gray-300">+0123 4567 8910</p>
             </span>
             <span
-              class="flex items-center px-4 py-3 md:hover:border-2 hover:border-blue-700 rounded-md"
+              class="flex items-center px-4 py-3 md:my-1 hover:ring-2 hover:ring-blue-700 rounded-md"
             >
               <icon-envelope
                 width="15"
@@ -37,10 +37,10 @@
                 iconName="envelope"
                 class="mr-3 text-indigo-400"
               ></icon-envelope>
-              <p class="text-sm text-gray-200">hello@example.com</p>
+              <p class="text-sm text-gray-300">hello@example.com</p>
             </span>
             <span
-              class="flex items-center px-4 py-3 md:hover:border-2 hover:border-blue-700 rounded-md"
+              class="flex items-center px-4 py-3 hover:ring-2 hover:ring-blue-700 rounded-md"
             >
               <icon-location
                 width="15"
@@ -48,14 +48,14 @@
                 iconName="map-marker-alt"
                 class="mr-3 text-indigo-400"
               ></icon-location>
-              <p class="text-sm text-gray-200">121 street 414 don</p>
+              <p class="text-sm text-gray-300">121 street 414 don</p>
             </span>
           </div>
           <!-- left-bottom-div-starts-here -->
-          <div class="flex m-2 ml-4 md:ml-0">
+          <div class="flex m-2 ml-4 md:ml-1.5">
             <nuxt-link
               to="#"
-              class="p-2 items-start md:p-4 border-t mr-2.5 rounded-full md:hover:bg-blue-500 hover:text-white"
+              class="p-2 items-start md:p-3 mr-2.5 rounded-full md:hover:bg-blue-500 hover:text-white"
               ><icon-facebook
                 width="16"
                 height="16"
@@ -65,17 +65,17 @@
             ></nuxt-link>
             <nuxt-link
               to="#"
-              class="p-2 md:p-4 mx-2 rounded-full md:hover:bg-blue-500 hover:text-white border-t"
+              class="p-2 md:p-3 mx-2 rounded-full md:hover:bg-blue-500 hover:text-gray-100"
               ><icon-twitter
                 width="16"
                 height="16"
                 iconName="twitter"
-                class="text-white"
+                class="text-gray-100"
               ></icon-twitter
             ></nuxt-link>
             <nuxt-link
               to="#"
-              class="p-2 md:p-4 ml-2.5 rounded-full md:hover:bg-blue-500 hover:text-white border-t"
+              class="p-2 md:p-3 ml-2.5 rounded-full md:hover:bg-blue-500 hover:text-gray-100"
               ><icon-insta
                 width="16"
                 height="16"
@@ -86,29 +86,29 @@
           </div>
         </div>
         <!-- Right-form-div-starts-here -->
-        <div class="w-full md:w-[45%] bg-white h-[26rem] rounded-xl p-6">
+        <div class="w-full md:w-[45%] bg-white h-[26rem] rounded-xl p-7">
           <div>
             <div class="mb-3">
-              <p>Your Name</p>
+              <p class="ml-0.5 mb-1.5 text-sm">Your Name</p>
               <span
-                class="flex p-2 border focus-within:border-2 border-gray-300 focus-within:border-blue-500 rounded-md"
+                class="flex p-1.5 border focus-within:border-opacity-0 border-gray-300 focus-within:ring-2 focus-within:ring-blue-400 rounded"
               >
                 <icon-user
                   width="15"
                   height="15"
                   iconName="user"
-                  class="self-center text-gray-500"
+                  class="self-center text-gray-400"
                 ></icon-user>
                 <input
                   type="text"
-                  class="focus:outline-none w-full px-2 focus:bg-white"
+                  class="focus:outline-none w-full px-2"
                 />
               </span>
             </div>
             <div class="mb-3">
-              <p>Mail</p>
+              <p class="ml-0.5 mb-1.5 text-sm">Mail</p>
               <span
-                class="flex p-2 border focus-w focus-within:border-2 border-gray-300 focus-within:border-blue-500 rounded-md"
+                class="flex p-1.5 border focus-within:border-opacity-0 border-gray-300 focus-within:ring-2 focus-within:ring-blue-400 rounded"
               >
                 <icon-envelope
                   width="15"
@@ -123,9 +123,9 @@
               </span>
             </div>
             <div class="mb-3">
-              <p>Message</p>
+              <p class="ml-0.5 mb-1.5 text-sm">Message</p>
               <span
-                class="flex p-2 border focus-within:border-2 border-gray-300 focus-within:border-blue-500 rounded-md"
+                class="flex p-1.5 border focus-within:border-opacity-0 border-gray-300 focus-within:ring-2 focus-within:ring-blue-400 rounded"
               >
                 <textarea
                   name=""
@@ -133,14 +133,14 @@
                   cols="30"
                   rows="5"
                   placeholder="Message"
-                  class="w-full resize-none focus:outline-none"
+                  class="w-full resize-none focus:outline-none placeholder-opacity-60	"
                 ></textarea>
               </span>
             </div>
             <span>
               <button
                 type="submit"
-                class="px-4 py-2 bg-blue-800 text-white rounded-md focus:outline-none float-right"
+                class="px-6 py-2.5 bg-blue-500 text-white text-sm rounded-md focus:outline-none float-right"
               >
                 Send Messages
               </button>

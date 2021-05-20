@@ -19,7 +19,7 @@
                 <p class="mx-0.5 text-gray-600">in</p>
                 <p>Latest News</p>
               </div>
-              <div class="font-bold line-clamp-2 mb-2 text-gray-800 so">
+              <div class="font-bold line-clamp-2 mb-2">
                 {{ doc.title }}
               </div>
               <div class="text-sm text-gray-500 flex">

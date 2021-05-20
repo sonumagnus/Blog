@@ -5,7 +5,7 @@ slug: second-post
 img: blog-2.jpg
 category: Technology
 tags: 
- - technology
+ - how to 
  - top list
 ---
 # Four Signs a Person Is Secretly Unhappy with Their Life

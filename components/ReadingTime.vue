@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'readingTime',
+  // name: 'readingTime',
   props: ['content'],
   computed: {
     readingTime () {

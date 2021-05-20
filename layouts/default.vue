@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Nuxt class="m-auto min-h-screen font-sohne" />
+  <div class="font-sohne">
+    <Nuxt class="m-auto min-h-screen" />
     <Footer />
   </div>
 </template>

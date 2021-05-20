@@ -14,7 +14,7 @@
         <span class="flex">
           <nuxt-link
             to="#"
-            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+            class="text-white p-px rounded-full bg-blue-300 mx-0.5 md:mx-1"
             ><icon-twitter
               width="18"
               height="18"
@@ -24,7 +24,7 @@
           ></nuxt-link>
           <nuxt-link
             to="#"
-            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+            class="text-white p-px rounded-full bg-gradient-to-b from-purple-500 to-yellow-400 mx-0.5 md:mx-1"
             ><icon-insta
               width="18"
               height="18"
@@ -34,7 +34,7 @@
           ></nuxt-link>
           <nuxt-link
             to="#"
-            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+            class="text-white p-px rounded-full bg-blue-500 mx-0.5 md:mx-1"
             ><icon-facebook
               width="18"
               height="18"
@@ -44,7 +44,7 @@
           ></nuxt-link>
           <nuxt-link
             to="#"
-            class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+            class="text-white p-px rounded-full bg-red-400 mx-0.5 md:mx-1"
           >
             <icon-share
               width="18"

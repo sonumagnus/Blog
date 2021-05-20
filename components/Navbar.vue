@@ -1,12 +1,12 @@
 <template>
   <div class="w-full bg-white border-b shadow-sm">
-    <div class="w-full md:w-5/6 h-auto m-auto px-3">
+    <div class="w-full md:w-11/12 h-auto m-auto px-6">
       <div class="w-full flex md:justify-between">
         <!--main-Navbar-div-->
         <div class="py-2">
           <!--Navbar-Left-Div{Contains: heading}-->
           <nuxt-link to="/">
-            <h1 class="text-2xl font-extrabold px-2 text-black">BlogTag</h1>
+            <h1 class="text-2xl font-semibold">BlogTag</h1>
           </nuxt-link>
         </div>
         <div></div>
@@ -17,7 +17,7 @@
               <li>
                 <nuxt-link
                   to="/"
-                  class="text-lg font-bold px-4 text-gray-900 hover:text-blue-700 hover:underline"
+                  class="text-lg font-medium px-4 text-gray-900 hover:text-blue-700 hover:border-b-2 border-blue-600 py-3.5"
                 >
                   Home
                 </nuxt-link>
@@ -25,7 +25,7 @@
               <li>
                 <nuxt-link
                   to="/Blog"
-                  class="text-lg font-bold px-4 text-gray-900 hover:text-blue-700 hover:underline"
+                  class="text-lg font-medium px-4 text-gray-900 hover:text-blue-700 hover:border-b-2 border-blue-600 py-3.5"
                 >
                   Blog
                 </nuxt-link>
@@ -33,7 +33,7 @@
               <li>
                 <nuxt-link
                   to="/News"
-                  class="text-lg font-bold px-4 text-gray-900 hover:text-blue-700 hover:underline"
+                  class="text-lg font-medium px-4 text-gray-900 hover:text-blue-700 hover:border-b-2 border-blue-600 py-3.5"
                 >
                   News
                 </nuxt-link>

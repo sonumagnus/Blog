@@ -5,7 +5,7 @@ slug: fifth-post
 img: blog-5.jpg
 category: smartphone
 tags:
- - technology
+ - how to
 ---
 
 # A Quick Guide to Understanding Orbital Debris Reentry Predictions

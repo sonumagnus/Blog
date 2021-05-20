@@ -1,11 +1,11 @@
 <template>
   <div>
     <Navbar />
-    <div class="p-5 md:mx-36 lg:mx-72">
+    <div class="m-4 md:mx-36 lg:mx-72">
       <span v-for="(tag, id) in article.tags" :key="id">
         <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
           <span
-            class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
+            class="truncate uppercase tracking-wider font-medium px-2 py-1 rounded-full mr-2 mb-2 border transition-colors duration-300 ease-linear"
           >
             {{ tags[tag].name }}
           </span>
@@ -24,7 +24,7 @@
           <span class="flex">
             <nuxt-link
               to="#"
-              class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+              class="text-white p-px rounded-full bg-blue-300 mx-0.5 md:mx-1"
               ><icon-twitter
                 width="18"
                 height="18"
@@ -34,7 +34,7 @@
             ></nuxt-link>
             <nuxt-link
               to="#"
-              class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+              class="text-white p-px rounded-full bg-gradient-to-b from-purple-500 to-yellow-400 mx-0.5 md:mx-1"
               ><icon-insta
                 width="18"
                 height="18"
@@ -44,7 +44,7 @@
             ></nuxt-link>
             <nuxt-link
               to="#"
-              class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+              class="text-white p-px rounded-full bg-blue-500 mx-0.5 md:mx-1"
               ><icon-facebook
                 width="18"
                 height="18"
@@ -54,7 +54,7 @@
             ></nuxt-link>
             <nuxt-link
               to="#"
-              class="text-white p-px rounded-full bg-gray-500 mx-0.5 md:mx-1"
+              class="text-white p-px rounded-full bg-red-400 mx-0.5 md:mx-1"
             >
               <icon-share
                 width="18"

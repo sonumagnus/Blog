@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <category />
-    <div class="mx-6 mt-3 lg:mx-24">
+    <div class="m-6 lg:mx-20">
       <CategoryTitle category="blog" />
       <ul class="lg:grid lg:grid-cols-2 lg:gap-x-12">
         <li

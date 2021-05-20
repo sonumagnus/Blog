@@ -32,7 +32,12 @@ import IconCheckCircle from "~/components/icons/ui/IconCheckCircle";
 import IconMore from "~/components/icons/ui/IconMore";
 export default {
   components: { IconMore, IconCheckCircle },
-  props: ["category"],
+  props: {
+    category: {
+      type: String,
+      default: "",
+    },
+  },
 };
 </script>
 
