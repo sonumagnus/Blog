@@ -98,10 +98,10 @@ export default {
 </script>
 
 <style>
-.btn {
+/* .btn {
   position: relative;
-}
-.btn::after {
+} */
+/* .btn::after {
   content: "";
   transform: scale(0, 1);
   @apply absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transition duration-300 ease-in;
@@ -110,5 +110,5 @@ export default {
   content: "";
   transform: scale(1, 1);
   @apply absolute left-0 bottom-0 w-full h-0.5 bg-blue-600;
-}
+} */
 </style>
