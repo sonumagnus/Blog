@@ -3,9 +3,10 @@ title: How To Learn To Code A Practical Guide For Beginners
 description: How to access the zone of optimal mental performance that boosts productivity by 500%
 slug: fifth-post
 img: blog-5.jpg
-category: smartphone
-tags:
+categories: 
  - how to
+ - mobile
+authors: stoner
 ---
 
 # A Quick Guide to Understanding Orbital Debris Reentry Predictions

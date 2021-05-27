@@ -16,7 +16,7 @@
             </p>
           </div>
           <!-- left-mid-div-starts-here -->
-          <div class="md:w-48">
+          <div class="w-48">
             <span
               class="flex items-center px-4 py-3 hover:ring-2 hover:ring-blue-700 rounded-md"
             >
@@ -89,7 +89,7 @@
         <div class="w-full md:w-[45%] bg-white h-[26rem] rounded-xl p-7">
           <div>
             <div class="mb-3">
-              <p class="ml-0.5 mb-1.5 text-sm">Your Name</p>
+              <label for="name" class="ml-0.5 text-sm">Your Name</label>
               <span
                 class="flex p-1.5 border focus-within:border-opacity-0 border-gray-300 focus-within:ring-2 focus-within:ring-blue-400 rounded"
               >
@@ -101,12 +101,13 @@
                 ></icon-user>
                 <input
                   type="text"
-                  class="focus:outline-none w-full px-2"
+                  class="focus:outline-none w-full px-2" id="name"
+                  placeholder=""
                 />
               </span>
             </div>
             <div class="mb-3">
-              <p class="ml-0.5 mb-1.5 text-sm">Mail</p>
+              <label class="ml-0.5 text-sm" for="email">Mail</label>
               <span
                 class="flex p-1.5 border focus-within:border-opacity-0 border-gray-300 focus-within:ring-2 focus-within:ring-blue-400 rounded"
               >
@@ -118,29 +119,31 @@
                 ></icon-envelope>
                 <input
                   type="email"
+                  id="email"
                   class="focus:outline-none w-full px-2 focus:bg-white"
+                  placeholder=""
                 />
               </span>
             </div>
             <div class="mb-3">
-              <p class="ml-0.5 mb-1.5 text-sm">Message</p>
+              <label class="ml-0.5 text-sm" for="message">Message</label>
               <span
                 class="flex p-1.5 border focus-within:border-opacity-0 border-gray-300 focus-within:ring-2 focus-within:ring-blue-400 rounded"
               >
                 <textarea
                   name=""
-                  id=""
+                  id="message"
                   cols="30"
                   rows="5"
                   placeholder="Message"
-                  class="w-full resize-none focus:outline-none placeholder-opacity-60	"
+                  class="w-full resize-none focus:outline-none placeholder-opacity-60"
                 ></textarea>
               </span>
             </div>
             <span>
               <button
                 type="submit"
-                class="px-6 py-2.5 bg-blue-500 text-white text-sm rounded-md focus:outline-none float-right"
+                class="px-6 py-2.5 bg-blue-500 text-white text-sm rounded-md focus:outline-none focus:ring-2 float-right"
               >
                 Send Messages
               </button>

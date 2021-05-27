@@ -5,21 +5,14 @@
       class="flex lg:h-screen w-screen lg:overflow-hidden flex-col lg:flex-row"
     >
       <!-- Left-SVG-div-starts-here -->
-      <div class="lg:w-2/5 xs:w-full xs:h-84 lg:h-full">
-        <div class="svg h-full w-full"></div>
-      </div>
-      <div class="absolute left-12 right-96 text-white hidden md:block">
-        <div class="mt-16 -mb-3 flex flex-col text-sm">
-          <div class="lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
-            <h1 class="text-4xl font-medium uppercase">
-              {{ tag.name }}
+      <div class="svg w-full lg:w-2/5 h-1/2 lg:h-full">
+        <div class="text-gray-300 m-6 md:my-12">
+          <div class="text-center my-3">
+            <h1 class="text-2xl capitalize font-medium md:font-semibold">
+              {{ category.name }}
             </h1>
-            <p class="my-4 text-lg capitalize text-gray-300">
-              {{ tag.description }}
-            </p>
-
-            <!-- <nuxt-content :document="tag" /> -->
           </div>
+          <p class="text-lg">{{ category.description }}</p>
         </div>
       </div>
       <!-- Left-image-div-ends-here -->
@@ -39,7 +32,7 @@
           </span>
         </NuxtLink>
         <p class="font-bold text-2xl capitalize text-gray-400">
-          Articles - {{ tag.name }}:
+          Articles - {{ category.name }}:
         </p>
         <ul>
           <li
@@ -54,9 +47,9 @@
                     <p
                       class="px-1.5 bg-gray-400 rounded text-gray-200 mr-2 uppercase"
                     >
-                      {{ article.category[0] }}
+                      {{ article.categories[0][0] }}
                     </p>
-                    <p class="capitalize">{{ article.category }}</p>
+                    <p class="capitalize">{{ article.categories[0] }}</p>
                     <p class="mx-0.5 text-gray-600">in</p>
                     <p>Blogs</p>
                   </span>
@@ -87,7 +80,7 @@
                 <img
                   :src="`/resources/${article.img}`"
                   alt=""
-                  class="w-[6.25rem] h-[6.25rem] sm:w-auto md:h-32 lg:h-[8.375rem] object-cover md:self-center"
+                  class="w-[6.25rem] h-[6.25rem] sm:w-auto md:h-32 lg:h-[8.375rem] object-cover md:self-center rounded"
                 />
               </div>
             </nuxt-link>
@@ -104,18 +97,20 @@ import IconStar from "~/components/icons/ui/IconStar";
 export default {
   components: { IconStar, IconLeftArrow },
   async asyncData({ $content, params }) {
-    const tags = await $content("tags")
-      .where({ slug: { $contains: params.tag } })
+    const categories = await $content("categories")
+      .where({ slug: { $contains: params.category } })
       .limit(1)
       .fetch();
-    const tag = tags.length > 0 ? tags[0] : {};
+
+    const category = categories.length > 0 ? categories[0] : {};
     const articles = await $content("blog", params.slug)
-      .where({ tags: { $contains: tag.name } })
+      .where({ categories: { $contains: category.name } })
       .sortBy("createdAt", "asc")
       .fetch();
+
     return {
       articles,
-      tag,
+      category,
     };
   },
   methods: {

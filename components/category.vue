@@ -1,30 +1,62 @@
 <template>
-    <div class="px-6 lg:px-24 py-2 text-center border-t border-b ">
-      <h3 class="uppercase text-sm lg:text-lg font-bold mb-4 text-gray-500">discover by category</h3>
-      <ul class="flex flex-wrap mb-2 justify-evenly ">
-        <li
-          v-for="tag of tags"
-          :key="tag.slug"
+  <div class="px-6 lg:px-24 py-2 text-center border-t border-b">
+    <h3 class="uppercase text-sm lg:text-lg font-bold mb-4 text-gray-500">
+      discover by category
+    </h3>
+    <ul class="flex flex-wrap mb-2 md:justify-evenly justify-between">
+      <li v-for="(category, index) of categories" :key="index">
+        <NuxtLink
+          :to="`/blog/category/${category.slug}`"
+          class="flex items-center border border-gray-400 bg-gray-100 rounded p-1"
         >
-          <NuxtLink :to="`/blog/tag/${tag.slug}`">
-            <p class="px-2 py-1 text-gray-800 opacity-70 capitalize text-sm lg:text-xl border border-gray-400 rounded">
-              {{ tag.name }}
-            </p>
-          </NuxtLink>
-        </li>
-      </ul>
-    </div>
+          <span class="p-1 bg-green-500 rounded text-gray-200 ">
+            <icon-toplist
+              width="16"
+              height="16"
+              iconName="clipboard-list"
+              v-if="category.name == 'top list'"
+            ></icon-toplist>
+            <icon-phone
+              width="16"
+              height="16"
+              iconName="mobile"
+              v-if="category.name == 'mobile'"
+            ></icon-phone>
+            <icon-howto
+              width="16"
+              height="16"
+              iconName="bullseye-arrow"
+              v-if="category.name == 'how to'"
+            ></icon-howto>
+          </span>
+          <p
+            class="px-2 text-gray-800 opacity-70 capitalize text-sm lg:text-base"
+          >
+            {{ category.name }}
+          </p>
+        </NuxtLink>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
+import IconToplist from "~/components/icons/categoryBtn/IconToplist";
+import IconPhone from "~/components/icons/categoryBtn/IconPhone";
+import IconHowto from "~/components/icons/categoryBtn/IconHowto";
 export default {
+  components: {
+    IconToplist,
+    IconPhone,
+    IconHowto,
+  },
   data() {
     return {
-      tags: [],
+      categories: [],
     };
   },
   async fetch() {
-    this.tags = await this.$content("tags").sortBy("asc").limit(6).fetch();
+    this.categories = await this.$content("categories").sortBy("desc").fetch();
   },
 };
 </script>

@@ -1,8 +1,8 @@
 <template>
   <div class="border-b">
-    <div class="m-6 md:mx-20">
+    <div class="mx-6 my-8 md:mx-20">
       <seemore category="news" />
-      <ul class="md:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-x-5 md:gap-x-9">
+      <ul class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-8">
         <li v-for="(doc, index) of docs" :key="index" class="my-3.5">
           <nuxt-link :to="`${doc.path}`" class="flex">
             <div class="text-3xl font-bold text-gray-300 mr-4">

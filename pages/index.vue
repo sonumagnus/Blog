@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <NewsNewsfeed />
-    <div class="m-6 md:mx-20">
+    <div class="m-6 lg:my-10 lg:mx-20">
       <seemore category="blog" />
       <ul class="lg:grid lg:grid-cols-2 lg:gap-x-12">
         <li
@@ -17,9 +17,9 @@
                   <p
                     class="px-1.5 bg-gray-400 rounded text-gray-200 mr-2 uppercase"
                   >
-                    {{ article.category[0] }}
+                    {{ article.categories[0][0] }}
                   </p>
-                  <p class="capitalize">{{ article.category }}</p>
+                  <p class="capitalize">{{ article.categories[0] }}</p>
                   <p class="mx-0.5 text-gray-600">in</p>
                   <p>Blogs</p>
                 </span>
@@ -50,7 +50,7 @@
               <img
                 :src="`/resources/${article.img}`"
                 alt=""
-                class="w-[6.25rem] h-[6.25rem] sm:w-auto md:h-32 object-cover md:self-center"
+                class="w-[6.25rem] h-[6.25rem] sm:w-auto md:h-32 object-cover md:self-center rounded"
               />
             </div>
           </nuxt-link>
@@ -59,18 +59,21 @@
     </div>
     <!-- this-category div contains category button in bottom of the page -->
     <Category />
+    <author />
   </div>
 </template>
 
 <script>
+import author from "~/components/author"
 import IconStar from "~/components/icons/ui/IconStar";
-import Seemore from "~/components/seemore.vue";
+import Seemore from "~/components/seemore";
 export default {
-  components: { IconStar, Seemore },
+  components: { IconStar, Seemore, author },
   async asyncData({ $content, params }) {
     const articles = await $content("blog", params.slug)
       // .only(["title", "description", "img", "createdAt", "slug"])
       .sortBy("createdAt", "asc")
+      .limit(6)
       .fetch();
     return {
       articles,

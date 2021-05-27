@@ -3,10 +3,10 @@ title: The Worst Question You Can Ask a Software Developer
 description: Managers ask it. Developers hate it. Know why that is and what you should be asking instead
 slug: sixth-post
 img: blog-6.jpg
-category: smartphone
-tags: 
- - smartphone
+categories: 
+ - mobile
  - top list
+authors: stoner
 ---
 
 # Learn These 10 Things in Your 20s, Fly in Your 40s

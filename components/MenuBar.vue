@@ -1,22 +1,21 @@
 <template>
   <transition name="modal">
     <div
-      class="fixed z-20 top-0 left-0 w-full h-full bg-opacity-50 bg-black"
+      class="fixed z-20 inset-0 w-full h-full bg-opacity-50 bg-black"
       @click="close"
       v-show="show"
     >
       <div
-        class="pt-6 pr-6 pb-32 pl-6 bg-gray-50 w-2/3 ml-1/5 mr-1/4 h-screen transition-all duration-300 ease-in-out  modal-container"
+        class="px-10 bg-gray-100 w-2/3 h-screen duration-300 ease-in-out modal-container text-lg font-semibold space-y-6 flex flex-col text-gray-800 "
         @click.stop
       >
-        <nuxt-link to="/" class="p-3 block font-bold mt-8">Home</nuxt-link>
-        <nuxt-link to="/Blog" class="p-3 block font-bold">Blog</nuxt-link>
-        <nuxt-link to="/News" class="p-3 block font-bold">News</nuxt-link>
-        <nuxt-link to="/contact" class="p-3 block font-bold">Contact</nuxt-link>
-        <nuxt-link to="/icons" class="p-3 block font-bold">About us</nuxt-link>
-        <nuxt-link to="/privacy" class="p-3 block font-bold"
-          >Privacy Policy</nuxt-link
-        >
+      <p class="text-2xl mt-2 mb-5 text-gray-500">BlogTag</p>
+        <nuxt-link to="/">Home</nuxt-link>
+        <nuxt-link to="/Blog">Blog</nuxt-link>
+        <nuxt-link to="/News">News</nuxt-link>
+        <nuxt-link to="/contact">Contact</nuxt-link>
+        <nuxt-link to="/icons">About us</nuxt-link>
+        <nuxt-link to="/privacy">Privacy Policy</nuxt-link>
       </div>
     </div>
   </transition>

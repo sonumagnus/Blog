@@ -17,7 +17,7 @@
               <li>
                 <nuxt-link
                   to="/"
-                  class="text-lg font-medium px-4 text-gray-900 hover:text-blue-700 hover:border-b-2 border-blue-600 py-3.5"
+                  class="text-lg font-medium px-4 text-gray-900 hover:text-blue-700 py-3.5 btn"
                 >
                   Home
                 </nuxt-link>
@@ -25,7 +25,7 @@
               <li>
                 <nuxt-link
                   to="/Blog"
-                  class="text-lg font-medium px-4 text-gray-900 hover:text-blue-700 hover:border-b-2 border-blue-600 py-3.5"
+                  class="text-lg font-medium px-4 text-gray-900 hover:text-blue-700 py-3.5 btn"
                 >
                   Blog
                 </nuxt-link>
@@ -33,7 +33,7 @@
               <li>
                 <nuxt-link
                   to="/News"
-                  class="text-lg font-medium px-4 text-gray-900 hover:text-blue-700 hover:border-b-2 border-blue-600 py-3.5"
+                  class="text-lg font-medium px-4 text-gray-900 hover:text-blue-700 py-3.5 btn"
                 >
                   News
                 </nuxt-link>
@@ -65,7 +65,7 @@
               width="22"
               height="22"
               IconName="bars"
-              class="mt-3 absolute right-3 text-gray-600"
+              class="top-3 absolute right-3 text-gray-600"
             ></icon-menu>
           </span>
         </span>
@@ -98,4 +98,17 @@ export default {
 </script>
 
 <style>
+.btn {
+  position: relative;
+}
+.btn::after {
+  content: "";
+  transform: scale(0, 1);
+  @apply absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transition duration-300 ease-in;
+}
+.btn:hover::after {
+  content: "";
+  transform: scale(1, 1);
+  @apply absolute left-0 bottom-0 w-full h-0.5 bg-blue-600;
+}
 </style>

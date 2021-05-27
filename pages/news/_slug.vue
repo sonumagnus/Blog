@@ -1,66 +1,86 @@
 <template>
   <div>
     <Navbar />
-    <div class="mx-5 md:mx-72 m-auto">
+    <div class="m-5 md:mx-36 lg:mx-72">
       <!--this-div-contains-title and description-only-->
-      <h1 class="text-3xl md:text-5xl font-medium my-2">{{ doc.title }}</h1>
-      <h2
-        class="text-lg md:text-2xl text-gray-600 font-medium md:font-normal py-1"
+      <h1
+        class="text-[32px] leading-10 md:text-[46px] md:leading-[56px] text-gray-900 font-fell"
       >
+        {{ doc.title }}
+      </h1>
+      <h2 class="text-lg md:text-[22px] text-gray-500 mt-2.5 lg:mt-3.5">
         {{ doc.description }}
       </h2>
-      <div class="flex justify-between py-4">
-        <!-- this-div-contains-social-icons -->
-        <span class="flex">
+      <div class="flex justify-between flex-col-reverse md:flex-row md:items-center py-4">
+        <div v-for="(writer, index) in author" :key="index" class="flex">
           <nuxt-link
-            to="#"
-            class="text-white p-px rounded-full bg-blue-300 mx-0.5 md:mx-1"
+            :to="`/news`"
+            class="p-1 border-b border-t border-gray-900 rounded-full mr-3"
+          >
+            <img
+              :src="`/resources/${writer.img}`"
+              alt=""
+              class="h-12 w-12 object-cover rounded-full"
+            />
+          </nuxt-link>
+          <span class="text-sm self-center">
+            <nuxt-link :to="`/blog/author/${writer.name}`"
+              ><p class="capitalize hover:underline">
+                {{ writer.name }}
+              </p></nuxt-link
+            >
+            <span class="flex text-gray-500">
+              <p>{{ formatDate(doc.createdAt) }}</p>
+              <p class="mx-1">·</p>
+              <ReadingTime :content="doc.body" />
+              <icon-star
+                width="12"
+                height="12"
+                iconName="star"
+                class="m-1 text-gray-400"
+              ></icon-star>
+            </span>
+          </span>
+        </div>
+
+        <!-- this-div-contains-social-icons -->
+        <span class="flex md:self-center mb-6 md:mb-0 text-gray-500">
+          <nuxt-link to="#" class="p-px rounded-full mx-0.5 md:mx-1"
             ><icon-twitter
-              width="18"
-              height="18"
+              width="22"
+              height="22"
               iconName="twitter"
-              class="m-1"
+              class="m-1 hover:text-blue-400"
             ></icon-twitter
           ></nuxt-link>
-          <nuxt-link
-            to="#"
-            class="text-white p-px rounded-full bg-gradient-to-b from-purple-500 to-yellow-400 mx-0.5 md:mx-1"
-            ><icon-insta
-              width="18"
-              height="18"
-              iconName="instagram"
-              class="m-1"
-            ></icon-insta
+          <nuxt-link to="#" class="p-px rounded-full mx-0.5 md:mx-1"
+            ><icon-insta-square
+              width="22"
+              height="22"
+              iconName="instagram-square"
+              class="m-1 hover:text-gray-700"
+            ></icon-insta-square
           ></nuxt-link>
-          <nuxt-link
-            to="#"
-            class="text-white p-px rounded-full bg-blue-500 mx-0.5 md:mx-1"
-            ><icon-facebook
-              width="18"
-              height="18"
-              iconName="facebook"
-              class="m-1"
-            ></icon-facebook
+          <nuxt-link to="#" class="p-px rounded-full mx-0.5 md:mx-1"
+            ><icon-fb-square
+              width="22"
+              height="22"
+              iconName="facebook-square"
+              class="m-1 hover:text-blue-600"
+            ></icon-fb-square
           ></nuxt-link>
-          <nuxt-link
-            to="#"
-            class="text-white p-px rounded-full bg-red-400 mx-0.5 md:mx-1"
-          >
-            <icon-share
-              width="18"
-              height="18"
+          <nuxt-link to="#" class="p-px rounded-full mx-0.5 md:mx-1">
+            <icon-share-square
+              width="22"
+              height="22"
               iconName="share"
-              class="m-1"
-            ></icon-share>
+              class="m-1 hover:text-green-500"
+            ></icon-share-square>
           </nuxt-link>
-        </span>
-        <span>
-          <!-- this-span-contains-created-time -->
-          <p>Last Updated : {{ formatDate(doc.updatedAt) }}</p>
         </span>
       </div>
       <div>
-        <img :src="`/resources/${doc.img}`" alt="" class="mb-2.5 w-full" />
+        <img :src="`/resources/${doc.img}`" alt="" class="mb-8 w-full" />
       </div>
       <!-- Document-article-div -->
       <div>
@@ -75,17 +95,17 @@
 
 <script>
 import IconTwitter from "~/components/icons/contact/IconTwitter";
-import IconFacebook from "~/components/icons/contact/IconFacebook";
-import IconInsta from "~/components/icons/contact/IconInsta";
-import IconShare from "~/components/icons/ui/IconShare";
-import PrevNextNews from "~/components/PrevNextNews";
+import IconFbSquare from "~/components/icons/contact/IconFbSquare";
+import IconInstaSquare from "~/components/icons/contact/IconInstaSquare";
+import IconShareSquare from "~/components/icons/ui/IconShareSquare";
+import IconStar from "~/components/icons/ui/IconStar";
 export default {
   components: {
     IconTwitter,
-    IconFacebook,
-    IconInsta,
-    IconShare,
-    PrevNextNews,
+    IconFbSquare,
+    IconInstaSquare,
+    IconShareSquare,
+    IconStar,
   },
   async asyncData({ $content, params }) {
     const doc = await $content("news", params.slug).fetch();
@@ -96,10 +116,17 @@ export default {
       .surround(params.slug)
       .fetch();
 
+    const author = await $content("authors")
+      .only(["name", "bio", "img"])
+      .where({ name: { $containsAny: doc.authors } })
+      .limit(1)
+      .fetch();
+
     return {
       doc,
       prev,
       next,
+      author,
     };
   },
   methods: {
@@ -112,16 +139,25 @@ export default {
 </script>
 
 <style>
+.nuxt-content {
+  @apply font-charter;
+}
 .nuxt-content h1 {
-  @apply text-xl font-semibold text-gray-800;
+  @apply text-xl font-medium font-sohne;
 }
 .nuxt-content h2 {
   @apply text-xl font-medium text-gray-600;
 }
 .nuxt-content p {
-  @apply text-lg my-0.5;
+  @apply text-lg my-0.5 text-gray-700 my-1;
 }
-.nuxt-content img {
-  @apply rounded;
+@media (min-width: 1024px) {
+  .nuxt-content p {
+    @apply text-xl leading-8 my-2;
+  }
+
+  .nuxt-content h1 {
+    @apply text-3xl leading-9 font-sohne;
+  }
 }
 </style>

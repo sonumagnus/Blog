@@ -13,7 +13,7 @@
   "eslint.codeAction.disableRuleComment": {
     "enable": false
   },
-  "editor.fontSize": 16,
+  "editor.fontSize": 15,
   "editor.letterSpacing": 1.1,
   "editor.tabSize": 6,
   "editor.lineHeight": 29,

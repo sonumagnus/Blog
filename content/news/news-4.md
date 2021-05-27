@@ -4,6 +4,7 @@ description: In the world of smartph, we’ve reached a point where it’s no lo
 slug: news-4
 img: blog-3.jpg
 category: Android
+authors: sonu
 ---
 
 _well, this is the news section writing blog for testing purpose_

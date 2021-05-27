@@ -17,9 +17,9 @@
                   <p
                     class="px-1.5 bg-gray-400 rounded text-gray-200 mr-2 uppercase"
                   >
-                    {{ article.category[0] }}
+                    {{ article.categories[0][0] }}
                   </p>
-                  <p class="capitalize">{{ article.category }}</p>
+                  <p class="capitalize">{{ article.categories[0] }}</p>
                   <p class="mx-0.5 text-gray-600">in</p>
                   <p>Blogs</p>
                 </span>
@@ -48,7 +48,7 @@
               <img
                 :src="`/resources/${article.img}`"
                 alt=""
-                class="w-[6.25rem] h-[6.25rem] sm:w-auto md:h-32 object-cover md:self-center"
+                class="w-[6.25rem] h-[6.25rem] sm:w-auto md:h-32 object-cover md:self-center rounded"
               />
             </div>
           </nuxt-link>

@@ -4,6 +4,7 @@ description: This is the description for news blog. But here i will have to
 slug: news-5
 img: news-1.jpg
 category: Android
+authors: bhaskar
 ---
 
 # Stop Using React Context :

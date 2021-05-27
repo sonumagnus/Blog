@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <div class="text-xl px-3 text-center font-serif">
+    <div class="text-xl px-3 text-center font-charter">
       <p class="text-3xl text-gray-800 font-bold italic underline py-5">
         Privacy Policy
       </p>

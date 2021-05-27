@@ -3,9 +3,10 @@ title: Chris Hemsworth Is Exactly What’s Wrong With the Fitness Industry
 description: In September 2008, Holland (co-star Tanner Pflueger) appeared on the news programme on channel FIVE and gave his first TV interview
 slug: forth-post
 img: blog-4.jpg
-category: smartphone
-tags: 
+categories: 
  - top list
+ - mobile
+authors: bhaskar
 ---
 
 # How I Solved the Problem:

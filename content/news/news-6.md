@@ -4,6 +4,7 @@ description: this is the description for news blog
 slug: news-6
 img: news-3.jpg
 category: Computer
+authors: bhaskar
 ---
 
 # 7 signs you’re rich, even if it doesn’t feel like

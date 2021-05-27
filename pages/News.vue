@@ -43,7 +43,7 @@
               <img
                 :src="`/resources/${doc.img}`"
                 alt=""
-                class="w-[6.25rem] h-[6.25rem] sm:w-auto md:h-32 object-cover md:self-center"
+                class="w-[6.25rem] h-[6.25rem] sm:w-auto md:h-32 object-cover md:self-center rounded"
               />
             </div>
           </nuxt-link>
