@@ -49,7 +49,7 @@
         <p>
           Appdodo.Com only gathers the above-listed information from users. Now
           the question arises that Why Do We Need to Collect Users Information?
-          Or What We Do with This Information?
+          Or What We Do with This Information??
         </p>
         <br />
         <p>
