@@ -44,49 +44,49 @@
                 <p>{{ formatDate(article.createdAt) }}</p>
                 <p class="mx-1">·</p>
                 <ReadingTime :content="article.body" />
-                <!-- <icon-star
+                <icon-star
                   width="12"
                   height="12"
                   iconName="star"
                   class="m-1 text-gray-400"
-                ></icon-star> -->
+                ></icon-star>
               </span>
             </span>
           </div>
           <!-- this-div-contains-social-icons -->
           <span class="flex md:self-center mb-6 md:mb-0 text-gray-500">
-            <!-- <nuxt-link to="#" class="p-px rounded-full mx-0.5 md:mx-1"
-              ><icon-twitter
+            <nuxt-link to="#" class="p-px rounded-full mx-0.5 md:mx-1">
+              <icon-twitter
                 width="22"
                 height="22"
                 iconName="twitter"
                 class="m-1 hover:text-blue-400"
-              ></icon-twitter
-            ></nuxt-link>
-            <nuxt-link to="#" class="p-px rounded-full mx-0.5 md:mx-1"
-              ><icon-insta-square
+              ></icon-twitter>
+            </nuxt-link>
+            <nuxt-link to="#" class="p-px rounded-full mx-0.5 md:mx-1">
+              <icon-instagram
                 width="22"
                 height="22"
                 iconName="instagram-square"
-                class="m-1 hover:text-gray-700"
-              ></icon-insta-square
-            ></nuxt-link>
-            <nuxt-link to="#" class="p-px rounded-full mx-0.5 md:mx-1"
-              ><icon-fb-square
+                class="m-1 hover:text-blue-400"
+              ></icon-instagram>
+            </nuxt-link>
+            <nuxt-link to="#" class="p-px rounded-full mx-0.5 md:mx-1">
+              <icon-fb
                 width="22"
                 height="22"
                 iconName="facebook-square"
-                class="m-1 hover:text-blue-600"
-              ></icon-fb-square
-            ></nuxt-link>
+                class="m-1 hover:text-blue-400"
+              ></icon-fb>
+            </nuxt-link>
             <nuxt-link to="#" class="p-px rounded-full mx-0.5 md:mx-1">
-              <icon-share-square
+              <icon-sharee
                 width="22"
                 height="22"
-                iconName="share"
-                class="m-1 hover:text-green-500"
-              ></icon-share-square>
-            </nuxt-link> -->
+                iconName="share-square"
+                class="m-1 hover:text-blue-400"
+              ></icon-sharee>
+            </nuxt-link>
           </span>
         </div>
         <div>
@@ -105,19 +105,13 @@
 </template>
 
 <script>
-// import IconFbSquare from '~/components/icons/contact/IconFbSquare.vue';
-// import IconInstaSquare from '~/components/icons/contact/IconInstaSquare.vue';
-// import IconTwitter from '~/components/icons/contact/IconTwitter.vue';
-// import IconShareSquare from '~/components/icons/ui/IconShareSquare.vue';
-// import IconStar from '~/components/icons/ui/IconStar.vue';
+import IconTwitter from "~/components/icons/contact/IconTwitter.vue";
+import IconFb from "~/components/icons/SquareIcons/IconFb.vue";
+import IconInstagram from "~/components/icons/SquareIcons/IconInstagram.vue";
+import IconSharee from "~/components/icons/SquareIcons/IconSharee.vue";
+import IconStar from "~/components/icons/ui/IconStar.vue";
 export default {
-  // components: {
-  //   IconTwitter,
-  //   IconInstaSquare,
-  //   IconFbSquare,
-  //   IconShareSquare,
-  //   IconStar
-  // },
+  components: { IconStar, IconInstagram, IconFb, IconSharee, IconTwitter },
   async asyncData({ $content, params }) {
     const article = await $content("blog", params.slug).fetch();
 
