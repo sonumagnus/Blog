@@ -90,11 +90,7 @@
           </span>
         </div>
         <div>
-          <img
-            :src="`/resources/${article.img}`"
-            alt=""
-            class="mb-8 w-full"
-          />
+          <img :src="`/resources/${article.img}`" alt="" class="mb-8 w-full" />
         </div>
       </div>
       <!-- Document-article-div -->
