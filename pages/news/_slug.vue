@@ -11,7 +11,9 @@
       <h2 class="text-lg md:text-[22px] text-gray-500 mt-2.5 lg:mt-3.5">
         {{ doc.description }}
       </h2>
-      <div class="flex justify-between flex-col-reverse md:flex-row md:items-center py-4">
+      <div
+        class="flex justify-between flex-col-reverse md:flex-row md:items-center py-4"
+      >
         <div v-for="(writer, index) in author" :key="index" class="flex">
           <nuxt-link
             :to="`/news`"
@@ -155,7 +157,8 @@ export default {
   .nuxt-content p {
     @apply text-xl leading-8 my-2;
   }
-
+}
+@media (min-width: 1024px) {
   .nuxt-content h1 {
     @apply text-3xl leading-9 font-sohne;
   }
