@@ -96,18 +96,19 @@
 </template>
 
 <script>
-import IconTwitter from "~/components/icons/contact/IconTwitter";
-import IconFbSquare from "~/components/icons/contact/IconFbSquare";
-import IconInstaSquare from "~/components/icons/contact/IconInstaSquare";
-import IconShareSquare from "~/components/icons/ui/IconShareSquare";
-import IconStar from "~/components/icons/ui/IconStar";
+import IconFbSquare from "~/components/icons/contact/IconFbSquare.vue";
+import IconTwitter from "~/components/icons/contact/IconTwitter.vue";
+import IconShareSquare from "~/components/icons/ui/IconShareSquare.vue";
+import IconStar from "~/components/icons/ui/IconStar.vue";
+import IconInstaSquare from "~/components/icons/contact/IconInstaSquare.vue"
+
 export default {
   components: {
+    IconStar,
     IconTwitter,
     IconFbSquare,
-    IconInstaSquare,
     IconShareSquare,
-    IconStar,
+    IconInstaSquare
   },
   async asyncData({ $content, params }) {
     const doc = await $content("news", params.slug).fetch();

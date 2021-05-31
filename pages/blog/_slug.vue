@@ -105,18 +105,18 @@
 </template>
 
 <script>
-import IconTwitter from "~/components/icons/contact/IconTwitter";
-import IconFbSquare from "~/components/icons/contact/IconFbSquare";
-import IconInstaSquare from "~/components/icons/contact/IconInstaSquare";
-import IconShareSquare from "~/components/icons/ui/IconShareSquare";
-import IconStar from "~/components/icons/ui/IconStar";
+import IconFbSquare from '~/components/icons/contact/IconFbSquare.vue';
+import IconInstaSquare from '~/components/icons/contact/IconInstaSquare.vue';
+import IconTwitter from '~/components/icons/contact/IconTwitter.vue';
+import IconShareSquare from '~/components/icons/ui/IconShareSquare.vue';
+import IconStar from '~/components/icons/ui/IconStar.vue';
 export default {
   components: {
     IconTwitter,
-    IconFbSquare,
     IconInstaSquare,
+    IconFbSquare,
     IconShareSquare,
-    IconStar,
+    IconStar
   },
   async asyncData({ $content, params }) {
     const article = await $content("blog", params.slug).fetch();
