@@ -1,7 +1,6 @@
 ---
 title: Follow Elon Musk’s Advice and Skip the MBA. Read These 10 Books Instead
 description: this is the description for news blog are important or not doesn't matter
-slug: news-2
 img: news-2.jpg
 category: Computer
 authors: sonu

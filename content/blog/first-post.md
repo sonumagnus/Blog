@@ -1,10 +1,10 @@
 ---
 title: Green Plants are goint to extinct about 500 times faster than they should, study finds
 description: She kept her expenses minimal, re-invested her income
-slug: first-post
 img: blog-1.jpg
 categories: 
  - mobile
+ - how to
 authors: 
  - sonu
  - bhaskar

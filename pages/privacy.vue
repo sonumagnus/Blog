@@ -1,6 +1,7 @@
 <template>
   <div>
     <Navbar />
+    <animated-slug />
     <div class="text-xl px-3 text-center font-charter">
       <p class="text-3xl text-gray-800 font-bold italic underline py-5">
         Privacy Policy
@@ -77,7 +78,9 @@
 </template>
 
 <script>
-export default {};
+import animatedSlug from '~/components/animatedSlug.vue';
+export default {
+  components: { animatedSlug },};
 </script>
 
 <style>

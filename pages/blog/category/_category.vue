@@ -6,13 +6,11 @@
     >
       <!-- Left-SVG-div-starts-here -->
       <div class="svg w-full lg:w-2/5 h-1/2 lg:h-full">
-        <div class="text-gray-300 m-6 md:my-12">
-          <div class="text-center my-3">
-            <h1 class="text-2xl capitalize font-medium md:font-semibold">
-              {{ category.name }}
-            </h1>
-          </div>
-          <p class="text-lg">{{ category.description }}</p>
+        <div class="text-gray-100 mx-12 my-6 lg:m-12 relative">
+          <h1 class="text-4xl capitalize font-semibold mb-3 lg:mb-6">
+            {{ category.name }}
+          </h1>
+          <p class="text-lg text-gray-300">{{ category.description }}</p>
         </div>
       </div>
       <!-- Left-image-div-ends-here -->
@@ -124,8 +122,8 @@ export default {
 
 <style scoped>
 .svg {
-  background-color: #28324e;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23ca002c' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23a70022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23c6004c' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23a3003c' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23c0006a' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%239d0055' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23b7008a' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%2394006e' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%23000000' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23180d1c' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%23261431' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%23351947' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%23451e5e' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23552277' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover;
 }

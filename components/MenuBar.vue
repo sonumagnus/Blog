@@ -6,10 +6,10 @@
       v-show="show"
     >
       <div
-        class="px-10 bg-gray-100 w-2/3 h-screen duration-300 ease-in-out modal-container text-lg font-semibold space-y-6 flex flex-col text-gray-800 "
+        class="px-10 bg-gray-100 w-2/3 h-screen duration-300 ease-in-out modal-container text-lg font-semibold space-y-6 flex flex-col text-gray-800"
         @click.stop
       >
-      <p class="text-2xl mt-2 mb-5 text-gray-500">BlogTag</p>
+        <p class="text-2xl mt-2 mb-5 text-gray-500">BlogTag</p>
         <nuxt-link to="/">Home</nuxt-link>
         <nuxt-link to="/Blog">Blog</nuxt-link>
         <nuxt-link to="/News">News</nuxt-link>
@@ -23,7 +23,12 @@
 
 <script>
 export default {
-  props: ["show"],
+  props: {
+    show: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       data: [],

@@ -1,13 +1,11 @@
 ---
 title: How to add the "Blue Arrow" button on your website (WebApp)
 description: Losing complete interest in your spouse, no longer arguing, and having no trust in them are all red flags
-slug: second-post
 img: blog-2.jpg
 categories: 
- - how to 
+ - mobile
  - top list
-authors: 
- - stoner
+authors: stoner
 ---
 # Four Signs a Person Is Secretly Unhappy
  Holland began dancing at a hip hop class at Nifty Feet Dance School in Wimbledon. His potential was spotted by choreographer Lynne Page (who was an associate to Peter Darling, choreographer of Billy Elliot and Billy Elliot the Musical) when he performed with his dance school as part of the 2006 Richmond Dance Festival.<br><br>

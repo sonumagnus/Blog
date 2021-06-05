@@ -1,5 +1,4 @@
 ---
 name: top list
-description: Building, designing, maintaining websites and web services.
-img: https://images.unsplash.com/photo-1598313183973-4effcded8d5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80
+description: Here you will read Reviews "Top Best Products, Gadgets, Services, Apps, Games, and all other stuff that can be listed to help you out in Choosing the Best One"
 ---

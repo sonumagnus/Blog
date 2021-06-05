@@ -1,5 +1,4 @@
 ---
 name: how to
-description: technology is a programming language adhering to the ECMAScript spec.
-img: https://images.unsplash.com/photo-1598425237654-4fc758e50a93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80
+description: Here you will find the Perfect way and Guidance Articles, Ready to Teach you how to do specific thing you are searching for. All the Articles are Completely free to Read.
 ---

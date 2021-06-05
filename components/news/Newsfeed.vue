@@ -1,11 +1,15 @@
 <template>
   <div class="border-b">
-    <div class="mx-6 my-8 md:mx-20">
+    <span v-if="$fetchState.pending">
+      <animated-slug />
+    </span>
+    <p v-else-if="$fetchState.error">An error occurred :(</p>
+    <div class="mx-6 my-8 md:mx-20" v-else>
       <seemore category="news" />
       <ul class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-8">
         <li v-for="(doc, index) of docs" :key="index" class="my-3.5">
           <nuxt-link :to="`${doc.path}`" class="flex">
-            <div class="text-3xl font-bold text-gray-300 mr-4">
+            <div class="text-3xl font-bold text-gray-200 mr-4">
               0{{ index + 1 }}
             </div>
             <div class="mt-2">
@@ -45,8 +49,9 @@
 import seemore from "~/components/seemore";
 import IconCheckCircle from "~/components/icons/ui/IconCheckCircle";
 import IconStar from "~/components/icons/ui/IconStar";
+import AnimatedSlug from '../animatedSlug.vue';
 export default {
-  components: { IconCheckCircle, IconStar, seemore },
+  components: { IconCheckCircle, IconStar, seemore, AnimatedSlug },
   data() {
     return {
       docs: [],

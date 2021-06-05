@@ -52,7 +52,7 @@
           </div>
         </div>
         <span class="md:hidden flex">
-          <span @click="searchbox">
+          <span>
             <icon-search
               width="18"
               height="18"
@@ -84,15 +84,7 @@ export default {
     IconSearch,
   },
   data() {
-    return { menu: false, search: false };
-  },
-  methods: {
-    display() {
-      this.show = !this.show;
-    },
-    searchbox() {
-      this.search = !this.search;
-    },
+    return { menu: false };
   },
 };
 </script>

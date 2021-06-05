@@ -1,20 +1,20 @@
 <template>
-  <span>{{readingTime}} min read</span>
+  <span>{{ readingTime }} min read</span>
 </template>
 
 <script>
 export default {
   // name: 'readingTime',
-  props: ['content'],
+  props: ["content"],
   computed: {
-    readingTime () {
+    readingTime() {
       let minutes = 0;
       const contentString = JSON.stringify(this.content);
       const words = contentString.split(" ").length;
       const wordsPerMinute = 200;
       minutes = Math.ceil(words / wordsPerMinute);
       return minutes;
-    }
-  }
-}
+    },
+  },
+};
 </script>

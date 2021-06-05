@@ -1,7 +1,6 @@
 ---
 title: I Procrastinate for 3 Hours Before Starting Work. Here’s How I Solved the Problem
 description: this is the description for news blog
-slug: news-6
 img: news-3.jpg
 category: Computer
 authors: bhaskar

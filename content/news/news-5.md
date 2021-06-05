@@ -1,7 +1,6 @@
 ---
 title: The 7 Emails You Should Send Every Week to Get Ahead in Your Career
 description: This is the description for news blog. But here i will have to 
-slug: news-5
 img: news-1.jpg
 category: Android
 authors: bhaskar
