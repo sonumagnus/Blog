@@ -6,7 +6,18 @@
       v-show="show"
     >
       <div
-        class="px-10 bg-gray-100 w-2/3 h-screen duration-300 ease-in-out modal-container text-lg font-semibold space-y-6 flex flex-col text-gray-800"
+        class="
+          px-10
+          bg-gray-100
+          w-2/3
+          h-screen
+          modal-container
+          text-lg
+          font-semibold
+          space-y-6
+          flex flex-col
+          text-gray-800
+        "
         @click.stop
       >
         <p class="text-2xl mt-2 mb-5 text-gray-500">BlogTag</p>
@@ -43,7 +54,17 @@ export default {
 </script>
 
 <style>
-.modal-enter .modal-container {
+.modal-enter-active,
+.modal-leave-active,
+.modal-enter-active .modal-container,
+.modal-leave-active .modal-container {
+  transition: all 0.3s ease;
+}
+.modal-enter .modal-container,
+.modal-leave-to .modal-container {
   transform: translate(-100%, 0);
 }
+/* .modal-enter .modal-container {
+  transform: translate(-100%, 0);
+} */
 </style>

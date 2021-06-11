@@ -3,7 +3,7 @@
     <Navbar />
     <div class="w-full md:w-11/12 m-auto">
       <div
-        class="w-full md:w-2/3 m-auto md:mt-6 bg-NavyBlue h-auto flex flex-col md:flex-row box-content md:p-11 md:rounded-xl"
+        class="w-full md:w-2/3 m-auto md:mt-3 bg-NavyBlue h-auto flex flex-col md:flex-row box-content md:p-11 md:rounded-xl"
       >
         <!-- left-div-contains-quote-and icons-starts-here -->
         <div class="w-full md:w-[55%] h-80 md:h-[26rem] flex flex-col md:justify-between md:pl-8 md:pr-32">

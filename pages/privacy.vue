@@ -1,7 +1,8 @@
 <template>
   <div>
     <Navbar />
-    <animated-slug />
+    <!-- <animated-slug /> -->
+    <!-- <transitionss /> -->
     <div class="text-xl px-3 text-center font-charter">
       <p class="text-3xl text-gray-800 font-bold italic underline py-5">
         Privacy Policy
@@ -78,10 +79,23 @@
 </template>
 
 <script>
-import animatedSlug from '~/components/animatedSlug.vue';
+import animatedSlug from "~/components/animatedSlug.vue";
+import Transitionss from "~/components/transitionss.vue";
 export default {
-  components: { animatedSlug },};
+  components: { animatedSlug, Transitionss },
+  transition: {
+    name: "home",
+    mode: "out-in",
+  },
+};
 </script>
 
 <style>
+.home-enter {
+  transform: translateY(25vh);
+  opacity: 0%;
+}
+.home-enter-active{
+  transition: all .8s ease-in-out;
+}
 </style>

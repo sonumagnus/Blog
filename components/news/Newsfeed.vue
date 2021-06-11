@@ -1,11 +1,15 @@
 <template>
-  <div class="border-b">
-    <span v-if="$fetchState.pending">
-      <animated-slug />
+  <div class="border-b mx-6 my-8 md:mx-20">
+    <seemore category="news" />
+    <!--animated-slug-loop-for-loading-animation-pulse-started-here -->
+    <span v-if="$fetchState.pending" class="grid grid-cols-1 lg:grid-cols-3">
+      <div v-for="(doc, index) in docs" :key="index">
+        <animated-slug v-if="index < docs.length" />
+      </div>
     </span>
+    <!-- animated-slug-loop-for-loading-animation-pulse-ended-here -->
     <p v-else-if="$fetchState.error">An error occurred :(</p>
-    <div class="mx-6 my-8 md:mx-20" v-else>
-      <seemore category="news" />
+    <div class="" v-else>
       <ul class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-8">
         <li v-for="(doc, index) of docs" :key="index" class="my-3.5">
           <nuxt-link :to="`${doc.path}`" class="flex">
@@ -15,7 +19,15 @@
             <div class="mt-2">
               <div class="flex text-sm font-medium mb-2">
                 <span
-                  class="px-1.5 bg-gray-500 text-gray-300 mr-1.5 rounded items-start uppercase"
+                  class="
+                    px-1.5
+                    bg-gray-500
+                    text-gray-300
+                    mr-1.5
+                    rounded
+                    items-start
+                    uppercase
+                  "
                 >
                   {{ doc.category[0] }}
                 </span>
@@ -49,7 +61,7 @@
 import seemore from "~/components/seemore";
 import IconCheckCircle from "~/components/icons/ui/IconCheckCircle";
 import IconStar from "~/components/icons/ui/IconStar";
-import AnimatedSlug from '../animatedSlug.vue';
+import AnimatedSlug from "../animatedSlug.vue";
 export default {
   components: { IconCheckCircle, IconStar, seemore, AnimatedSlug },
   data() {
