@@ -1,10 +1,10 @@
 <template>
   <div class="border-b mx-6 my-8 md:mx-20">
-    <seemore category="news" />
+      <seemore category="news" />
     <!--animated-slug-loop-for-loading-animation-pulse-started-here -->
     <span v-if="$fetchState.pending" class="grid grid-cols-1 lg:grid-cols-3">
-      <div v-for="(doc, index) in docs" :key="index">
-        <animated-slug v-if="index < docs.length" />
+      <div v-for="(count, index) in counters" :key="index">
+        <animated-slug v-if="count <= counters.length" />
       </div>
     </span>
     <!-- animated-slug-loop-for-loading-animation-pulse-ended-here -->
@@ -19,15 +19,7 @@
             <div class="mt-2">
               <div class="flex text-sm font-medium mb-2">
                 <span
-                  class="
-                    px-1.5
-                    bg-gray-500
-                    text-gray-300
-                    mr-1.5
-                    rounded
-                    items-start
-                    uppercase
-                  "
+                  class="px-1.5 bg-gray-500 text-gray-300 mr-1.5 rounded items-start uppercase"
                 >
                   {{ doc.category[0] }}
                 </span>
@@ -61,12 +53,13 @@
 import seemore from "~/components/seemore";
 import IconCheckCircle from "~/components/icons/ui/IconCheckCircle";
 import IconStar from "~/components/icons/ui/IconStar";
-import AnimatedSlug from "../animatedSlug.vue";
+import AnimatedSlug from '../animatedSlug.vue';
 export default {
   components: { IconCheckCircle, IconStar, seemore, AnimatedSlug },
   data() {
     return {
       docs: [],
+      counters: [1,2,3,4,5,6]
     };
   },
   async fetch() {
