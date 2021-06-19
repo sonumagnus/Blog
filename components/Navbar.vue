@@ -52,7 +52,7 @@
           </div>
         </div>
         <span class="md:hidden flex">
-          <span>
+          <span @click="showsearchbar = !showsearchbar">
             <icon-search
               width="18"
               height="18"
@@ -71,6 +71,7 @@
         </span>
       </div>
       <menu-bar :show="menu" @close="menu = false"></menu-bar>
+      <app-search-input :show="showsearchbar" @disable="showsearchbar= false" />
     </div>
   </div>
 </template>
@@ -78,13 +79,15 @@
 <script>
 import IconSearch from "~/components/icons/header/IconSearch";
 import IconMenu from "~/components/icons/header/IconMenu";
+import AppSearchInput from './AppSearchInput.vue';
 export default {
   components: {
     IconMenu,
     IconSearch,
+    AppSearchInput,
   },
   data() {
-    return { menu: false };
+    return { menu: false, showsearchbar: false };
   },
 };
 </script>

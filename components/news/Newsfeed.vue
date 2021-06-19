@@ -1,10 +1,14 @@
 <template>
   <div class="border-b mx-6 my-8 md:mx-20">
-      <seemore category="news" />
+    <!-- <app-search-input  class="mb-6"/> -->
+    <seemore category="news" />
     <!--animated-slug-loop-for-loading-animation-pulse-started-here -->
-    <span v-if="$fetchState.pending" class="grid grid-cols-1 lg:grid-cols-3">
-      <div v-for="(count, index) in counters" :key="index">
-        <animated-slug v-if="count <= counters.length" />
+    <span
+      v-if="$fetchState.pending"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 md:gap-y-10"
+    >
+      <div v-for="(counter, index) in counters" :key="index">
+        <animated-slug v-if="index < counters.length" />
       </div>
     </span>
     <!-- animated-slug-loop-for-loading-animation-pulse-ended-here -->
@@ -19,7 +23,15 @@
             <div class="mt-2">
               <div class="flex text-sm font-medium mb-2">
                 <span
-                  class="px-1.5 bg-gray-500 text-gray-300 mr-1.5 rounded items-start uppercase"
+                  class="
+                    px-1.5
+                    bg-gray-500
+                    text-gray-300
+                    mr-1.5
+                    rounded
+                    items-start
+                    uppercase
+                  "
                 >
                   {{ doc.category[0] }}
                 </span>
@@ -53,13 +65,14 @@
 import seemore from "~/components/seemore";
 import IconCheckCircle from "~/components/icons/ui/IconCheckCircle";
 import IconStar from "~/components/icons/ui/IconStar";
-import AnimatedSlug from '../animatedSlug.vue';
+import AnimatedSlug from "../animatedSlug.vue";
+import AppSearchInput from '../AppSearchInput.vue';
 export default {
-  components: { IconCheckCircle, IconStar, seemore, AnimatedSlug },
+  components: { IconCheckCircle, IconStar, seemore, AnimatedSlug, AppSearchInput },
   data() {
     return {
       docs: [],
-      counters: [1,2,3,4,5,6]
+      counters: [1, 2, 3, 4, 5, 6],
     };
   },
   async fetch() {
