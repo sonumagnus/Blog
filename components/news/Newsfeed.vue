@@ -66,9 +66,15 @@ import seemore from "~/components/seemore";
 import IconCheckCircle from "~/components/icons/ui/IconCheckCircle";
 import IconStar from "~/components/icons/ui/IconStar";
 import AnimatedSlug from "../animatedSlug.vue";
-import AppSearchInput from '../AppSearchInput.vue';
+import AppSearchInput from "../AppSearchInput.vue";
 export default {
-  components: { IconCheckCircle, IconStar, seemore, AnimatedSlug, AppSearchInput },
+  components: {
+    IconCheckCircle,
+    IconStar,
+    seemore,
+    AnimatedSlug,
+    AppSearchInput,
+  },
   data() {
     return {
       docs: [],

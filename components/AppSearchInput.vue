@@ -56,8 +56,9 @@
               transition
               ease-in-out
               duration-150
-              text-green-500
+              text-green-700
               hover:text-black
+              border-b
             "
           >
             {{ article.title }}
@@ -90,7 +91,7 @@ export default {
         return;
       }
       this.articles = await this.$content("blog")
-        .limit(3)
+        .limit(6)
         .search(searchQuery)
         .fetch();
     },

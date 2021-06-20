@@ -64,7 +64,4 @@ export default {
 .modal-leave-to .modal-container {
   transform: translate(-100%, 0);
 }
-/* .modal-enter .modal-container {
-  transform: translate(-100%, 0);
-} */
 </style>
