@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <NewsNewsfeed />
+    <Newsfeed />
     <div class="m-6 lg:my-10 lg:mx-20">
       <seemore category="blog" />
       <ul class="lg:grid lg:grid-cols-2 lg:gap-x-12">
@@ -15,7 +15,14 @@
               <div class="pr-4">
                 <span class="flex mb-2 text-sm font-medium">
                   <p
-                    class="px-1.5 bg-gray-400 rounded text-gray-200 mr-2 uppercase"
+                    class="
+                      px-1.5
+                      bg-gray-400
+                      rounded
+                      text-gray-200
+                      mr-2
+                      uppercase
+                    "
                   >
                     {{ article.categories[0][0] }}
                   </p>
@@ -24,12 +31,26 @@
                   <p>Blogs</p>
                 </span>
                 <p
-                  class="font-bold line-clamp-2 leading-5 sm:text-lg md:leading-7 capitalize"
+                  class="
+                    font-bold
+                    line-clamp-2
+                    leading-5
+                    sm:text-lg
+                    md:leading-7
+                    capitalize
+                  "
                 >
                   {{ article.title }}
                 </p>
                 <p
-                  class="hidden md:block md:line-clamp-1 text-gray-500 md:leading-5 md:mt-1"
+                  class="
+                    hidden
+                    md:block
+                    md:line-clamp-1
+                    text-gray-500
+                    md:leading-5
+                    md:mt-1
+                  "
                 >
                   {{ article.description }}
                 </p>
@@ -50,7 +71,15 @@
               <img
                 :src="`/resources/${article.img}`"
                 alt=""
-                class="w-[6.25rem] h-[6.25rem] sm:w-auto md:h-32 object-cover md:self-center rounded"
+                class="
+                  w-[6.25rem]
+                  h-[6.25rem]
+                  sm:w-auto
+                  md:h-32
+                  object-cover
+                  md:self-center
+                  rounded
+                "
               />
             </div>
           </nuxt-link>
@@ -64,11 +93,12 @@
 </template>
 
 <script>
-import author from "~/components/author"
+import author from "~/components/author";
 import IconStar from "~/components/icons/ui/IconStar";
+import Newsfeed from "~/components/news/Newsfeed.vue";
 import Seemore from "~/components/seemore";
 export default {
-  components: { IconStar, Seemore, author },
+  components: { IconStar, Seemore, author, Newsfeed },
   async asyncData({ $content, params }) {
     const articles = await $content("blog", params.slug)
       // .only(["title", "description", "img", "createdAt", "slug"])

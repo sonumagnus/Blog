@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Nuxty",
+    title: "My Blog Website",
     htmlAttrs: {
       lang: "en"
     },
@@ -10,7 +10,10 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/resources/logo.png" }]
+  },
+  env: {
+    baseUrl: process.env.BASE_URL || "http://sonulodha.herokuapp.com/"
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

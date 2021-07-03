@@ -110,6 +110,18 @@ export default {
     IconFb,
     IconSharee,
   },
+    head() {
+    return {
+      title: `${this.doc.title}`,
+      meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: `${this.doc.description}`
+          }
+        ]
+    };
+  },
   async asyncData({ $content, params }) {
     const doc = await $content("news", params.slug).fetch();
 
@@ -152,7 +164,7 @@ export default {
   @apply text-xl font-medium text-gray-600;
 }
 .nuxt-content p {
-  @apply text-lg my-0.5 text-gray-700 my-1;
+  @apply text-lg text-gray-700 my-1;
 }
 @media (min-width: 1024px) {
   .nuxt-content p {

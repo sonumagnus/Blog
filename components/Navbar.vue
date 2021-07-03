@@ -1,7 +1,7 @@
 <template>
   <div class="w-full bg-white border-b shadow-sm">
     <div class="w-full md:w-11/12 h-auto m-auto px-6">
-      <div class="w-full flex md:justify-between">
+      <div class="w-full flex justify-center md:justify-between">
         <!--main-Navbar-div-->
         <div class="py-2">
           <!--Navbar-Left-Div{Contains: heading}-->
@@ -57,7 +57,7 @@
               width="18"
               height="18"
               icon-name="search"
-              class="mt-3.5 absolute right-12 text-gray-600"
+              class="mt-3.5 absolute right-4 text-gray-600"
             ></icon-search>
           </span>
           <span @click="menu = true">
@@ -65,7 +65,7 @@
               width="22"
               height="22"
               IconName="bars"
-              class="top-3 absolute right-3 text-gray-600"
+              class="top-3.5 absolute left-4 text-gray-600 transform rotate-180"
             ></icon-menu>
           </span>
         </span>

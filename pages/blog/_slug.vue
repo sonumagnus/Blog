@@ -5,7 +5,18 @@
       <span v-for="(category, id) in article.categories" :key="id">
         <NuxtLink :to="`/blog/category/${categories[category].slug}`">
           <span
-            class="truncate uppercase tracking-wider font-medium px-2 py-1 rounded-full mr-2 mb-2 border"
+            class="
+              truncate
+              uppercase
+              tracking-wider
+              font-medium
+              px-2
+              py-1
+              rounded-full
+              mr-2
+              mb-2
+              border
+            "
           >
             {{ categories[category].name }}
           </span>
@@ -15,7 +26,15 @@
       <div>
         <!--this-div-contains-title and description-only-->
         <h1
-          class="text-[32px] leading-10 md:text-[46px] md:leading-[56px] mt-3.5 text-gray-900 font-fell"
+          class="
+            text-[32px]
+            leading-10
+            md:text-[46px]
+            md:leading-[56px]
+            mt-3.5
+            text-gray-900
+            font-fell
+          "
         >
           {{ article.title }}
         </h1>
@@ -112,6 +131,19 @@ import IconSharee from "~/components/icons/SquareIcons/IconSharee.vue";
 import IconStar from "~/components/icons/ui/IconStar.vue";
 export default {
   components: { IconStar, IconInstagram, IconFb, IconSharee, IconTwitter },
+  head() {
+    return {
+      title: `${this.article.title}`,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: `${this.article.description}`,
+        },
+      ],
+      link: [{ rel: "canonical", href: `${process.env.baseUrl}` }],
+    };
+  },
   async asyncData({ $content, params }) {
     const article = await $content("blog", params.slug).fetch();
 
@@ -165,7 +197,7 @@ export default {
   @apply text-xl font-medium text-gray-600;
 }
 .nuxt-content p {
-  @apply text-lg my-0.5 text-gray-700 my-1;
+  @apply text-lg text-gray-700 my-1;
 }
 @media (min-width: 1024px) {
   .nuxt-content p {

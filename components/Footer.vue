@@ -8,7 +8,7 @@
           <div
             class="h-12 w-12 md:h-14 md:w-14 rounded-full overflow-hidden mr-2 md:my-4 md:mr-4"
           >
-            <img src="/resources/logo.png" alt="" />
+            <img src="/resources/logo.png" alt="logo" />
           </div>
           <div class="text-center md:text-left my-4 md:my-0">
             <p class="text-gray-300 font-bold py-2 md:py-0">ABOUT US</p>

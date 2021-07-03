@@ -1,33 +1,44 @@
 <template>
   <transition name="search">
     <div
-      class="relative inset-0 h-screen w-full flex items-start"
+      class="
+        fixed
+        z-20
+        inset-0
+        flex
+        justify-evenly
+        items-start
+        bg-gray-800
+        opacity-[98%]
+        pt-12
+      "
       v-show="show"
     >
-      <input
-        v-model="searchQuery"
-        type="search"
-        autocomplete="off"
-        placeholder="Search Articles"
-        class="
-          block
-          w-full
-          pl-4
-          py-2
-          mt-2
-          truncate
-          leading-5
-          placeholder-gray-500
-          border border-gray-500
-          text-gray-700
-          focus:border-gray-300
-          rounded-md
-          focus:outline-none
-          bg-white
-        "
-      />
+      <span class="input-wrapper relative mx-10 w-full">
+        <input
+          v-model="searchQuery"
+          type="search"
+          autocomplete="off"
+          placeholder="Search Articles"
+          class="
+            block
+            pl-4
+            py-2
+            truncate
+            leading-5
+            bg-gray-800
+            placeholder-gray-500
+            text-gray-200
+            focus:outline-none
+          "
+      /></span>
       <span @click="close">
-        <icon-close width="30" height="30" iconName="times" class="my-3 ml-2" />
+        <icon-close
+          width="26"
+          height="26"
+          iconName="times"
+          class="my-3 ml-2 text-gray-400 mr-6"
+        />
       </span>
       <ul
         v-if="articles.length"
@@ -37,9 +48,7 @@
           w-auto
           flex-1
           bg-white
-          dark:bg-gray-900
           rounded-md
-          border border-gray-300
           overflow-hidden
           mt-12
         "
@@ -50,14 +59,15 @@
             class="
               flex
               px-4
-              py-2
+              py-4
               items-center
               leading-5
               transition
               ease-in-out
               duration-150
-              text-green-700
+              text-gray-200
               hover:text-black
+              bg-gray-800
               border-b
             "
           >
@@ -111,5 +121,13 @@ export default {
 .search-enter-active,
 .search-leave-active {
   transition: all 0.3s ease;
+}
+.input-wrapper::after {
+  content: "";
+  @apply h-px w-full bg-gray-400 left-0 bottom-0 absolute;
+}
+.input-wrapper:focus-within::after {
+  content: "";
+  @apply h-px w-full bg-gray-100 left-0 bottom-0 absolute duration-1000 ease-in-out;
 }
 </style>
