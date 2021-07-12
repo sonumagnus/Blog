@@ -6,7 +6,7 @@
           v-for="author of authors"
           :key="author.slug"
         >
-          <NuxtLink :to="`/blog/author/${author.slug}`">
+          <NuxtLink :to="`/article/author/${author.slug}`">
             <p class="px-2 py-1 text-gray-800 opacity-70 capitalize text-sm lg:text-xl border border-gray-400 rounded">
               {{ author.name }}
             </p>

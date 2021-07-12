@@ -1,11 +1,12 @@
 ---
-title: How To Learn To Code Learn by Practical Guidance in Official Docs
+title: This is totally different title for news in order to try searchquery right
 description: Managers ask it. Developers hate it. Know why that is and what you should be asking instead
-img: blog-5.jpg
+section: news
+img: news-1.jpg
 categories: 
  - mobile
  - top list
-authors: stoner
+authors: sonu
 ---
 
 # A Quick Guide to Understanding Orbital Debris Reentry Predictions

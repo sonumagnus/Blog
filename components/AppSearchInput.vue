@@ -100,7 +100,7 @@ export default {
         this.articles = [];
         return;
       }
-      this.articles = await this.$content("blog")
+      this.articles = await this.$content("article", "blog")
         .limit(6)
         .search(searchQuery)
         .fetch();

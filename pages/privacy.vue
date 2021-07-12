@@ -1,9 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <!-- <animated-slug /> -->
-    <!-- <transitionss /> -->
-    <div class="text-xl px-3 text-center font-charter">
+    <div class="text-xl mx-6 lg:mx-20 text-center font-charter">
       <p class="text-3xl text-gray-800 font-bold italic underline py-5">
         Privacy Policy
       </p>
@@ -20,7 +18,7 @@
         <p>What Information Do We Collect?</p>
         <br />
 
-        <p class="text-gray-900"><strong>1) COOKIES</strong></p>
+        <p class="text-gray-600"><strong>1) COOKIES</strong></p>
         <p>
           Yes, we do store cookies sometimes to provide the user with a quality
           experience. Cookies are small text files that are sent by Appdodo.Com
@@ -33,7 +31,7 @@
         </p>
         <br />
 
-        <p><strong>2) LOG FILES</strong></p>
+        <p class="text-gray-600"><strong>2) LOG FILES</strong></p>
         <p>
           We may also utilize the data located in the log file. A Log File may
           consist of the user's Internet Protocol Address(IP Address), Internet
@@ -41,7 +39,7 @@
           time user visited Appdodo.Com and the pages visited by them.
         </p>
         <br />
-        <p><strong>3) DEVICE INFORMATION</strong></p>
+        <p class="text-gray-600"><strong>3) DEVICE INFORMATION</strong></p>
         <p>
           We also collect user's device information by which they visit
           Appdodo.Com, so that we may deliver the specific web page we had
@@ -61,7 +59,7 @@
         </p>
         <br />
 
-        <p><strong>Why Do We Collect User Information?</strong></p>
+        <p class="text-gray-600"><strong>Why Do We Collect User Information?</strong></p>
         <p>1. To deliver users the best-optimized page for their device.</p>
         <p>
           2. To help Appdodo.Com identify the returning users and hence
@@ -79,23 +77,8 @@
 </template>
 
 <script>
-import animatedSlug from "~/components/animatedSlug.vue";
-import Transitionss from "~/components/transitionss.vue";
-export default {
-  components: { animatedSlug, Transitionss },
-  transition: {
-    name: "home",
-    mode: "out-in",
-  },
-};
+export default {};
 </script>
 
 <style>
-.home-enter {
-  transform: translateY(25vh);
-  opacity: 0%;
-}
-.home-enter-active{
-  transition: all .8s ease-in-out;
-}
 </style>

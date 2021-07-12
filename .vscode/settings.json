@@ -21,7 +21,7 @@
 //   "editor.formatOnType": true,
 //   "editor.minimap.enabled": false,
 //   "workbench.tree.indent": 10,
-//   "workbench.statusBar.visible": false,
+  "workbench.statusBar.visible": false,
 //   "workbench.sideBar.location": "right",
 //   "terminal.integrated.fontSize": 14,
 //   "terminal.integrated.letterSpacing": 1,

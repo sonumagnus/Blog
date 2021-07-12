@@ -1,10 +1,15 @@
 <template>
   <div class="flex">
-    <icon-checked-circle width="22" height="22" iconName="check-circle" class="mr-3"></icon-checked-circle>
+    <icon-checked-circle
+      width="22"
+      height="22"
+      iconName="check-circle"
+      class="mr-3"
+    ></icon-checked-circle>
     <p
       class="text-sm font-bold self-center uppercase text-purple-900 opacity-60"
     >
-    all latest {{ category }}
+      all latest {{ category }}
     </p>
   </div>
 </template>
@@ -16,11 +21,8 @@ export default {
     IconCheckedCircle,
   },
   props: {
-    category: {
-      type: String,
-      default: "",
-    },
-  }
+    category: String,
+  },
 };
 </script>
 

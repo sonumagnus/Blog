@@ -6,7 +6,7 @@
     <ul class="flex flex-wrap mb-2 md:justify-evenly justify-between">
       <li v-for="(category, index) of categories" :key="index">
         <NuxtLink
-          :to="`/blog/category/${category.slug}`"
+          :to="`/article/category/${category.slug}`"
           class="flex items-center border border-gray-400 bg-gray-100 rounded p-1.5"
         >
           <span class="p-1 bg-green-500 rounded text-gray-200 ">

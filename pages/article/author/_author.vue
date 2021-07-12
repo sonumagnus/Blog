@@ -101,7 +101,7 @@ export default {
       .fetch();
 
     const author = authors.length > 0 ? authors[0] : {};
-    const articles = await $content("blog", params.slug)
+    const articles = await $content("article/blog", params.slug)
       .where({ authors: { $contains: author.name } })
       .sortBy("createdAt", "asc")
       .fetch();

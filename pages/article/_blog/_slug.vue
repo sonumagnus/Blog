@@ -3,7 +3,7 @@
     <Navbar />
     <div class="m-5 md:mx-36 lg:mx-72">
       <span v-for="(category, id) in article.categories" :key="id">
-        <NuxtLink :to="`/blog/category/${categories[category].slug}`">
+        <NuxtLink :to="`/article/category/${categories[category].slug}`">
           <span
             class="
               truncate
@@ -44,7 +44,7 @@
         <div class="flex justify-between my-7 md:flex-row flex-col-reverse">
           <div v-for="(writer, index) in author" :key="index" class="flex">
             <nuxt-link
-              :to="`/blog/author/${writer.name}`"
+              :to="`/article/author/${writer.name}`"
               class="p-1 border-b border-t border-gray-900 rounded-full mr-3"
             >
               <img
@@ -54,7 +54,7 @@
               />
             </nuxt-link>
             <span class="text-sm self-center">
-              <nuxt-link :to="`/blog/author/${writer.name}`"
+              <nuxt-link :to="`/article/author/${writer.name}`"
                 ><p class="capitalize hover:underline">
                   {{ writer.name }}
                 </p></nuxt-link
@@ -145,7 +145,9 @@ export default {
     };
   },
   async asyncData({ $content, params }) {
-    const article = await $content("blog", params.slug).fetch();
+    const article = await $content("article", params.blog, params.slug)
+      .only(["title", "description", "body", "img", "createdAt", "categories", "slug", "authors"])
+      .fetch();
 
     const categoriesList = await $content("categories")
       .only(["name", "slug"])
@@ -163,7 +165,7 @@ export default {
       ...categoriesList.map((s) => ({ [s.name]: s }))
     );
 
-    const [prev, next] = await $content("blog")
+    const [prev, next] = await $content("article", params.blog)
       .only(["title", "slug"])
       .sortBy("createdAt", "asc")
       .surround(params.slug)

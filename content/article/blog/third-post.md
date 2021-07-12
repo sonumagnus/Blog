@@ -1,6 +1,7 @@
 ---
 title: I tried planking for 5 minutes every day for a month and it made my back feel great
 description: Actions may speak louder than words, but our words still hold tremendous power
+section: blog
 img: blog-3.jpg
 categories: 
  - mobile

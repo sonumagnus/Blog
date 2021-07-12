@@ -7,8 +7,8 @@
       v-if="$fetchState.pending"
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 md:gap-y-10"
     >
-      <div v-for="(counter, index) in counters" :key="index">
-        <animated-slug v-if="index < counters.length" />
+      <div v-for="num in 6" :key="num">
+        <animated-slug />
       </div>
     </span>
     <!-- animated-slug-loop-for-loading-animation-pulse-ended-here -->
@@ -33,15 +33,15 @@
                     uppercase
                   "
                 >
-                  {{ doc.category[0] }}
+                  {{ doc.categories[0][0] }}
                 </span>
-                <div>{{ doc.category }}</div>
+                <div>{{ doc.categories[0] }}</div>
                 <p class="mx-0.5 text-gray-600">in</p>
                 <p>Latest News</p>
               </div>
-              <div class="font-bold line-clamp-2 mb-2">
+              <h2 class="font-bold line-clamp-2 mb-2">
                 {{ doc.title }}
-              </div>
+              </h2>
               <div class="text-sm text-gray-500 flex">
                 <p>{{ formatDate(doc.createdAt) }}</p>
                 <p class="px-1.5 font-semibold">·</p>
@@ -78,11 +78,10 @@ export default {
   data() {
     return {
       docs: [],
-      counters: [1, 2, 3, 4, 5, 6],
     };
   },
   async fetch() {
-    this.docs = await this.$content("news").sortBy("asc").limit(6).fetch();
+    this.docs = await this.$content("article/news").sortBy("asc").limit(6).fetch();
   },
   methods: {
     formatDate(date) {

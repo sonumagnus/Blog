@@ -101,7 +101,7 @@ export default {
       .fetch();
 
     const category = categories.length > 0 ? categories[0] : {};
-    const articles = await $content("blog", params.slug)
+    const articles = await $content("article/blog", params.slug)
       .where({ categories: { $contains: category.name } })
       .sortBy("createdAt", "asc")
       .fetch();

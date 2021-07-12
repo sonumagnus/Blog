@@ -142,7 +142,7 @@
             </div>
             <span>
               <button
-                type="submit"
+                type="summit"
                 class="px-6 py-2.5 bg-blue-500 text-white text-sm rounded-md focus:outline-none focus:ring-2 float-right"
               >
                 Send Messages

@@ -1,6 +1,7 @@
 ---
 title: How to add the "Blue Arrow" button on your website (WebApp)
-description: Losing complete interest in your spouse, no longer arguing, and having no trust in them are all red flags
+description: Losing complete interest in your spouse, no longer arguing, and having no trust in them are all red 
+section: blog
 img: blog-2.jpg
 categories: 
  - mobile

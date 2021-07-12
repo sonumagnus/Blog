@@ -6,7 +6,7 @@
         <div class="py-2">
           <!--Navbar-Left-Div{Contains: heading}-->
           <nuxt-link to="/">
-            <h1 class="text-2xl font-semibold">BlogTag</h1>
+            <h1 class="text-2xl font-semibold">𝓑𝓵𝓸𝓰𝓣𝓪𝓰</h1>
           </nuxt-link>
         </div>
         <div></div>

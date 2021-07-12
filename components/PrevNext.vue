@@ -5,7 +5,7 @@
     <span>
       <NuxtLink
         v-if="prev"
-        :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
+        :to="`${prev.slug}`"
         class="font-bold line-clamp-2"
       >
         <span class="flex text-red-900">
@@ -26,7 +26,7 @@
     <span class="pr-2">
       <NuxtLink
         v-if="next"
-        :to="{ name: 'blog-slug', params: { slug: next.slug } }"
+        :to="`${next.slug}`"
         class="font-bold line-clamp-2"
       >
         <span class="flex justify-end items-center text-red-900">

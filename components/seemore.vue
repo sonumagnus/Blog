@@ -13,7 +13,17 @@
     </span>
     <nuxt-link :to="`${category}`" class="self-center">
       <span
-        class="flex items-center border rounded-xl px-1 mb-0.5 bg-gray-100 text-blue-600 opacity-50"
+        class="
+          flex
+          items-center
+          border
+          rounded-xl
+          px-1
+          mb-0.5
+          bg-gray-100
+          text-blue-600
+          opacity-50
+        "
       >
         <p class="text-xs">See All</p>
         <icon-more
@@ -32,12 +42,7 @@ import IconCheckCircle from "~/components/icons/ui/IconCheckCircle";
 import IconMore from "~/components/icons/ui/IconMore";
 export default {
   components: { IconMore, IconCheckCircle },
-  props: {
-    category: {
-      type: String,
-      default: "",
-    },
-  },
+  props: ["category"],
 };
 </script>
 
