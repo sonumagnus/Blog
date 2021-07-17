@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <CategoryTitle category="news" class="m-6 lg:mx-20" />
+    <CategoryTitle category="news" />
     <blog-listing :articles="articles" section="news" />
   </div>
 </template>

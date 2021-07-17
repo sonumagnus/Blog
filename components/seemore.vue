@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between font-semibold uppercase">
+  <div class="flex justify-between font-semibold uppercase mx-6 mt-6 md:mx-20 ">
     <span class="flex text-xl">
       <icon-check-circle
         width="22"

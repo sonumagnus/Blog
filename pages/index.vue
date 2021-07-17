@@ -2,19 +2,17 @@
   <div>
     <Navbar />
     <Newsfeed />
-    <seemore category="blog" class="m-6 lg:mx-20" />
+    <seemore category="blog" />
     <blog-listing :articles="articles" />
     <Category />
-    <author />
   </div>
 </template>
 
 <script>
-import author from "~/components/author";
 import Newsfeed from "~/components/news/Newsfeed.vue";
 import Seemore from "~/components/seemore";
 export default {
-  components: { Seemore, author, Newsfeed },
+  components: { Seemore, Newsfeed },
   async asyncData({ $content, params }) {
     const articles = await $content("article/blog", params.slug)
       .only([

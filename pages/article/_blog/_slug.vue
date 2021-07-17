@@ -120,6 +120,7 @@
         </article>
       </div>
     </div>
+    <related-article :category="article.categories[0]" :title="article.title" />
   </div>
 </template>
 
@@ -129,8 +130,16 @@ import IconFb from "~/components/icons/SquareIcons/IconFb.vue";
 import IconInstagram from "~/components/icons/SquareIcons/IconInstagram.vue";
 import IconSharee from "~/components/icons/SquareIcons/IconSharee.vue";
 import IconStar from "~/components/icons/ui/IconStar.vue";
+import RelatedArticle from "~/components/RelatedArticle.vue";
 export default {
-  components: { IconStar, IconInstagram, IconFb, IconSharee, IconTwitter },
+  components: {
+    IconStar,
+    IconInstagram,
+    IconFb,
+    IconSharee,
+    IconTwitter,
+    RelatedArticle,
+  },
   head() {
     return {
       title: `${this.article.title}`,
@@ -146,7 +155,16 @@ export default {
   },
   async asyncData({ $content, params }) {
     const article = await $content("article", params.blog, params.slug)
-      .only(["title", "description", "body", "img", "createdAt", "categories", "slug", "authors"])
+      .only([
+        "title",
+        "description",
+        "body",
+        "img",
+        "createdAt",
+        "categories",
+        "slug",
+        "authors",
+      ])
       .fetch();
 
     const categoriesList = await $content("categories")

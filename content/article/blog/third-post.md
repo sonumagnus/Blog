@@ -4,9 +4,9 @@ description: Actions may speak louder than words, but our words still hold treme
 section: blog
 img: blog-3.jpg
 categories: 
+ - how to
  - mobile
  - top list
- - how to
 authors: stoner
 ---
 

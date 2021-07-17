@@ -1,20 +1,18 @@
 <template>
   <transition name="search">
     <div
-      class="
-        fixed
-        z-20
-        inset-0
-        flex
-        justify-evenly
-        items-start
-        bg-gray-800
-        opacity-[98%]
-        pt-12
-      "
+      class="fixed z-20 inset-0 justify-evenly items-start bg-gray-50 h-screen"
       v-show="show"
     >
-      <span class="input-wrapper relative mx-10 w-full">
+      <span @click="close">
+        <icon-close
+          width="35"
+          height="35"
+          iconName="times"
+          class="absolute right-5 top-3.5 text-gray-600"
+        />
+      </span>
+      <div class="input-wrapper relative mx-6">
         <input
           v-model="searchQuery"
           type="search"
@@ -22,24 +20,21 @@
           placeholder="Search Articles"
           class="
             block
-            pl-4
+            mt-20
             py-2
             truncate
             leading-5
-            bg-gray-800
+            bg-gray-50
             placeholder-gray-500
-            text-gray-200
+            text-gray-700
             focus:outline-none
+            w-full
+            h-12
+            border-b border-gray-300
+            text-center
           "
-      /></span>
-      <span @click="close">
-        <icon-close
-          width="26"
-          height="26"
-          iconName="times"
-          class="my-3 ml-2 text-gray-400 mr-6"
         />
-      </span>
+      </div>
       <ul
         v-if="articles.length"
         class="
@@ -55,19 +50,19 @@
       >
         <li v-for="article of articles" :key="article.slug">
           <NuxtLink
-            :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+            :to="`/article/blog/${article.slug}`"
             class="
               flex
-              px-4
+              px-9
               py-4
               items-center
               leading-5
               transition
               ease-in-out
               duration-150
-              text-gray-200
+              text-gray-800
               hover:text-black
-              bg-gray-800
+              bg-gray-50
               border-b
             "
           >
@@ -124,10 +119,12 @@ export default {
 }
 .input-wrapper::after {
   content: "";
-  @apply h-px w-full bg-gray-400 left-0 bottom-0 absolute;
+  transform: scale(0, 1);
+  @apply h-px w-full absolute;
 }
 .input-wrapper:focus-within::after {
   content: "";
-  @apply h-px w-full bg-gray-100 left-0 bottom-0 absolute duration-1000 ease-in-out;
+  transform: scale(1, 1);
+  @apply bg-blue-800 duration-300 ease-in-out;
 }
 </style>

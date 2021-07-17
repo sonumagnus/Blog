@@ -59,7 +59,9 @@
         </p>
         <br />
 
-        <p class="text-gray-600"><strong>Why Do We Collect User Information?</strong></p>
+        <p class="text-gray-600">
+          <strong>Why Do We Collect User Information?</strong>
+        </p>
         <p>1. To deliver users the best-optimized page for their device.</p>
         <p>
           2. To help Appdodo.Com identify the returning users and hence
@@ -77,7 +79,8 @@
 </template>
 
 <script>
-export default {};
+export default {
+};
 </script>
 
 <style>

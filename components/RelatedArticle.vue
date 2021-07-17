@@ -1,13 +1,14 @@
 <template>
-  <div class="m-6 md:mx-20">
-    <ul class="lg:grid lg:grid-cols-2 lg:gap-x-10">
+  <div class="m-6 lg:mx-20">
+    <p class="capitalize text-2xl text-gray-500 my-12 text-center font-medium">
+      Related {{ category }} Articles
+    </p>
+    <ul class="grid grid-cols-1 lg:grid-cols-3 gap-3">
       <li
+        v-show="article.title != title"
         v-for="(article, index) in articles"
         :key="index"
         class="
-          my-3
-          md:my-4
-          w-full
           p-1.5
           rounded-md
           border border-transparent
@@ -17,7 +18,7 @@
       >
         <nuxt-link :to="`${article.path}`">
           <div class="flex justify-between">
-            <div class="pr-4">
+            <div class="pr-3">
               <span class="flex mb-2 text-sm font-medium">
                 <p
                   class="
@@ -33,49 +34,29 @@
                 </p>
                 <p class="capitalize">{{ article.categories[0] }}</p>
                 <p class="mx-0.5 text-gray-600">in</p>
-                <p class="capitalize">{{ section }}</p>
+                <p class="capitalize">{{ category }}</p>
               </span>
-              <h2 class="font-bold line-clamp-2 text-lg leading-6">
+              <h2 class="font-semibold line-clamp-2 text-lg leading-6">
                 {{ article.title }}
               </h2>
-              <h3
-                class="
-                  hidden
-                  md:block
-                  md:line-clamp-1
-                  text-gray-500
-                  md:leading-5
-                  md:mt-1
-                "
-              >
-                {{ article.description }}
-              </h3>
               <span class="flex text-sm text-gray-600 mt-1.5">
                 <p>
                   {{ formatDate(article.createdAt) }}
                 </p>
                 <p class="px-1.5 font-semibold">·</p>
                 <ReadingTime :content="article.body" />
-                <icon-star
+                <!-- <icon-star
                   width="15"
                   height="15"
                   iconName="star"
                   class="mx-1 self-center opacity-60"
-                ></icon-star>
+                ></icon-star> -->
               </span>
             </div>
             <img
               :src="`/resources/${article.img}`"
               alt=""
-              class="
-                w-[6.25rem]
-                h-[6.25rem]
-                sm:w-auto
-                md:h-32
-                object-cover
-                md:self-center
-                rounded
-              "
+              class="w-[6.25rem] h-[6.25rem] sm:w-auto object-cover rounded"
             />
           </div>
         </nuxt-link>
@@ -85,18 +66,32 @@
 </template>
 
 <script>
-import IconStar from "./icons/ui/IconStar.vue";
+import IconStar from "~/components/icons/ui/IconStar.vue";
 export default {
   components: { IconStar },
   props: {
-    articles: {
-      type: Array,
-      default: [],
-    },
-    section: {
+    category: {
       type: String,
-      default: "blogs",
+      default: "",
     },
+    title: {
+      type: String,
+      default: "",
+    },
+  },
+  data() {
+    return {
+      articles: [],
+    };
+  },
+  async fetch() {
+    this.articles = await this.$content("article", "blog")
+      .only(["title", "img", "createdAt", "path", "categories", "body"])
+      .where({
+        categories: { $contains: this.category },
+      })
+      .limit(6)
+      .fetch();
   },
   methods: {
     formatDate(date) {

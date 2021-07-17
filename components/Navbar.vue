@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-white border-b shadow-sm">
+  <div class="w-full bg-white border-b shadow-sm h-12 md:h-[3.2rem] ">
     <div class="w-full md:w-11/12 h-auto m-auto px-6">
       <div class="w-full flex justify-center md:justify-between">
         <!--main-Navbar-div-->

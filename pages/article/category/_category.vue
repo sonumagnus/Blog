@@ -43,7 +43,14 @@
                 <div class="pr-4">
                   <span class="flex mb-2 text-sm font-medium">
                     <p
-                      class="px-1.5 bg-gray-400 rounded text-gray-200 mr-2 uppercase"
+                      class="
+                        px-1.5
+                        bg-gray-400
+                        rounded
+                        text-gray-200
+                        mr-2
+                        uppercase
+                      "
                     >
                       {{ article.categories[0][0] }}
                     </p>
@@ -52,12 +59,26 @@
                     <p>Blogs</p>
                   </span>
                   <p
-                    class="font-bold line-clamp-2 leading-5 md:text-xl md:leading-7 capitalize"
+                    class="
+                      font-bold
+                      line-clamp-2
+                      leading-5
+                      md:text-xl
+                      md:leading-7
+                      capitalize
+                    "
                   >
                     {{ article.title }}
                   </p>
                   <p
-                    class="hidden md:block md:line-clamp-2 text-gray-500 md:leading-5 md:mt-1"
+                    class="
+                      hidden
+                      md:block
+                      md:line-clamp-2
+                      text-gray-500
+                      md:leading-5
+                      md:mt-1
+                    "
                   >
                     {{ article.description }}
                   </p>
@@ -78,7 +99,16 @@
                 <img
                   :src="`/resources/${article.img}`"
                   alt=""
-                  class="w-[6.25rem] h-[6.25rem] sm:w-auto md:h-32 lg:h-[8.375rem] object-cover md:self-center rounded"
+                  class="
+                    w-[6.25rem]
+                    h-[6.25rem]
+                    sm:w-auto
+                    md:h-32
+                    lg:h-[8.375rem]
+                    object-cover
+                    md:self-center
+                    rounded
+                  "
                 />
               </div>
             </nuxt-link>
@@ -101,7 +131,7 @@ export default {
       .fetch();
 
     const category = categories.length > 0 ? categories[0] : {};
-    const articles = await $content("article/blog", params.slug)
+    const articles = await $content("article/blog")
       .where({ categories: { $contains: category.name } })
       .sortBy("createdAt", "asc")
       .fetch();

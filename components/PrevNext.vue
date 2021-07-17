@@ -17,7 +17,7 @@
           ></icon-prev>
           <p class="font-semibold text-lg">Previous</p>
         </span>
-        <p class="hover:underline">
+        <p class="hover:underline text-green-400">
         {{ prev.title }}
         </p>
       </NuxtLink>
@@ -37,7 +37,7 @@
           ></icon-next>
           <p class="order-1 text-lg font-semibold">Next</p>
         </span>
-        <p class="hover:underline">
+        <p class="hover:underline text-green-400">
         {{ next.title }}
         </p>
       </NuxtLink>

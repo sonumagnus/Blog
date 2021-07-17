@@ -4,8 +4,8 @@ description: Managers ask it. Developers hate it. Know why that is and what you 
 section: news
 img: news-1.jpg
 categories: 
- - mobile
  - top list
+ - mobile
 authors: sonu
 ---
 

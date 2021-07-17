@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <category />
-    <CategoryTitle category="blog" class="m-6 lg:mx-20" />
+    <CategoryTitle category="blog" />
     <blog-listing :articles="articles" />
   </div>
 </template>
