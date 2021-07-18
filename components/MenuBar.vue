@@ -25,7 +25,6 @@
         <nuxt-link to="/Blog">Blog</nuxt-link>
         <nuxt-link to="/News">News</nuxt-link>
         <nuxt-link to="/contact">Contact</nuxt-link>
-        <nuxt-link to="/icons">About us</nuxt-link>
         <nuxt-link to="/privacy">Privacy Policy</nuxt-link>
       </div>
     </div>
