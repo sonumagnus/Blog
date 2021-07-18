@@ -1,5 +1,5 @@
 <template>
-  <div class="m-6 lg:mx-20">
+  <div class="m-4 lg:mx-20">
     <p class="capitalize text-2xl text-gray-500 my-6 pb-3 font-medium border-b">
       More {{ category }} Related Articles
     </p>
@@ -21,10 +21,10 @@
             <img
               :src="`/resources/${article.img}`"
               alt=""
-              class="w-[6.25rem] h-[6.25rem] sm:w-auto object-cover rounded"
+              class="w-[6.25rem] h-20 sm:w-auto object-cover rounded"
             />
             <div class="pl-3">
-              <span class="flex mb-2 text-sm font-medium">
+              <!-- <span class="flex mb-2 text-sm font-medium">
                 <p
                   class="
                     px-1.5
@@ -40,7 +40,7 @@
                 <p class="capitalize">{{ article.categories[0] }}</p>
                 <p class="mx-0.5 text-gray-600">in</p>
                 <p class="capitalize">{{ category }}</p>
-              </span>
+              </span> -->
               <h2 class="font-semibold line-clamp-2 text-lg leading-6">
                 {{ article.title }}
               </h2>
@@ -50,12 +50,12 @@
                 </p>
                 <p class="px-1.5 font-semibold">·</p>
                 <ReadingTime :content="article.body" />
-                <!-- <icon-star
-                  width="15"
-                  height="15"
+                <icon-star
+                  width="12"
+                  height="12"
                   iconName="star"
                   class="mx-1 self-center opacity-60"
-                ></icon-star> -->
+                ></icon-star>
               </span>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default {
   },
   async fetch() {
     this.articles = await this.$content("article", "blog")
-      .only(["title", "img", "createdAt", "path", "categories", "body"])
+      .only(["title", "img", "createdAt", "path", "body"])
       .where({
         categories: { $contains: this.category },
       })

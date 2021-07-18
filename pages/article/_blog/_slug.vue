@@ -95,7 +95,7 @@
                 width="22"
                 height="22"
                 iconName="facebook-square"
-                class="m-1 hover:text-blue-400"
+                class="m-1 hover:text-blue-600"
               ></icon-fb>
             </nuxt-link>
             <nuxt-link to="#" class="p-px rounded-full mx-0.5 md:mx-1">
