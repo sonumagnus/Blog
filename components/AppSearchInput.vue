@@ -9,14 +9,13 @@
         class="
           absolute
           right-0
-          w-full md:w-1/4
+          w-full lg:w-1/4
           justify-evenly
           items-start
           bg-gray-50
           h-screen
           search-div ring ring-gray-50
         "
-        v-show="show"
         @click.stop
       >
         <span @click="close">
@@ -27,7 +26,7 @@
             class="absolute right-5 top-3.5 text-gray-600"
           />
         </span>
-        <div class="input-wrapper relative mx-6">
+        <div class="input-wrapper relative mx-6 md:mx-24 lg:mx-6">
           <input
             v-model="searchQuery"
             type="search"

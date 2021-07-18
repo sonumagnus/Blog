@@ -1,6 +1,6 @@
 <template>
   <div class="m-6 lg:mx-20">
-    <p class="capitalize text-2xl text-gray-600 my-6 pb-3 font-medium border-b">
+    <p class="capitalize text-2xl text-gray-500 my-6 pb-3 font-medium border-b">
       More {{ category }} Related Articles
     </p>
     <ul class="grid grid-cols-1 lg:grid-cols-3 gap-3">
@@ -17,7 +17,12 @@
         "
       >
         <nuxt-link :to="`${article.path}`">
-          <div class="flex justify-between flex-row-reverse">
+          <div class="flex">
+            <img
+              :src="`/resources/${article.img}`"
+              alt=""
+              class="w-[6.25rem] h-[6.25rem] sm:w-auto object-cover rounded"
+            />
             <div class="pl-3">
               <span class="flex mb-2 text-sm font-medium">
                 <p
@@ -53,11 +58,6 @@
                 ></icon-star> -->
               </span>
             </div>
-            <img
-              :src="`/resources/${article.img}`"
-              alt=""
-              class="w-[6.25rem] h-[6.25rem] sm:w-auto object-cover rounded"
-            />
           </div>
         </nuxt-link>
       </li>

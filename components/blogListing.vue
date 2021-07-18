@@ -17,7 +17,7 @@
       >
         <nuxt-link :to="`${article.path}`">
           <div class="flex justify-between">
-            <div class="pr-4">
+            <div class="pr-3">
               <span class="flex mb-2 text-sm font-medium">
                 <p
                   class="
