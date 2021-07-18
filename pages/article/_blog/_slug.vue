@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <div class="m-5 md:mx-36 lg:mx-72">
+    <div class="m-5 md:mx-36 lg:mx-72 border-b md:mb-10 md:pb-8">
       <span v-for="(category, id) in article.categories" :key="id">
         <NuxtLink :to="`/article/category/${categories[category].slug}`">
           <span
@@ -15,7 +15,7 @@
               rounded-full
               mr-2
               mb-2
-              border
+              border hover:bg-gray-100
             "
           >
             {{ categories[category].name }}

@@ -6,11 +6,17 @@
     >
       <!-- Left-SVG-div-starts-here -->
       <div class="relative w-full lg:w-2/5">
-        <img :src="`/resources/${author.img}`" alt="" class="h-72 lg:h-auto w-full object-cover" />
+        <img
+          :src="`/resources/${author.img}`"
+          alt=""
+          class="h-72 lg:h-auto w-full object-cover"
+        />
         <div class="bg-gray-900 bg-opacity-60 absolute inset-0"></div>
         <div class="absolute inset-10 lg:inset-20 text-white">
-          <p class="text-5xl capitalize font-medium text-gray-200">{{ author.name }}</p>
-          <p class="mt-5 text-lg ">{{ author.bio }}</p>
+          <p class="text-5xl capitalize font-medium text-gray-200">
+            {{ author.name }}
+          </p>
+          <p class="mt-5 text-lg">{{ author.bio }}</p>
         </div>
       </div>
       <!-- Left-image-div-ends-here -->
@@ -36,14 +42,30 @@
           <li
             v-for="(article, index) in articles"
             :key="index"
-            class="my-5 w-full"
+            class="
+              my-3
+              md:my-5
+              p-1.5
+              rounded-md
+              border border-transparent
+              hover:border-gray-200
+              hover:shadow
+              w-full
+            "
           >
             <nuxt-link :to="`${article.path}`">
               <div class="flex justify-between">
                 <div class="pr-4">
                   <span class="flex mb-2 text-sm font-medium">
                     <p
-                      class="px-1.5 bg-gray-400 rounded text-gray-200 mr-2 uppercase"
+                      class="
+                        px-1.5
+                        bg-gray-400
+                        rounded
+                        text-gray-200
+                        mr-2
+                        uppercase
+                      "
                     >
                       {{ article.categories[0][0] }}
                     </p>
@@ -52,12 +74,26 @@
                     <p>Blogs</p>
                   </span>
                   <p
-                    class="font-bold line-clamp-2 leading-5 md:text-xl md:leading-7 capitalize"
+                    class="
+                      font-bold
+                      line-clamp-2
+                      leading-5
+                      md:text-xl
+                      md:leading-7
+                      capitalize
+                    "
                   >
                     {{ article.title }}
                   </p>
                   <p
-                    class="hidden md:block md:line-clamp-2 text-gray-500 md:leading-5 md:mt-1"
+                    class="
+                      hidden
+                      md:block
+                      md:line-clamp-2
+                      text-gray-500
+                      md:leading-5
+                      md:mt-1
+                    "
                   >
                     {{ article.description }}
                   </p>
@@ -78,7 +114,16 @@
                 <img
                   :src="`/resources/${article.img}`"
                   alt=""
-                  class="w-[6.25rem] h-[6.25rem] sm:w-auto md:h-32 lg:h-[8.375rem] object-cover md:self-center rounded"
+                  class="
+                    w-[6.25rem]
+                    h-[6.25rem]
+                    sm:w-auto
+                    md:h-32
+                    lg:h-[8.375rem]
+                    object-cover
+                    md:self-center
+                    rounded
+                  "
                 />
               </div>
             </nuxt-link>

@@ -1,7 +1,7 @@
 <template>
   <div class="m-6 lg:mx-20">
-    <p class="capitalize text-2xl text-gray-500 my-12 text-center font-medium">
-      Related {{ category }} Articles
+    <p class="capitalize text-2xl text-gray-600 my-6 pb-3 font-medium border-b">
+      More {{ category }} Related Articles
     </p>
     <ul class="grid grid-cols-1 lg:grid-cols-3 gap-3">
       <li
@@ -17,8 +17,8 @@
         "
       >
         <nuxt-link :to="`${article.path}`">
-          <div class="flex justify-between">
-            <div class="pr-3">
+          <div class="flex justify-between flex-row-reverse">
+            <div class="pl-3">
               <span class="flex mb-2 text-sm font-medium">
                 <p
                   class="

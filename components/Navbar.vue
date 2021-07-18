@@ -1,53 +1,47 @@
 <template>
-  <div class="w-full bg-white border-b shadow-sm h-12 md:h-[3.2rem] ">
+  <div class="w-full bg-white border-b shadow-sm h-12 md:h-[3.2rem]">
     <div class="w-full md:w-11/12 h-auto m-auto px-6">
       <div class="w-full flex justify-center md:justify-between">
         <!--main-Navbar-div-->
-        <div class="py-2">
+        <div class="py-2 text-2xl font-semibold">
           <!--Navbar-Left-Div{Contains: heading}-->
-          <nuxt-link to="/">
-            <h1 class="text-2xl font-semibold">𝓑𝓵𝓸𝓰𝓣𝓪𝓰</h1>
-          </nuxt-link>
+          <nuxt-link to="/"> 𝓑𝓵𝓸𝓰𝓣𝓪𝓰 </nuxt-link>
         </div>
-        <div></div>
         <div class="w-2/5 hidden md:flex justify-end py-3">
           <!--Navbar-Right-Div{Contains: Menu, Contact-btn}-->
-          <div class="mr-8">
-            <ul class="flex">
-              <li>
-                <nuxt-link
-                  to="/"
-                  class="text-lg font-medium px-4 text-gray-900 hover:text-blue-700 py-3.5 btn"
-                >
-                  Home
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link
-                  to="/Blog"
-                  class="text-lg font-medium px-4 text-gray-900 hover:text-blue-700 py-3.5 btn"
-                >
-                  Blog
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link
-                  to="/News"
-                  class="text-lg font-medium px-4 text-gray-900 hover:text-blue-700 py-3.5 btn"
-                >
-                  News
-                </nuxt-link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <!--Contact-button-Container-div-->
+          <div v-for="item in list" :key="item.to" class="mr-8">
             <nuxt-link
-              to="/contact"
-              class="px-4 py-2 bg-green-700 text-pink-50 hover:bg-green-800 rounded-full transition-colors duration-700 font-medium"
+              :to="item.to"
+              class="
+                text-lg
+                font-medium
+                px-0.5
+                text-gray-900
+                hover:text-blue-700
+                py-3.5
+                btn
+              "
+              >{{ item.title }}</nuxt-link
             >
-              Contact
-            </nuxt-link>
+          </div>
+          <div @click="showsearchbar = !showsearchbar">
+            <!--search-button-Container-div-->
+            <span
+              class="
+                px-4
+                py-1.5
+                ring-2 ring-gray-300 hover:ring-blue-300 bg-[#00FFFF]
+                text-lg text-gray-600
+                hover:bg-blue-500
+                hover:text-gray-100
+                transition-colors
+                duration-500
+                rounded-full
+                font-medium cursor-pointer
+              "
+            >
+              Search
+            </span>
             <!--Contact-button-->
           </div>
         </div>
@@ -71,7 +65,10 @@
         </span>
       </div>
       <menu-bar :show="menu" @close="menu = false"></menu-bar>
-      <app-search-input :show="showsearchbar" @disable="showsearchbar= false" />
+      <app-search-input
+        :show="showsearchbar"
+        @disable="showsearchbar = false"
+      />
     </div>
   </div>
 </template>
@@ -79,7 +76,7 @@
 <script>
 import IconSearch from "~/components/icons/header/IconSearch";
 import IconMenu from "~/components/icons/header/IconMenu";
-import AppSearchInput from './AppSearchInput.vue';
+import AppSearchInput from "./AppSearchInput.vue";
 export default {
   components: {
     IconMenu,
@@ -87,7 +84,15 @@ export default {
     AppSearchInput,
   },
   data() {
-    return { menu: false, showsearchbar: false };
+    return {
+      menu: false,
+      showsearchbar: false,
+      list: [
+        { title: "Home", to: "/" },
+        { title: "Blog", to: "/blog" },
+        { title: "News", to: "/news" },
+      ],
+    };
   },
 };
 </script>
@@ -99,7 +104,7 @@ export default {
 .btn::after {
   content: "";
   transform: scale(0, 1);
-  @apply absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transition duration-300 ease-in;
+  @apply absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transition duration-300 ease-in-out;
 }
 .btn:hover::after {
   content: "";

@@ -36,7 +36,16 @@
           <li
             v-for="(article, index) in articles"
             :key="index"
-            class="my-5 w-full"
+            class="
+              my-3
+              md:my-5
+              w-full
+              p-1.5
+              rounded-md
+              border border-transparent
+              hover:border-gray-200
+              hover:shadow
+            "
           >
             <nuxt-link :to="`${article.path}`">
               <div class="flex justify-between">
