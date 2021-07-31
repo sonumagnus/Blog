@@ -3,7 +3,7 @@
     <div
       v-show="show"
       @click="close"
-      class="fixed inset-0 bg-gray-500 bg-opacity-60 z-20"
+      class="fixed inset-0 bg-gray-500 bg-opacity-40 z-20"
     >
       <div
         class="

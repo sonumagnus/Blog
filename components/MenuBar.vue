@@ -10,6 +10,7 @@
           px-10
           bg-gray-100
           w-2/3
+          max-w-xs
           h-screen
           modal-container
           text-lg
@@ -21,11 +22,9 @@
         @click.stop
       >
         <p class="text-2xl mt-2 mb-5 text-gray-500">BlogTag</p>
-        <nuxt-link to="/">Home</nuxt-link>
-        <nuxt-link to="/Blog">Blog</nuxt-link>
-        <nuxt-link to="/News">News</nuxt-link>
-        <nuxt-link to="/contact">Contact</nuxt-link>
-        <nuxt-link to="/privacy">Privacy Policy</nuxt-link>
+        <nuxt-link v-for="item in list" :key="item.title" :to="item.to">{{
+          item.title
+        }}</nuxt-link>
       </div>
     </div>
   </transition>
@@ -42,6 +41,13 @@ export default {
   data() {
     return {
       data: [],
+      list: [
+        { title: "Home", to: "/" },
+        { title: "Blog", to: "/blog" },
+        { title: "News", to: "/news" },
+        { title: "Contact", to: "/contact" },
+        { title: "Privacy", to: "/privacy" },
+      ],
     };
   },
   methods: {

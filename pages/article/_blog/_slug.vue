@@ -109,7 +109,7 @@
           </span>
         </div>
         <div>
-          <img :src="`/resources/${article.img}`" alt="" class="mb-8 w-full" />
+          <img :src="`/resources/${article.img}`" alt="" class="mb-8 w-full h-full max-h-96 object-cover" />
         </div>
       </div>
       <!-- Document-article-div -->
@@ -150,7 +150,7 @@ export default {
           content: `${this.article.description}`,
         },
       ],
-      link: [{ rel: "canonical", href: `${process.env.baseUrl}` }],
+      link: [{ rel: "canonical", href: `${process.env.baseUrl}${this.article.path}` }],
     };
   },
   async asyncData({ $content, params }) {
@@ -211,22 +211,25 @@ export default {
   @apply font-charter;
 }
 .nuxt-content h1 {
-  @apply text-xl font-medium font-sohne;
+  @apply text-2xl font-semibold font-sohne;
 }
 .nuxt-content h2 {
-  @apply text-xl font-medium text-gray-600;
+  @apply text-2xl font-semibold text-gray-600 mt-8;
 }
 .nuxt-content p {
   @apply text-lg text-gray-700 my-1;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .nuxt-content p {
     @apply text-xl leading-8 my-2;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .nuxt-content h1 {
-    @apply text-3xl leading-9 font-sohne;
+    @apply text-2xl leading-9 mt-6 font-medium font-sohne;
+  }
+  .nuxt-content h2 {
+    @apply text-xl leading-9 font-medium font-sohne;
   }
 }
 </style>

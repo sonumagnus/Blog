@@ -23,6 +23,7 @@ export default {
         "path",
         "categories",
         "body",
+        "authors",
       ])
       .sortBy("createdAt", "asc")
       .limit(6)

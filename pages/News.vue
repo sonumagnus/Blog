@@ -21,6 +21,7 @@ export default {
         "path",
         "categories",
         "body",
+        "authors",
       ])
       .sortBy("createdAt", "asc")
       .fetch();

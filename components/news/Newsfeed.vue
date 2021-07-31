@@ -2,7 +2,6 @@
   <div>
     <seemore category="news" />
     <div class="border-b mx-6 mb-8 md:mx-20">
-      <!-- <app-search-input  class="mb-6"/> -->
       <!--animated-slug-loop-for-loading-animation-pulse-started-here -->
       <span
         v-if="$fetchState.pending"
@@ -14,54 +13,47 @@
           md:gap-y-10
         "
       >
-        <div v-for="num in 6" :key="num">
-          <animated-slug />
-        </div>
+        <animated-slug v-for="num in 6" :key="num" />
       </span>
       <!-- animated-slug-loop-for-loading-animation-pulse-ended-here -->
       <p v-else-if="$fetchState.error">An error occurred :(</p>
       <div class="" v-else>
         <ul class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-8">
-          <li v-for="(doc, index) of docs" :key="index" class="my-3.5">
-            <nuxt-link :to="`${doc.path}`" class="flex">
-              <div class="text-3xl font-bold text-gray-200 mr-4">
-                0{{ index + 1 }}
+          <li v-for="(doc, index) of docs" :key="index" class="my-3.5 flex">
+            <div class="text-3xl font-bold text-gray-300 mr-4">
+              0{{ index + 1 }}
+            </div>
+            <div class="mt-2">
+              <div class="flex text-sm font-medium mb-2">
+                <nuxt-link :to="`/article/author/${doc.authors}`" class="flex">
+                  <img
+                    :src="`resources/${doc.authors}.jpg`"
+                    alt="author's pic"
+                    class="w-5 h-5 rounded-full object-cover mr-2"
+                  />
+                  <div class="capitalize hover:text-blue-600">{{ doc.authors }}</div>
+                </nuxt-link>
+                <p class="mx-0.5 text-gray-600">in</p>
+                <!-- <nuxt-link :to="`/article/category/${doc.categories[0]}`" class="capitalize">{{ doc.categories[0] }}</nuxt-link> -->
+                <p class="capitalize">{{ doc.categories[0] }}</p>
               </div>
-              <div class="mt-2">
-                <div class="flex text-sm font-medium mb-2">
-                  <span
-                    class="
-                      px-1.5
-                      bg-gray-500
-                      text-gray-300
-                      mr-1.5
-                      rounded
-                      items-start
-                      uppercase
-                    "
-                  >
-                    {{ doc.categories[0][0] }}
-                  </span>
-                  <div class="capitalize">{{ doc.categories[0] }}</div>
-                  <p class="mx-0.5 text-gray-600">in</p>
-                  <p>News</p>
-                </div>
+              <nuxt-link :to="`${doc.path}`">
                 <h2 class="font-bold line-clamp-2 mb-2">
                   {{ doc.title }}
                 </h2>
-                <div class="text-sm text-gray-500 flex">
-                  <p>{{ formatDate(doc.createdAt) }}</p>
-                  <p class="px-1.5 font-semibold">·</p>
-                  <ReadingTime :content="doc.body" />
-                  <icon-star
-                    width="15"
-                    height="15"
-                    IconName="star"
-                    class="self-center mx-1 opacity-60"
-                  ></icon-star>
-                </div>
+              </nuxt-link>
+              <div class="text-sm text-gray-500 flex">
+                <p>{{ formatDate(doc.createdAt) }}</p>
+                <p class="px-1.5 font-semibold">·</p>
+                <ReadingTime :content="doc.body" />
+                <icon-star
+                  width="15"
+                  height="15"
+                  IconName="star"
+                  class="self-center mx-1 opacity-60"
+                ></icon-star>
               </div>
-            </nuxt-link>
+            </div>
           </li>
         </ul>
       </div>

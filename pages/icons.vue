@@ -68,6 +68,9 @@ class="grid p-10 grid-cols-5 md:grid-cols-10 gap-8 text-3xl md:text-5xl text-gra
 <i class="far fa-map-marker-alt"></i>
 <i class="fad fa-mobile"></i>
 <i class="fal fa-list-ul"></i>
+<i class="fas fa-gamepad-alt"></i>
+<i class="far fa-gamepad-alt"></i>
+<i class="fab fa-app-store-ios"></i>
 </div>
 </div>
 </template>

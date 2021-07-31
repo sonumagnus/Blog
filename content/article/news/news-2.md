@@ -1,11 +1,10 @@
 ---
-title: How To Learn To Code Learn by Practical Guidance in Official Docs
-description: Managers ask it. Developers hate it. Know why that is and what you should be asking instead
-section: news
+title: PUBG New State Release Date Announced By the CEO and Founder
+description: Official Information about the Release date of upcoming popular mobile title in gaming :: PUBG New State
 img: news-2.jpg
 categories: 
- - mobile
- - top list
+ - gaming
+ - apps & software
 authors: sonu
 ---
 

@@ -13,7 +13,7 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/resources/logo.png" }]
   },
   env: {
-    baseUrl: process.env.BASE_URL || "http://sonulodha.herokuapp.com/"
+    baseUrl: process.env.BASE_URL || "http://sonulodha.herokuapp.com"
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

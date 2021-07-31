@@ -51,18 +51,11 @@
               <div class="flex justify-between">
                 <div class="pr-4">
                   <span class="flex mb-2 text-sm font-medium">
-                    <p
-                      class="
-                        px-1.5
-                        bg-gray-400
-                        rounded
-                        text-gray-200
-                        mr-2
-                        uppercase
-                      "
-                    >
-                      {{ article.categories[0][0] }}
-                    </p>
+                    <img
+                      :src="`/resources/${article.authors}.jpg`"
+                      alt="author's pic"
+                      class="w-5 h-5 rounded-full object-cover mr-2"
+                    />
                     <p class="capitalize">{{ article.categories[0] }}</p>
                     <p class="mx-0.5 text-gray-600">in</p>
                     <p>Blogs</p>
@@ -112,8 +105,11 @@
                     w-[6.25rem]
                     h-[6.25rem]
                     sm:w-auto
+                    sm:max-w-[9.5rem]
+                    md:max-w-[12.1rem]
                     md:h-32
                     lg:h-[8.375rem]
+                    lg:max-w-[12.7rem] 
                     object-cover
                     md:self-center
                     rounded

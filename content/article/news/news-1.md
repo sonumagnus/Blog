@@ -1,17 +1,35 @@
 ---
-title: This is totally different title for news in order to try searchquery right
-description: Managers ask it. Developers hate it. Know why that is and what you should be asking instead
-section: news
+title: BGMI India Series 2021 - Everything You Need to Know About it
+description: Everything You need to know about BGMI India Series - Registration Process, Qualifiers, and Prize Pool
 img: news-1.jpg
 categories: 
- - top list
- - mobile
+ - gaming
 authors: sonu
 ---
 
-# A Quick Guide to Understanding Orbital Debris Reentry Predictions
+As you all know BGMI has been released few Weeks ago, and it's about to host an official tournament called "Battleground Mobile India Series 2021". Today, We will talk about everything that you want to know about this major tournament event. When will it start? How to Join it? What is Tournament format? What are the Rules? and How much Prize Pool it offering?
 
- Holland began dancing at a hip hop class at Nifty Feet Dance School in Wimbledon. His potential was spotted by choreographer Lynne Page (who was an associate to Peter Darling, choreographer of Billy Elliot and Billy Elliot the Musical) when he performed with his dance school as part of the 2006 Richmond Dance Festival.<br><br>
-After eight auditions and two subsequent years of training, on 28 June 2008, Holland made his West End debut in Billy Elliot the Musical as Michael, Billy's best friend. He gave his first performance in the title role on 8 September 2008, receiving positive notices.<br><br>
-In September 2008, Holland (together with co-star Tanner Pflueger) appeared on the news programme on channel FIVE and gave his first TV interview. The following year, he was featured on ITV1 show The Feel Good Factor. At the premiere on 31 January, Holland and two actors also playing the title role he fronted for the final The Feel Good Factor show on 28 March 2009.<br><br>
-On 8 March 2010, to mark the fifth anniversary of Billy Elliot the Musical, four current Billy Elliots, including Holland, were invited to 10 Downing Street to meet the Prime Minister, Gordon Brown. Holland was chosen to be a lead at the fifth-anniversary show on 31 March Holland appeared on a regular basis as Billy in Billy Elliot the Musical, rotating with three other performers,until 29 May 2010, when he finished his run.
+## When Will BGMI Start? 
+So, The BGMI India Series Starting form 2 August 2021 and In-Game Qualifiers will be held first.
+
+## How To Join BGMI India Series?
+Well, To join and play BGMI India Series 2021. All you need to go on the official website of BGMI India Series 2021 and need to click on **Register Now** and then fill the necessary information required there. and that's how you can register Your Squad for this tournament.
+
+## What is Tournament Format?
+Well, The Tournament will be Played in Five Rounds
+
+(1) **In-Game Qualifiers ::** In-Game Qualifiers Will be Start from 2nd August and will End on 8 August. For it "Registered Team" have to play fifteen matches. From which top 10 best match will be counted for the next qualifier round. Top 1024 Teams will be Qualified to the next round which is **Online Qualifiers**
+
+(2) **Online Qualifiers ::** Online Qualifiers will starts from 17 August and end on 12 Sep. Top 64 Teams from Online Qualifiers will be Qualified for the next round.
+
+(3) **Quarter Finals ::** Quarter Final will be Starts from 16 Sep. and end on 26 Sep. Top 24 teams will be qualified for next round.
+
+(4) **Semi-Finals ::** Semi Finals will starts from 30 Sep. and end on 3 Oct. Only top 16 teams will be qualified to the Finals
+
+(5) **Finals ::** Finals will start from 6 Oct. to 9 Oct. and One Team will win 50,00,000 INR Cash Prize.
+
+## What are the Rules?
+Only the Players from above 16 age group will be able to join this tournament. Players which are above 16 but not 18 yet will have to submit an _Consent Letter_  from their Parents or Legal Guardian.
+
+## What is The Price Pool?
+BGMI India Series 2021 Offering Massive Price Pool that is 1,00,00,000 INR. The Team that win the Finals will get 50,00,000 INR Price and Remaining Cash Reward will be given to other titles like MVP Players, Most Kills, Most Damage,etc.

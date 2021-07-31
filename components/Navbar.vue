@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-white border-b shadow-sm h-12 md:h-[3.2rem]">
+  <div class="w-full bg-white border-b shadow-sm h-12 md:h-[3.2rem] sticky top-0 z-50">
     <div class="w-full md:w-11/12 h-auto m-auto px-6">
       <div class="w-full flex justify-center md:justify-between">
         <!--main-Navbar-div-->
@@ -9,7 +9,7 @@
         </div>
         <div class="w-2/5 hidden md:flex justify-end py-3">
           <!--Navbar-Right-Div{Contains: Menu, Contact-btn}-->
-          <div v-for="item in list" :key="item.to" class="mr-8">
+          <div v-for="item in list" :key="item.title" class="mr-8">
             <nuxt-link
               :to="item.to"
               class="

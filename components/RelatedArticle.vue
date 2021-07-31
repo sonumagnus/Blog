@@ -1,9 +1,21 @@
 <template>
   <div class="m-4 lg:mx-20">
-    <p class="capitalize text-2xl text-gray-500 my-6 pb-3 font-medium border-b">
-      More {{ category }} Related Articles
-    </p>
-    <ul class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+    <div class="border-b-2 border-blue-400">
+      <p
+        class="
+          text-lg
+          md:text-2xl
+          font-medium
+          text-gray-100
+          bg-blue-400
+          inline-block
+          px-3
+        "
+      >
+        Related Articles
+      </p>
+    </div>
+    <ul class="grid grid-cols-1 lg:grid-cols-3 gap-3 my-3">
       <li
         v-show="article.title != title"
         v-for="(article, index) in articles"
@@ -24,23 +36,6 @@
               class="w-[6.25rem] h-20 sm:w-auto object-cover rounded"
             />
             <div class="pl-3">
-              <!-- <span class="flex mb-2 text-sm font-medium">
-                <p
-                  class="
-                    px-1.5
-                    bg-gray-400
-                    rounded
-                    text-gray-200
-                    mr-2
-                    uppercase
-                  "
-                >
-                  {{ article.categories[0][0] }}
-                </p>
-                <p class="capitalize">{{ article.categories[0] }}</p>
-                <p class="mx-0.5 text-gray-600">in</p>
-                <p class="capitalize">{{ category }}</p>
-              </span> -->
               <h2 class="font-semibold line-clamp-2 text-lg leading-6">
                 {{ article.title }}
               </h2>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <category />
+    <category class="" />
     <CategoryTitle category="blog" />
     <blog-listing :articles="articles" />
   </div>
@@ -23,6 +23,7 @@ export default {
         "path",
         "categories",
         "body",
+        "authors"
       ])
       .sortBy("createdAt", "asc")
       .fetch();
