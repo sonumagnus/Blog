@@ -5,7 +5,7 @@ img: best-gaming-phone-under-20000.jpg
 categories: 
  - mobile
  - gaming
-authors: stoner
+authors: dypanshu sharma
 ---
 So, You want to buy a gaming phone to play high end games such as PUBGM, BGMI, CODM, APEX LEGENDS, GARENA FREE FIRE, etc. and You have a budget under 20,000 Rupees. Don't worry Today we will talk about the best gaming phone in your budget segment that will fulfill all your gaming needs and will totally amaze you with its high-end gaming performance.
 

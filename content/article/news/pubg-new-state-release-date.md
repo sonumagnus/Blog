@@ -3,8 +3,8 @@ title: PUBG New State Release Date - KRAFTON Announced the Release Date for Upco
 description: 
 img: blog-1.jpg
 categories: 
- - gaming
-authors: sonu
+ - top list
+authors: sonu lodha
 ---
 
 Today, We will talk about the official announcement from the KRAFTON (PUBG Parental Company) regarding the Release of most exciting upcoming mobile game : **PUBG New State**.

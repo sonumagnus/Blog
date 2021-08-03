@@ -20,7 +20,7 @@
             <div class="pr-3">
               <span class="flex mb-2 text-sm font-medium">
                 <img
-                  :src="`/resources/${article.authors}.jpg`"
+                  :src="`/resources/${authorLink(article.authors)}.jpg`"
                   alt="author's pic"
                   class="w-5 h-5 rounded-full object-cover mr-2"
                 />
@@ -80,7 +80,6 @@
         </nuxt-link>
       </li>
     </ul>
-    <!-- <p>{{ categorylink }}</p> -->
   </div>
 </template>
 
@@ -88,19 +87,6 @@
 import IconStar from "./icons/ui/IconStar.vue";
 export default {
   components: { IconStar },
-  // data() {
-  //   return {
-  //     categorylink: [],
-  //   };
-  // },
-  // async fetch() {
-  //   this.categorylink = await this.$content("categories")
-  //     .only(["name", "slug", "path"])
-  //     .where({
-  //       name: { $containsAny: this.articles[1].categories },
-  //     })
-  //     .fetch();
-  // },
   props: {
     articles: {
       type: Array,
@@ -115,6 +101,13 @@ export default {
     formatDate(date) {
       const options = { month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);
+    },
+    authorLink(author) {
+      if (author == "sonu lodha") {
+        return "sonu_lodha";
+      } else if (author == "dypanshu sharma") {
+        return "dypanshu_sharma";
+      }
     },
   },
 };

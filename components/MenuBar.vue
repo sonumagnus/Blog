@@ -8,8 +8,8 @@
       <div
         class="
           px-10
-          bg-gray-100
-          w-2/3
+          bg-[#212121]
+          w-3/5
           max-w-xs
           h-screen
           modal-container
@@ -17,11 +17,11 @@
           font-semibold
           space-y-6
           flex flex-col
-          text-gray-800
+          text-gray-100
         "
         @click.stop
       >
-        <p class="text-2xl mt-2 mb-5 text-gray-500">BlogTag</p>
+        <p class="text-2xl mt-2 mb-5 text-gray-100">BlogTag</p>
         <nuxt-link v-for="item in list" :key="item.title" :to="item.to">{{
           item.title
         }}</nuxt-link>

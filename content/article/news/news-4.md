@@ -4,8 +4,9 @@ description: Everything You need to know about BGMI Release Date
 img: blog-1.jpg
 categories: 
  - mobile
+ - apps & software
  - top list
-authors: stoner
+authors: dypanshu sharma
 ---
 As you all know PUBGM has been banned in india due to data security issues and KRAFTON (Parental Company of PUBGM) has Announced new title for India specific users BGMI few weeks ago. All Android Gamers are enjoying the BGMI but for iOS users it hasn't released yet. 
 

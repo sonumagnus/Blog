@@ -15,7 +15,8 @@
               rounded-full
               mr-2
               mb-2
-              border hover:bg-gray-100
+              border
+              hover:bg-gray-100
             "
           >
             {{ categories[category].name }}
@@ -44,7 +45,7 @@
         <div class="flex justify-between my-7 md:flex-row flex-col-reverse">
           <div v-for="(writer, index) in author" :key="index" class="flex">
             <nuxt-link
-              :to="`/article/author/${writer.name}`"
+              :to="`/article/author/${writer.slug}`"
               class="p-1 border-b border-t border-gray-900 rounded-full mr-3"
             >
               <img
@@ -54,7 +55,7 @@
               />
             </nuxt-link>
             <span class="text-sm self-center">
-              <nuxt-link :to="`/article/author/${writer.name}`"
+              <nuxt-link :to="`/article/author/${writer.slug}`"
                 ><p class="capitalize hover:underline">
                   {{ writer.name }}
                 </p></nuxt-link
@@ -109,7 +110,11 @@
           </span>
         </div>
         <div>
-          <img :src="`/resources/${article.img}`" alt="" class="mb-8 w-full h-full max-h-96 object-cover" />
+          <img
+            :src="`/resources/${article.img}`"
+            alt=""
+            class="mb-8 w-full h-full max-h-96 object-cover"
+          />
         </div>
       </div>
       <!-- Document-article-div -->
@@ -150,7 +155,12 @@ export default {
           content: `${this.article.description}`,
         },
       ],
-      link: [{ rel: "canonical", href: `${process.env.baseUrl}${this.article.path}` }],
+      link: [
+        {
+          rel: "canonical",
+          href: `${process.env.baseUrl}${this.article.path}`,
+        },
+      ],
     };
   },
   async asyncData({ $content, params }) {
@@ -173,7 +183,7 @@ export default {
       .fetch();
 
     const author = await $content("authors")
-      .only(["name", "bio", "img"])
+      .only(["name", "img", "slug"])
       .where({ name: { $containsAny: article.authors } })
       .limit(1)
       .fetch();

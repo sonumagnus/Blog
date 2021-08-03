@@ -5,7 +5,7 @@ img: top-3-best-camera-phone-under-20k.jpg
 categories: 
  - mobile
  - top list
-authors: stoner
+authors: dypanshu sharma
 ---
 
 So, You want to buy a Good camera phone to captures Stunning selfies, photos & videos and your budget in around 20k. Don't worry, today we will talk about the top3  best Camera oriented smartphone that will give you an amazing camera experience with its high quality photos and selfies.

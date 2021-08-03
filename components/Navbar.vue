@@ -104,11 +104,11 @@ export default {
 .btn::after {
   content: "";
   transform: scale(0, 1);
-  @apply absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transition duration-300 ease-in-out;
+  @apply absolute left-0 bottom-0 w-full h-[0.16rem] bg-blue-600 transition duration-300 ease-in-out;
 }
 .btn:hover::after {
   content: "";
   transform: scale(1, 1);
-  @apply absolute left-0 bottom-0 w-full h-0.5 bg-blue-600;
+  @apply absolute left-0 bottom-0 w-full h-[0.16rem] bg-blue-600;
 }
 </style>

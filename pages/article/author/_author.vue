@@ -16,7 +16,7 @@
           <p class="text-5xl capitalize font-medium text-gray-200">
             {{ author.name }}
           </p>
-          <p class="mt-5 text-lg">{{ author.bio }}</p>
+          <p class="mt-5 text-lg capitalize">{{ author.bio }}</p>
         </div>
       </div>
       <!-- Left-image-div-ends-here -->
@@ -25,7 +25,7 @@
         class="relative mx-6 lg:p-4 lg:w-3/5 xs:w-full h-full overflow-y-scroll"
       >
         <NuxtLink to="/">
-          <span class="flex text-green-400 my-2">
+          <span class="flex text-green-400 mb-2">
             <icon-left-arrow
               width="15"
               height="15"
@@ -58,7 +58,7 @@
                 <div class="pr-4">
                   <span class="flex mb-2 text-sm font-medium">
                     <img
-                      :src="`/resources/${article.authors}.jpg`"
+                      :src="`/resources/${authorLink(article.authors)}.jpg`"
                       alt="author's pic"
                       class="w-5 h-5 rounded-full object-cover mr-2"
                     />
@@ -156,6 +156,13 @@ export default {
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);
+    },
+    authorLink(author) {
+      if (author == "sonu lodha") {
+        return "sonu_lodha";
+      } else if (author == "dypanshu sharma") {
+        return "dypanshu_sharma";
+      }
     },
   },
 };

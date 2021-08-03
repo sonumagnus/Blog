@@ -25,17 +25,26 @@
             </div>
             <div class="mt-2">
               <div class="flex text-sm font-medium mb-2">
-                <nuxt-link :to="`/article/author/${doc.authors}`" class="flex">
+                <nuxt-link
+                  :to="`/article/author/${authorLink(doc.authors)}`"
+                  class="flex"
+                >
                   <img
-                    :src="`resources/${doc.authors}.jpg`"
+                    :src="`resources/${authorLink(doc.authors)}.jpg`"
                     alt="author's pic"
                     class="w-5 h-5 rounded-full object-cover mr-2"
                   />
-                  <div class="capitalize hover:text-blue-600">{{ doc.authors }}</div>
+                  <div class="capitalize hover:text-blue-600">
+                    {{ doc.authors }}
+                  </div>
                 </nuxt-link>
                 <p class="mx-0.5 text-gray-600">in</p>
-                <!-- <nuxt-link :to="`/article/category/${doc.categories[0]}`" class="capitalize">{{ doc.categories[0] }}</nuxt-link> -->
-                <p class="capitalize">{{ doc.categories[0] }}</p>
+                <nuxt-link
+                  :to="`/article/category/${categoryLink(doc.categories[0])}`"
+                  class="capitalize"
+                  >{{ doc.categories[0] }}</nuxt-link
+                >
+                <!-- <p class="capitalize">{{ doc.categories[0] }}</p> -->
               </div>
               <nuxt-link :to="`${doc.path}`">
                 <h2 class="font-bold line-clamp-2 mb-2">
@@ -90,6 +99,22 @@ export default {
     formatDate(date) {
       const options = { month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);
+    },
+    categoryLink(category) {
+      if (category == "top list") {
+        return "top_list";
+      } else if (category == "apps & software") {
+        return "apps_&_software";
+      } else {
+        return category;
+      }
+    },
+    authorLink(authors) {
+      if (authors == "sonu lodha") {
+        return "sonu_lodha";
+      } else if (authors == "dypanshu sharma") {
+        return "dypanshu_sharma";
+      }
     },
   },
 };

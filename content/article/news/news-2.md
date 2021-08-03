@@ -5,7 +5,7 @@ img: news-2.jpg
 categories: 
  - gaming
  - apps & software
-authors: sonu
+authors: sonu lodha
 ---
 
 # A Quick Guide to Understanding Orbital Debris Reentry Predictions

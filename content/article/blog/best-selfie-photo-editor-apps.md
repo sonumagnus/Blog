@@ -5,7 +5,7 @@ img: best-selfie-photo-editor-apps.jpg
 categories: 
  - apps & software
  - mobile
-authors: bhaskar
+authors: sonu lodha
 ---
 Today, in this blog post, we will talk about the top 5 best ‘Photography’ apps, with which you can click amazing selfies & photos and also can turn any normal click into the fabulous one in just a matter of seconds. The best thing about all the mentioned apps is, you don’t need great knowledge of photo editing. With the intuitive and elegant user interface of these applications, you will be able to capture your life moments in truly awesome-looking Photos & Selfies.
 

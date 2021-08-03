@@ -5,7 +5,7 @@ img: top-3-best-video-editor-apps.jpg
 categories: 
  - top list
  - apps & software
-authors: sonu
+authors: sonu lodha
 ---
 
 Today, We will provide you top 3 best video editing apps for Android as well as iOS smartphones that can fulfill all your video editing needs wheather you want to edit videos for youtube or any social media plateform. These 3 video editing software provides all the basic & advance video editing features as per your need. Plus, you can download all of these apps from Google Play for free.

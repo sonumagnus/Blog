@@ -4,7 +4,7 @@ description: Everything You need to know about BGMI India Series - Registration 
 img: news-1.jpg
 categories: 
  - gaming
-authors: sonu
+authors: sonu lodha
 ---
 
 As you all know BGMI has been released few Weeks ago, and it's about to host an official tournament called "Battleground Mobile India Series 2021". Today, We will talk about everything that you want to know about this major tournament event. When will it start? How to Join it? What is Tournament format? What are the Rules? and How much Prize Pool it offering?

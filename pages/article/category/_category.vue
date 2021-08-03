@@ -10,7 +10,9 @@
           <h1 class="text-4xl capitalize font-semibold mb-3 lg:mb-6">
             {{ category.name }}
           </h1>
-          <p class="text-lg text-gray-300">{{ category.description }}</p>
+          <p class="text-lg text-gray-300 capitalize">
+            {{ category.description }}
+          </p>
         </div>
       </div>
       <!-- Left-image-div-ends-here -->
@@ -19,7 +21,7 @@
         class="relative mx-6 lg:p-4 lg:w-3/5 xs:w-full h-full overflow-y-scroll"
       >
         <NuxtLink to="/blog">
-          <span class="flex text-green-400 my-2">
+          <span class="flex text-green-400 my-2 md:my-0 mb-2">
             <icon-left-arrow
               width="15"
               height="15"
@@ -52,7 +54,7 @@
                 <div class="pr-4">
                   <span class="flex mb-2 text-sm font-medium">
                     <img
-                      :src="`/resources/${article.authors}.jpg`"
+                      :src="`/resources/${authorLink(article.authors)}.jpg`"
                       alt="author's pic"
                       class="w-5 h-5 rounded-full object-cover mr-2"
                     />
@@ -109,7 +111,7 @@
                     md:max-w-[12.1rem]
                     md:h-32
                     lg:h-[8.375rem]
-                    lg:max-w-[12.7rem] 
+                    lg:max-w-[12.7rem]
                     object-cover
                     md:self-center
                     rounded
@@ -150,6 +152,13 @@ export default {
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);
+    },
+    authorLink(author) {
+      if (author == "sonu lodha") {
+        return "sonu_lodha";
+      } else if (author == "dypanshu sharma") {
+        return "dypanshu_sharma";
+      }
     },
   },
 };
