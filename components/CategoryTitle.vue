@@ -7,7 +7,15 @@
       class="mr-3"
     ></icon-checked-circle>
     <p
-      class="text-sm md:text-base font-semibold self-center uppercase text-purple-900 opacity-60"
+      class="
+        text-sm
+        md:text-base
+        font-semibold
+        self-center
+        uppercase
+        text-purple-900
+        opacity-60
+      "
     >
       all latest {{ category }}
     </p>

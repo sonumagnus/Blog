@@ -4,12 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        NavyBlue: "#09115e"
+        NavyBlue: "#09115e",
+        MediumTitle: "rgba(41,41,41,1)"
       },
       fontFamily: {
         sohne: ["sohne, Helvetica Neue, Helvetica, Arial, sans-serif"],
         fell: ["fell"],
-        charter: ['charter']
+        charter: ["charter"]
       }
     }
   },

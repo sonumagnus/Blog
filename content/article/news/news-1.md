@@ -1,5 +1,5 @@
 ---
-title: BGMI India Series 2021 - Everything You Need to Know About it
+title: BGMI India Series 2021 - Everything You Need to Know About
 description: Everything You need to know about BGMI India Series - Registration Process, Qualifiers, and Prize Pool
 img: news-1.jpg
 categories: 

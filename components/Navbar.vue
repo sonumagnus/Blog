@@ -1,5 +1,17 @@
 <template>
-  <div class="w-full bg-white border-b shadow-sm h-12 md:h-[3.2rem] sticky top-0 z-50">
+  <div
+    class="
+      w-full
+      bg-white
+      border-b
+      shadow-sm
+      h-12
+      md:h-[3.2rem]
+      sticky
+      top-0
+      z-50
+    "
+  >
     <div class="w-full md:w-11/12 h-auto m-auto px-6">
       <div class="w-full flex justify-center md:justify-between">
         <!--main-Navbar-div-->
@@ -7,37 +19,33 @@
           <!--Navbar-Left-Div{Contains: heading}-->
           <nuxt-link to="/"> 𝓑𝓵𝓸𝓰𝓣𝓪𝓰 </nuxt-link>
         </div>
-        <div class="w-2/5 hidden md:flex justify-end py-3">
+        <div class="w-2/5 hidden md:flex justify-end leading-[3.3rem]">
           <!--Navbar-Right-Div{Contains: Menu, Contact-btn}-->
-          <div v-for="item in list" :key="item.title" class="mr-8">
-            <nuxt-link
-              :to="item.to"
-              class="
-                text-lg
-                font-medium
-                px-0.5
-                text-gray-900
-                hover:text-blue-700
-                py-3.5
-                btn
-              "
-              >{{ item.title }}</nuxt-link
-            >
-          </div>
+          <ul v-for="item in list" :key="item.title">
+            <nuxt-link :to="item.to">
+              <li class="px-4 text-lg font-medium btn leading-[3.2rem]">
+                {{ item.title }}
+              </li>
+            </nuxt-link>
+          </ul>
           <div @click="showsearchbar = !showsearchbar">
             <!--search-button-Container-div-->
             <span
               class="
                 px-4
                 py-1.5
-                ring-2 ring-gray-300 hover:ring-blue-300 bg-[#00FFFF]
+                ring-2 ring-gray-300
+                hover:ring-blue-300
+                bg-[#00FFFF]
                 text-lg text-gray-600
                 hover:bg-blue-500
                 hover:text-gray-100
                 transition-colors
                 duration-500
                 rounded-full
-                font-medium cursor-pointer
+                font-medium
+                cursor-pointer
+                ml-4
               "
             >
               Search
@@ -104,7 +112,7 @@ export default {
 .btn::after {
   content: "";
   transform: scale(0, 1);
-  @apply absolute left-0 bottom-0 w-full h-[0.16rem] bg-blue-600 transition duration-300 ease-in-out;
+  @apply absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transition duration-300 ease-in-out;
 }
 .btn:hover::after {
   content: "";
