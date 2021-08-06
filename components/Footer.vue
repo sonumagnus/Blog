@@ -137,7 +137,7 @@
             v-for="item in list"
             :key="item.title"
             :to="item.to"
-            class="mx-2 hover:text-red-500"
+            class="mx-2 hover:text-red-500 duration-300 ease-in-out"
             >{{ item.title }}</nuxt-link
           >
         </span>

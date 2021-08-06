@@ -18,23 +18,38 @@
         <nuxt-link :to="`${article.path}`">
           <div class="flex justify-between">
             <div class="pr-5">
-              <span class="flex mb-2 text-[13px] font-medium">
-                <img
-                  :src="`/resources/${authorLink(article.authors)}.jpg`"
-                  alt="author's pic"
-                  class="w-5 h-5 rounded-full object-cover mr-2"
-                />
-                <p class="capitalize">{{ article.authors }}</p>
-                <p class="mx-0.5 text-gray-500 opacity-90">in</p>
-                <p class="capitalize">{{ article.categories[0] }}</p>
-              </span>
-              <h2 class="font-bold line-clamp-2 text-base md:text-[20px] md:leading-7 leading-5 text-MediumTitle">
+              <div class="flex items-center mb-2 text-[13px] font-medium">
+                <div>
+                  <img
+                    :src="`/resources/${authorLink(article.authors)}.jpg`"
+                    alt="author's pic"
+                    class="w-5 h-5 rounded-full object-cover mr-2"
+                  />
+                </div>
+                <div class="flex flex-wrap">
+                  <p class="capitalize">{{ article.authors }}</p>
+                  <p class="mx-0.5 text-gray-500 opacity-90">in</p>
+                  <p class="capitalize">{{ article.categories[0] }}</p>
+                </div>
+              </div>
+              <h2
+                class="
+                  font-bold
+                  line-clamp-2
+                  text-base
+                  md:text-[20px]
+                  md:leading-7
+                  leading-5
+                  text-MediumTitle
+                "
+              >
                 {{ article.title }}
               </h2>
               <h3
                 class="
                   hidden
-                  md:block text-base
+                  md:block
+                  text-base
                   md:line-clamp-1
                   text-gray-500
                   md:leading-5

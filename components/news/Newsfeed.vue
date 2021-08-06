@@ -24,10 +24,10 @@
               0{{ index + 1 }}
             </div>
             <div class="mt-2">
-              <div class="flex text-[13px] leading-4 font-medium mb-2">
+              <div class="flex text-[13px] items-center leading-4 font-medium mb-2">
                 <nuxt-link
                   :to="`/article/author/${authorLink(doc.authors)}`"
-                  class="flex"
+                  class="flex items-center"
                 >
                   <img
                     :src="`resources/${authorLink(doc.authors)}.jpg`"
@@ -47,7 +47,7 @@
                 <!-- <p class="capitalize">{{ doc.categories[0] }}</p> -->
               </div>
               <nuxt-link :to="`${doc.path}`">
-                <h2 class="font-bold leading-5 line-clamp-2 mb-2">
+                <h2 class="font-bold leading-5 line-clamp-2 mb-2 text-MediumTitle">
                   {{ doc.title }}
                 </h2>
               </nuxt-link>

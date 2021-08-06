@@ -9,12 +9,14 @@
         class="
           absolute
           right-0
-          w-full lg:w-1/4
+          w-full
+          lg:w-1/3
           justify-evenly
           items-start
           bg-gray-50
           h-screen
-          search-div ring ring-gray-50
+          search-div
+          ring ring-gray-50
         "
         @click.stop
       >
@@ -40,7 +42,7 @@
               leading-5
               bg-gray-50
               placeholder-gray-500
-              text-gray-700
+              text-gray-500 text-semibold text-xl
               focus:outline-none
               w-full
               h-12
@@ -67,20 +69,28 @@
               :to="`/article/blog/${article.slug}`"
               class="
                 flex
-                px-9
-                py-4 md:py-3
+                px-6
+                py-3
                 items-center
                 leading-5
                 transition
                 ease-in-out
                 duration-150
-                text-gray-600
-                hover:text-blue-600
                 bg-gray-50
                 border-b
               "
             >
-              {{ article.title }}
+              <img
+                :src="`/resources/${article.img}`"
+                alt="img"
+                class="w-28 h-20 object-cover mr-4 rounded"
+              />
+              <div class="h-20 flex flex-col justify-between">
+                <h3 class="text-MediumTitle font-semibold hover:text-gray-600">
+                  {{ article.title }}
+                </h3>
+                <p class="text-[13px]">{{ formatDate(article.createdAt) }}</p>
+              </div>
             </NuxtLink>
           </li>
         </ul>
@@ -111,7 +121,8 @@ export default {
         return;
       }
       this.articles = await this.$content("article", "blog")
-        .limit(6)
+        .only(["img", "title", "createdAt", "slug"])
+        .limit(5)
         .search(searchQuery)
         .fetch();
     },
@@ -119,6 +130,10 @@ export default {
   methods: {
     close() {
       this.$emit("disable");
+    },
+    formatDate(date) {
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      return new Date(date).toLocaleDateString("en", options);
     },
   },
 };
