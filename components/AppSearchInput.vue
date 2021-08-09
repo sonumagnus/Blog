@@ -32,6 +32,7 @@
           <input
             v-model="searchQuery"
             type="search"
+            ref="input"
             autocomplete="off"
             placeholder="Search Articles"
             class="
@@ -136,6 +137,9 @@ export default {
       return new Date(date).toLocaleDateString("en", options);
     },
   },
+  updated() {
+    this.$refs.input.focus();
+  },
 };
 </script>
 <style scoped>
@@ -157,6 +161,7 @@ export default {
 .input-wrapper:focus-within::after {
   content: "";
   transform: scale(1, 1);
-  @apply bg-blue-800 duration-300 ease-in-out;
+  transition-duration: 0.8s;
+  @apply bg-blue-800 ease-in-out;
 }
 </style>

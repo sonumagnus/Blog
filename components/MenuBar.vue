@@ -63,7 +63,7 @@ export default {
 .modal-leave-active,
 .modal-enter-active .modal-container,
 .modal-leave-active .modal-container {
-  transition: all 0.3s ease;
+  transition: all 0.2s ease-in-out;
 }
 .modal-enter .modal-container,
 .modal-leave-to .modal-container {
